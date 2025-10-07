@@ -1,4 +1,4 @@
-# 🦾 Web-Controlled Robotic Hand – IoT-Based Remote Manipulation System
+# Web-Controlled Robotic Hand – IoT-Based Remote Manipulation System
 
 ## 📌 Project Overview
 
