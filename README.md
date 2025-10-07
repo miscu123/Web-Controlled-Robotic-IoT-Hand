@@ -92,10 +92,6 @@ Implement advanced features such as:
 
 ---
 
-## 🧱 System Architecture
-
----
-
 ## 🧩 Development Roadmap
 
 | Phase | Description | Output |
