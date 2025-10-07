@@ -33,22 +33,13 @@ Establish a seamless communication layer between the **web interface** and **ESP
 
 - HTTP requests  
 - WebSockets for real-time control  
-- MQTT (optional, for cloud expansion)  
-
-### 🧠 System Intelligence (Optional Extensions)
-
-Implement advanced features such as:
-
-- Gesture recording and replay  
-- Sensor-based feedback (force/flex sensors)  
-- AI-based gesture imitation using camera or glove input  
 
 ---
 
 ## 🔧 Planned Features
 
 ### 🖥️ Interactive Web Dashboard
-- Control each finger via sliders or buttons  
+- Control each finger via sliders / buttons  
 - Execute saved gestures instantly  
 - Monitor servo positions and feedback sensors  
 
@@ -57,16 +48,15 @@ Implement advanced features such as:
 - Bi-directional updates between device and web interface  
 
 ### ⚙️ Hardware Integration
-- 5-finger robotic hand actuated by servo motors  
+- 7-finger robotic hand actuated by servo motors (5 for fingers, 2 for hand rotation and incline)
 - 3D printed or acrylic mechanical structure  
 - ESP32-based embedded controller  
 
 ### 📶 IoT Connectivity
 - Control the robotic hand from any browser over Wi-Fi  
-- Optional cloud access for remote operation  
 
 ### 📈 Data Logging (Optional)
-- Record servo movement history and replay motion sequences  
+- Record action logs and store them into a database
 
 ---
 
@@ -74,8 +64,8 @@ Implement advanced features such as:
 
 ### 🧠 Embedded Layer
 - **Microcontroller:** ESP32  
-- **Language:** C++ (Arduino framework)  
-- **Libraries:** Servo.h, WiFi.h, WebServer.h, AsyncWebSocket  
+- **Language:** Python
+- **Libraries:** Servo.h, WiFi.h, WebServer.h, AsyncWebSocket, etc
 
 ### 🌐 Software Layer
 - **Frontend:** HTML, CSS, JavaScript (or React.js)  
@@ -84,11 +74,11 @@ Implement advanced features such as:
 
 ### 🧩 Hardware Components
 - ESP32 Development Board  
-- 5x Servo Motors (SG90 / MG996R)  
+- 7x Servo Motors (SG90 / MG996R)  
 - External 5V Power Supply  
 - Breadboard & Jumper Wires  
 - 3D Printed / Acrylic Hand Frame  
-- Optional: Flex or Pressure Sensors  
+- Fishing & elastic rope
 
 ---
 
@@ -102,55 +92,16 @@ Implement advanced features such as:
 | **4. Multi-Servo Control** | Add all 5 servos with coordinated motion | Functional robotic hand |
 | **5. Mechanical Assembly** | Build and mount servos to frame | Fully assembled hand |
 | **6. Full Web UI** | Add sliders, presets, and gesture buttons | Interactive interface |
-| **7. Feedback System (optional)** | Add sensors for force/flex detection | Real-time data visualization |
-
----
-
-## 🧠 Learning Outcomes
-
-Through this project, you will gain experience in:
-
-- Embedded systems programming with ESP32  
-- Real-time web communication  
-- IoT systems design and architecture  
-- PWM-based motor control  
-- Hardware and software co-design  
-- UI/UX for IoT control interfaces  
-
----
-
-## 📦 Installation & Usage
-
-### ⚙️ Hardware Setup
-1. Connect each servo to ESP32 PWM pins (e.g., D13–D17).  
-2. Power servos with an external 5V supply (common ground with ESP32).  
-3. Assemble servos to hand frame and calibrate positions.  
-
-### 💻 Software Setup
-1. Flash ESP32 with Arduino sketch.  
-2. Connect ESP32 to Wi-Fi or use Access Point mode.  
-3. Open browser and navigate to ESP32 IP address.  
-4. Control the hand through the dashboard!  
 
 ---
 
 ## 🛠️ Tools & Frameworks
 
-- Arduino IDE / PlatformIO  
+- Arduino IDE / PyCharm 
 - Node.js (optional backend)  
 - React.js or vanilla JS for frontend  
-- TailwindCSS for styling  
+- TailwindCSS / CSS for styling  
 - Git & GitHub for version control  
-
----
-
-## 🧩 Possible Future Enhancements
-
-- Integration with gesture-detecting gloves  
-- Cloud dashboard for remote global access  
-- Haptic feedback or AI imitation control  
-- Mobile app interface  
-- Voice commands (via browser API)  
 
 ---
 
