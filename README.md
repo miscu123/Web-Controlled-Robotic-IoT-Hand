@@ -156,8 +156,7 @@ Through this project, you will gain experience in:
 
 ## 👨‍💻 Contributors
 
-**[Your Name]** – Embedded Systems & Web Developer  
-Final Year B.Tech – Computer Science Engineering  
+**Mihai Albu** – Embedded Systems Junior Software Developer
 
 ---
 
