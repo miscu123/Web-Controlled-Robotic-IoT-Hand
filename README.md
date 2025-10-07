@@ -1,3 +1,98 @@
+# 🦾 Web-Controlled Robotic Hand – IoT-Based Remote Manipulation System
+
+## 📌 Project Overview
+
+**Web-Controlled Robotic Hand** is an **IoT-enabled embedded systems project** that integrates **hardware (servo-actuated robotic fingers)** and **software (web-based control interface)** to demonstrate real-time robotic manipulation over Wi-Fi.
+
+The system allows users to control a robotic hand from any device with a browser, sending commands through a modern web interface to move, flex, or hold specific finger positions.  
+It combines **embedded programming**, **web communication**, and **mechanical design**, making it an excellent showcase of cross-disciplinary engineering.
+
+---
+
+## 🎯 Main Objectives
+
+### ⚙️ Embedded System Design
+
+Develop the core embedded system responsible for:
+
+- Servo motor control using PWM signals  
+- Wi-Fi connectivity and web server hosting on ESP32  
+- Real-time command processing and feedback handling  
+
+### 🌐 Web Interface Development
+
+Design and implement a **responsive control dashboard** that enables users to:
+
+- Send movement commands to individual fingers  
+- Trigger pre-defined hand gestures (e.g., open, close, peace sign)  
+- Visualize live feedback or system status  
+
+### 🔗 Hardware-Software Integration
+
+Establish a seamless communication layer between the **web interface** and **ESP32 microcontroller** using protocols such as:
+
+- HTTP requests  
+- WebSockets for real-time control  
+- MQTT (optional, for cloud expansion)  
+
+### 🧠 System Intelligence (Optional Extensions)
+
+Implement advanced features such as:
+
+- Gesture recording and replay  
+- Sensor-based feedback (force/flex sensors)  
+- AI-based gesture imitation using camera or glove input  
+
+---
+
+## 🔧 Planned Features
+
+### 🖥️ Interactive Web Dashboard
+- Control each finger via sliders or buttons  
+- Execute saved gestures instantly  
+- Monitor servo positions and feedback sensors  
+
+### 🤝 Real-Time Communication
+- Instant response through WebSocket or MQTT  
+- Bi-directional updates between device and web interface  
+
+### ⚙️ Hardware Integration
+- 5-finger robotic hand actuated by servo motors  
+- 3D printed or acrylic mechanical structure  
+- ESP32-based embedded controller  
+
+### 📶 IoT Connectivity
+- Control the robotic hand from any browser over Wi-Fi  
+- Optional cloud access for remote operation  
+
+### 📈 Data Logging (Optional)
+- Record servo movement history and replay motion sequences  
+
+---
+
+## 🛠️ Tech Stack
+
+### 🧠 Embedded Layer
+- **Microcontroller:** ESP32  
+- **Language:** C++ (Arduino framework)  
+- **Libraries:** Servo.h, WiFi.h, WebServer.h, AsyncWebSocket  
+
+### 🌐 Software Layer
+- **Frontend:** HTML, CSS, JavaScript (or React.js)  
+- **Backend (Optional):** Node.js / Flask / Firebase  
+- **Communication Protocols:** HTTP / WebSocket / MQTT  
+
+### 🧩 Hardware Components
+- ESP32 Development Board  
+- 5x Servo Motors (SG90 / MG996R)  
+- External 5V Power Supply  
+- Breadboard & Jumper Wires  
+- 3D Printed / Acrylic Hand Frame  
+- Optional: Flex or Pressure Sensors  
+
+---
+
+## 🧱 System Architecture
 
 ---
 
