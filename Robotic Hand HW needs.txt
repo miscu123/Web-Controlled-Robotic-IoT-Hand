@@ -1,0 +1,5 @@
+- PCB - Arduino works -> use pyfirmata to work in python and control from keyboard
+- Potentiometre - 1 for each finger, 1 for hand inclination
+- servo motors / driver motors - 7
+- fishing rope 
+- elastic rope
