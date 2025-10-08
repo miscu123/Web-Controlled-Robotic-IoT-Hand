@@ -51,6 +51,17 @@ Provides the user interface for interacting with the ESP32 controller through th
 
 ---
 
+### 🧩 Hardware Components
+
+- ESP32 Development Board
+- 7x Servo Motors (SG90 / MG996R)
+- External 5V Power Supply
+- Breadboard & Jumper Wires
+- 3D Printed / Acrylic Hand Frame
+- Fishing & elastic rope
+
+---
+
 ## 🗃️ Database — MongoDB
 
 **Purpose:**  
