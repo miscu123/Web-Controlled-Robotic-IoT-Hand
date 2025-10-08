@@ -2,29 +2,39 @@ from pyfirmata2 import Arduino
 import keyboard
 import time
 
-board = Arduino('COM3')
-led_pin = 8
+# Connect to Arduino
+board = Arduino('COM4')
+servo_pin = 8  # Servo connected to pin 8
 
-print("Connected to Arduino!")
-print("Press 'o' to turn ON LED, 'f' to turn it OFF, or 'q' to quit.")
+# Initialize servo
+board.digital[servo_pin].mode = 4  # SERVO mode
+
+# Set initial position
+angle = 90
+board.digital[servo_pin].write(angle)
+print("Connected to PCB")
+print("Press 'a' to move LEFT, 'd' to move RIGHT, or 'q' to quit.")
 
 try:
     while True:
-        if keyboard.is_pressed('o'):
-            board.digital[led_pin].write(1)
-            print(" :LED ON")
-            time.sleep(0.3)
-        elif keyboard.is_pressed('f'):
-            board.digital[led_pin].write(0)
-            print(" :LED OFF")
-            time.sleep(0.3)
+        if keyboard.is_pressed('d'):
+            angle = max(0, angle - 5)
+            board.digital[servo_pin].write(angle)
+            print(f"Servo angle: {angle}°")
+
+        elif keyboard.is_pressed('a'):
+            angle = min(180, angle + 5)
+            board.digital[servo_pin].write(angle)
+            print(f"Servo angle: {angle}°")
+
         elif keyboard.is_pressed('q'):
-            board.digital[led_pin].write(0)
-            print(" :Exiting...")
+            print("Exiting...")
             break
-        time.sleep(0.05)
+
+        time.sleep(0.02)
 
 except KeyboardInterrupt:
     pass
 
 board.exit()
+print("Disconnected from Arduino.")
