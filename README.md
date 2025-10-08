@@ -65,31 +65,6 @@ Establish a seamless communication layer between the **web interface** and **ESP
 
 ---
 
-## 🛠️ Tech Stack
-
-### 🧠 Embedded Layer
-
-- **Microcontroller:** ESP32
-- **Language:** Python
-- **Libraries:** Servo.h, WiFi.h, WebServer.h, AsyncWebSocket, etc
-
-### 🌐 Software Layer
-
-- **Frontend:** HTML, CSS, JavaScript (or React.js)
-- **Backend (Optional):** Node.js / Flask / Firebase
-- **Communication Protocols:** HTTP / WebSocket / MQTT
-
-### 🧩 Hardware Components
-
-- ESP32 Development Board
-- 7x Servo Motors (SG90 / MG996R)
-- External 5V Power Supply
-- Breadboard & Jumper Wires
-- 3D Printed / Acrylic Hand Frame
-- Fishing & elastic rope
-
----
-
 ## 🧩 Development Roadmap
 
 | Phase                      | Description                               | Output                  |
