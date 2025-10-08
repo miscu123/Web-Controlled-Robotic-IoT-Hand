@@ -6,7 +6,7 @@ import time
 board = Arduino('COM4')
 servo_pin = 8  # Servo connected to pin 8
 
-# Initialize servo
+# Initialize the servo
 board.digital[servo_pin].mode = 4  # SERVO mode
 
 # Set initial position
