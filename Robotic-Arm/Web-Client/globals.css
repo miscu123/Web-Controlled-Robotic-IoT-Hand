@@ -1,0 +1,220 @@
+/* Custom CSS Variables */
+:root {
+  --robo-red: #dc2626;
+  --robo-red-light: #ef4444;
+  --robo-red-dark: #b91c1c;
+  --robo-gray-900: #111827;
+  --robo-gray-800: #1f2937;
+  --robo-gray-700: #374151;
+  --robo-gray-600: #4b5563;
+  --robo-gold: #fbbf24;
+  --robo-silver: #9ca3af;
+  --robo-bronze: #f97316;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--robo-gray-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--robo-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--robo-red-light);
+}
+
+/* Selection Styles */
+::selection {
+  background: var(--robo-red);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--robo-red);
+  color: white;
+}
+
+/* robo Background Pattern */
+.robo-bg {
+  position: relative;
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+}
+
+.robo-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(220, 38, 38, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(220, 38, 38, 0.05) 0%, transparent 25%);
+  pointer-events: none;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading States */
+.skeleton {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-red {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--robo-red) 0%, var(--robo-red-dark) 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--robo-red-light) 0%, var(--robo-red) 100%);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Utilities */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overflow-hidden-x {
+  overflow-x: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .robo-bg {
+    padding: 1rem;
+  }
+  
+  .glass,
+  .glass-dark {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* Focus Styles */
+button:focus,
+a:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --robo-red: #ff0000;
+    --robo-gray-600: #666;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
