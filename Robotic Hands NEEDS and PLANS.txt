@@ -1,0 +1,6 @@
+- PCB - Arduino works -> use pyfirmata to work in python and control from keyboard (Better to use ESP32 and micro python)
+- Potentiometre - 1 for each finger, 1 for hand inclination
+- servo motors / driver motors - 7
+- fishing rope 
+- elastic rope
+- Let the user choose the 'COM' type (COM3, COM4, etc)
