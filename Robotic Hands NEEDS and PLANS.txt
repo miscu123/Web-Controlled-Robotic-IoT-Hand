@@ -9,5 +9,6 @@
 1 more esp 32 to buy: https://www.optimusdigital.ro/ro/placi-cu-wifi/3053-placa-de-dezvoltare-esp32-cu-wifi-si-bluetooth.html
 4 more Potentiometres to buy: https://www.optimusdigital.ro/ro/senzori-altele/3319-modul-senzor-de-unghi-rotativ-cu-poteniometru-cjmcu-sv01a103aea01r00.html
 6 more servos to buy (4 at least for the fingers, rest of hand movement optional):
+1 more hand model: https://www.emag.ro/manechin-mana-stanga-din-lemn-20-cm-258/pd/D4LPGTMBM/?ref=graph_profiled_similar_fallback_1_3&provider=rec&recid=rec_49_c206be6ddf614d94ca6ef5880a8338f67b3ca85bb6b6c74344f7d1adc79689e3_1760117462&scenario_ID=49
 
 GLOVE IDEA -> RoboGlove.jpg
