@@ -1,6 +1,6 @@
 # Web-Controlled Robotic Hand – IoT-Based Remote Manipulation System
 
-## 📌 Project Overview
+## 📌 The Project Overview
 
 **Web-Controlled Robotic Hand** is an **IoT-enabled embedded systems project** that integrates **hardware (servo-actuated robotic fingers)** and **software (web-based control interface)** to demonstrate real-time robotic manipulation over Wi-Fi.
 

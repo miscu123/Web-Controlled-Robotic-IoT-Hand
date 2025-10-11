@@ -1,0 +1,14 @@
+- PCB - Arduino works -> use pyfirmata to work in python and control from keyboard (Better to use ESP32 and micro python)
+- Potentiometre - 1 for each finger, 1 for hand inclination
+- servo motors / driver motors - 7
+- fishing rope 
+- elastic rope
+- Let the user choose the 'COM' type (COM3, COM4, etc)
+
+5 more flex sensors to buy: https://www.ebay.com/itm/326790470201?_skw=2.2+flex+sensor&itmmeta=01K77FHMKFGDG2FCWEMZ6374RW&hash=item4c163ada39:g:WesAAeSwln9o1uH8&itmprp=enc%3AAQAKAAAA0FkggFvd1GGDu0w3yXCmi1fdDEd9BSxMBCrRYH9f7rgxDiU1RSTyzMHVGyJ%2FXs%2FUkN4p9BjcxojtwjY7xIvbcb0BVFDh2R8rhafilhBuxvZfpBX0yDSGUWqRDhLUzio68nxdMdJxvxsa4dnIaq7MFsuvIfvPAGhdpinZRi3J377MUWuzvfZhhNIokXZvYzlP3YrJp058w8DAGkXHAy9TPGwgM4ImOLD1II17NNZuW6nH7scCB2Hq3efQsRckwCcJZI9SNx%2B9tajRC68q1zjPWrY%3D%7Ctkp%3ABk9SR_LJxu-5Zg
+1 more esp 32 to buy: https://www.optimusdigital.ro/ro/placi-cu-wifi/3053-placa-de-dezvoltare-esp32-cu-wifi-si-bluetooth.html
+4 more Potentiometres to buy: https://www.optimusdigital.ro/ro/senzori-altele/3319-modul-senzor-de-unghi-rotativ-cu-poteniometru-cjmcu-sv01a103aea01r00.html
+6 more servos to buy (4 at least for the fingers, rest of hand movement optional):
+1 more hand model: https://www.emag.ro/manechin-mana-stanga-din-lemn-20-cm-258/pd/D4LPGTMBM/?ref=graph_profiled_similar_fallback_1_3&provider=rec&recid=rec_49_c206be6ddf614d94ca6ef5880a8338f67b3ca85bb6b6c74344f7d1adc79689e3_1760117462&scenario_ID=49
+
+GLOVE IDEA -> RoboGlove.jpg
