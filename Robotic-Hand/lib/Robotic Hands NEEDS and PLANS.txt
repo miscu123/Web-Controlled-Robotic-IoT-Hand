@@ -12,4 +12,5 @@
 1 more hand model: https://www.emag.ro/manechin-mana-stanga-din-lemn-20-cm-258/pd/D4LPGTMBM/?ref=graph_profiled_similar_fallback_1_3&provider=rec&recid=rec_49_c206be6ddf614d94ca6ef5880a8338f67b3ca85bb6b6c74344f7d1adc79689e3_1760117462&scenario_ID=49
 
 Web Client "Build process": https://www.aaedmusa.com/projects/cara
+Robo Hand & Glove designs: https://www.viralsciencecreativity.com/post/arduino-flex-sensor-controlled-robot-hand
 GLOVE IDEA -> RoboGlove.jpg
