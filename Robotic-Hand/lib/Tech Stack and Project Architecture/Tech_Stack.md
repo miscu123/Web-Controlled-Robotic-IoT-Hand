@@ -1,64 +1,73 @@
 # 🧠 Tech Stack Overview
 
-This document outlines the technologies and tools used to build the **Web Controlled Robotic Hand** — a project that allows users to send commands to ESP32 microcontrollers and log command history.
+This document outlines the technologies and tools used to build the **Web-Controlled Robotic Hand** — a project that enables users to control servo motors via a web interface hosted directly on an **ESP32** microcontroller.
 
 ---
 
-## 🐍 Backend — Python + Flask
+## ⚙️ Backend — C++ (ESP32 Web Server)
 
 **Purpose:**  
-Provides the web server, handles API requests from the frontend, executes Python functions, and communicates with the ESP32 (via Serial or Wi-Fi).
+Implements an onboard web server using **C++ (Arduino framework)** to handle HTTP requests from the browser, control servo motors, and manage communication between the web interface and the robotic hand hardware.
 
-**Why Flask?**
+**Why C++ on ESP32?**
 
-- Lightweight and easy to set up.
-- Perfect for small web apps or dashboards.
-- Flexible — integrates easily with serial communication, REST APIs, and databases.
+- Runs natively on the microcontroller — no external computer or server needed.
+- Efficient memory and performance management.
+- Full control over hardware interfaces (GPIO, PWM, Serial, etc.).
+- Supports both **Wi-Fi** and **access point (AP)** modes for flexible connectivity.
 
 **Responsibilities:**
 
-- Serve the web interface (HTML/JS/CSS).
-- Receive commands from the frontend.
-- Communicate with ESP32 (via USB serial or network).
-- Log command history to the database.
-- Provide REST API endpoints for control and data retrieval.
+- Host and serve the HTML/JS web interface.
+- Receive and process HTTP requests from the browser.
+- Control servo positions based on user commands.
+- Maintain connection with all hardware components (motors, sensors, etc.).
+- Log command activity (optional via EEPROM, SD card, or external server).
+
+**Example Flow:**
+
+1. ESP32 connects to Wi-Fi or starts its own access point.
+2. ESP32 hosts a web page at a local IP (e.g., `192.168.4.1`).
+3. User opens the page in a browser.
+4. When the user sends a command, a **GET** or **POST** request is sent to the ESP32 web server.
+5. ESP32 parses the command, moves the servos, and sends a response (JSON or plain text).
 
 ---
 
 ## 🌐 Frontend — HTML, CSS, JavaScript
 
 **Purpose:**  
-Provides the user interface for interacting with the ESP32 controller through the browser.
+Provides the user interface for controlling the robotic hand from any web browser (PC, tablet, or phone).
 
 **Technologies:**
 
-- **HTML** — Structure of the web page (buttons, layout, etc.)
-- **CSS** — Styling and layout customization for clean UI
-- **JavaScript** — Handles user interactions and sends HTTP requests to Flask backend via `fetch()` or AJAX
+- **HTML** — Defines the layout and controls (buttons, sliders, etc.).
+- **CSS** — Styles the interface for a clean and responsive design.
+- **JavaScript** — Sends commands to the ESP32 via HTTP requests and updates the interface dynamically.
 
 **Responsibilities:**
 
-- Display control buttons, sliders, and feedback messages.
-- Send commands to Flask backend (e.g., `/control`, `/status`).
-- Update the UI based on backend responses.
+- Display control buttons and sliders for each servo motor.
+- Send control commands (e.g., finger positions) to the ESP32.
+- Display real-time feedback (e.g., connection status, command confirmation).
 
 **Example Interaction Flow:**
 
-1. User clicks a button (e.g., “Turn ON”).
-2. JS sends a POST request to `/control` with command data.
-3. Flask processes the command and responds with JSON.
-4. JS updates the page with the response (“LED ON confirmed”).
+1. User adjusts a slider or presses a control button.
+2. JavaScript sends an HTTP request to a specific endpoint on the ESP32 (e.g., `/servo?finger=1&angle=90`).
+3. The ESP32 processes the command and moves the corresponding servo.
+4. The web interface updates with a confirmation message or animation.
 
 ---
 
-### 🧩 Hardware Components
+## 🧩 Hardware Components
 
-- ESP32 Development Board
-- 7x Servo Motors (SG90 / MG996R)
-- External 5V Power Supply
-- Breadboard & Jumper Wires
-- 3D Printed / Acrylic Hand Frame
-- Fishing & elastic rope
+- **ESP32 Development Board**
+- **7× Servo Motors (SG90 / MG996R)**
+- **External 5V Power Supply**
+- **Breadboard & Jumper Wires**
+- **3D Printed or Acrylic Hand Frame**
+- **Fishing Line & Elastic Rope (for finger movement)**
 
 ---
 

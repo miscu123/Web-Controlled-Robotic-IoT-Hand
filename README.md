@@ -52,7 +52,7 @@ Establish a seamless communication layer between the **web interface** and **ESP
 ### ⚙️ Hardware Integration
 
 - 7-finger robotic hand actuated by servo motors (5 for fingers, 2 for hand rotation and incline)
-- 3D printed or acrylic mechanical structure
+- 3D printed or acrylic mechanical structure / straight up bought hand
 - ESP32-based embedded controller
 
 ### 📶 IoT Connectivity
@@ -80,27 +80,17 @@ Establish a seamless communication layer between the **web interface** and **ESP
 
 ## 🛠️ Tools & Frameworks
 
-- Arduino IDE / PyCharm
+- Arduino IDE / VS Code
 - Node.js (optional backend)
-- React.js or vanilla JS for frontend
-- TailwindCSS / CSS for styling
+- Vanilla JS for frontend
+- CSS for styling
 - Git & GitHub for version control
 
 ---
 
 ## 👨‍💻 Contributors
 
-**Mihai Albu** – Embedded Systems Junior Software Developer
-
----
-
-## Install dependencies & Run Flask
-
-To install the dependencies for this project, we use a venv
-
-1. Command for the venv is: pip install -r requirements.txt
-2. Activate venv: .\venv\Scripts\Activate.ps1
-3. Command to run the Flask Backend: python ./Robotic-Arm/main.py --> http://127.0.0.1:5000
+**Mihai Albu** – Automotive Embedded Systems Junior Software Developer
 
 ---
 
