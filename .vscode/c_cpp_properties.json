@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/include",
                 "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src/Backend-Server",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESP32Servo/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -246,6 +247,7 @@
                 "path": [
                     "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/include",
                     "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src/Backend-Server",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESP32Servo/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
