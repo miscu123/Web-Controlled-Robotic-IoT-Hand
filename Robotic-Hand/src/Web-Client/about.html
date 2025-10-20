@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="globals.css" />
+  <title>ABOUT - IoT Robotic Hand</title>
+</head>
+
+<body class="robo-bg">
+    <!-- Navigation Bar -->
+    <nav style="padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; z-index: 100; margin-bottom: 40px;">
+        <div style="display: flex; gap: 16px;">
+            <a href="index.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">Home</a>
+            <a href="about.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">About</a>
+            <a href="#controller-section" class="btn-primary" style="padding: 8px 18px; font-size: 0.95rem;">Take Control</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero animate-fade-in">
+            <h1 class="gradient-text">ABOUT The IoT Robot Hand</h1>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid">
+        <div class="card hover-lift animate-slide-in-bottom stagger-1">
+            <h3>INTRODUCTION</h3>
+            <p>Inspiration & first steps</p>
+        </div>
+
+        <div class="card hover-lift animate-slide-in-bottom stagger-2">
+            <h3>HAND & GLOVE DESIGNS</h3>
+            <p>From prototypes to finished product</p>
+        </div>
+
+        <div class="card hover-lift animate-slide-in-bottom stagger-3">
+            <h3>PROGRAMMING</h3>
+            <p>From sketches to finished backend</p>
+        </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="performance">
+            <div class="container animate-fade-in">
+                <h2 class="gradient-text" style="text-align: left; margin-top: 80px; font-size: 2.7rem;">
+                    INTRODUCTION
+                </h2>
+                <p style="margin-top: 30px; font-size: 1.2rem;">
+                    The advancement of the Internet of Things (IoT) and embedded systems has opened new possibilities in human–machine interaction, robotics, and 
+                    remote control technologies. This project, titled "IoT Robotic Hand", aims to design and implement a robotic hand that can be wirelessly controlled 
+                    through both a sensor-equipped glove and a web-based interface.
+                </p>
+                <p style="margin-top: 10px; font-size: 1.2rem;">
+                    The project utilizes two ESP32 microcontrollers—one embedded in the robotic hand and another integrated into a wearable glove. 
+                    The glove is equipped with flex sensors that detect the bending motion of each finger. These sensor readings are transmitted via Wi-Fi to the ESP32 
+                    controlling the robotic hand, which replicates the same movements in real time using servo motors. This setup allows the robotic hand to imitate natural
+                    human gestures with high accuracy and low latency.
+                </p>
+                <p style="margin-top: 10px; font-size: 1.2rem;">
+                    In addition to gesture-based control, the system also features a web server interface hosted on the ESP32, allowing users to control the robotic hand 
+                    remotely through a standard web browser.
+                </p>
+                <p style="margin-top: 10px; font-size: 1.2rem;">
+                    The IoT Robotic Hand project serves as a prototype for future applications in assistive technology, teleoperation, prosthetics, and remote robotic systems. 
+                    It showcases how affordable hardware and IoT connectivity can be combined to create interactive and practical solutions in modern robotics.
+                </p>
+            </div>
+        </section>
+
+        <!-- HAND & GLOVE DESIGNS-->
+        <section id="plans" style="margin-top: 80px;">
+            <div class="container animate-fade-in">
+                <h2 class="gradient-text" style="text-align: left; font-size: 2.7rem; margin-bottom: 40px;">
+                    HAND & GLOVE DESIGNS
+                </h2>
+            </div>
+        </section>
+
+        <!-- PROGRAMMING-->
+        <section id="plans" style="margin-top: 80px;">
+            <div class="container animate-fade-in">
+                <h2 class="gradient-text" style="text-align: left; font-size: 2.7rem; margin-bottom: 40px;">
+                    PROGRAMMING
+                </h2>
+                <!-- Backend Card -->
+                <div class="card hover-lift stagger-1">
+                    <h3>Backend — C++ </h3>
+                    <p>
+                    Implements an onboard web server using C++ (Arduino Framework) to handle HTTP requests, control servo motors, and manage communication between the browser, 
+                    robotic hand & sensor glove.
+                    </p>
+                    <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
+                        <li>Handles Wi-Fi and AP modes</li>
+                        <li>Controls hardware (GPIO, PWM, Serial)</li>
+                        <li>Can log commands</li>
+                    </ul>
+                </div>
+
+                <!-- Frontend Card -->
+                <div class="card hover-lift stagger-2">
+                    <h3>Frontend — HTML, CSS, JavaScript</h3>
+                    <p>
+                    Provides a responsive web interface for controlling the robotic hand from any browser. JavaScript sends commands to the ESP32’s server to move servos and 
+                    display feedback dynamically.
+                    </p>
+                    <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
+                        <li>Real-time control with sliders & buttons</li>
+                        <li>Communicates via HTTP requests</li>
+                        <li>Displays live feedback and status</li>
+                    </ul>
+                </div>
+
+                <!-- Database Card -->
+                <div class="card hover-lift stagger-3">
+                    <h3>Database — MongoDB</h3>
+                    <p>
+                    Stores command logs sent to the ESP32, including timestamps and results, enabling traceability and data analytics.
+                    </p>
+                    <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
+                        <li>Schemaless JSON-like storage</li>
+                        <li>Ideal for simple IoT logging</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(14, 8, 8, 0.1);">
+        <p style="color: #9ca3af; margin-bottom: 16px;">© 2026 IoT Robotic Hand</p>
+            <div class="buttons">
+            <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Home</a>
+            <a href="#performance" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Features</a>
+            <a href="#plans" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Future Plans</a>
+            <a href="https://github.com/miscu123" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">GitHub</a>
+            <a href="mailto:mihaialbu4567@gmail.com.com" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
