@@ -63,7 +63,7 @@ Provides the user interface for controlling the robotic hand from any web browse
 ## 🧩 Hardware Components
 
 - **ESP32 Development Board**
-- **7× Servo Motors (SG90 / MG996R)**
+- **6× Servo Motors (SG90 / MG996R)**
 - **External 5V Power Supply**
 - **Breadboard & Jumper Wires**
 - **3D Printed or Acrylic Hand Frame**

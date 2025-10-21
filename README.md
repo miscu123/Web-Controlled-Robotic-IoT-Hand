@@ -51,8 +51,8 @@ Establish a seamless communication layer between the **web interface** and **ESP
 
 ### ⚙️ Hardware Integration
 
-- 7-finger robotic hand actuated by servo motors (5 for fingers, 2 for hand rotation and incline)
-- 3D printed or acrylic mechanical structure / straight up bought hand
+- 6-finger robotic hand actuated by servo motors (5 for fingers, 1 for wrist rotation)
+- 03D printed or acrylic mechanical structure / straight up bought hand
 - ESP32-based embedded controller
 
 ### 📶 IoT Connectivity
