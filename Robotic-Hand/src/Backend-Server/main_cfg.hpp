@@ -33,7 +33,7 @@ void count_up(void);   // count up from 1 -> 5
 void count_down(void); // count down from 5 -> 1
 void peace(void);      // peace sign
 void ok_sign(void);    // make the 'ok' sign (index and thumb finger touch and the rest bend a little)
-void go_berserk(void); // let the hand do random gestures
 void hold_phone(void); // make the hand hold the phone
+void go_berserk(void); // let the hand do random gestures
 
 #endif

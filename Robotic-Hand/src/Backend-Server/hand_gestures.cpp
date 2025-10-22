@@ -167,3 +167,28 @@ void ok_sign(void)
     servo_ring.write(25);
     servo_little.write(10);
 }
+
+void hold_phone(void)
+{
+    reset_all();
+    delay(200);
+    for (angle = 0; angle <= 90; angle += 3)
+    {
+        servo_thumb.write(angle);
+        // Serial.print("Unghi: ");
+        // Serial.println(angle);
+        delay(8);
+    }
+    delay(100);
+    for (angle = 0; angle <= 90; angle += 3)
+    {
+        servo_little.write(angle);
+        // Serial.print("Unghi: ");
+        // Serial.println(angle);
+        delay(8);
+    }
+    delay(100);
+    servo_index.write(10);
+    servo_middle.write(10);
+    servo_ring.write(10);
+}
