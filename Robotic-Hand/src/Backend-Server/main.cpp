@@ -1,7 +1,9 @@
-/* Inclusions */
+/* INCLUSIONS */
 #include "main_cfg.hpp"
 
-/* Define the servos declared in header file (just now we allocate memory) */
+/* LOCAL MACROS */
+
+/* GLOBAL VARIABLES */
 Servo servo_little;
 Servo servo_ring;
 Servo servo_middle;
@@ -10,7 +12,13 @@ Servo servo_thumb;
 Servo servo_wrist;
 volatile int angle;
 
-/* Standard function definitions */
+/* LOCAL VARIABLES */
+
+/* LOCAL FUNCTION DECLARATIONS */
+
+/* LOCAL FUNCTION DEFINITIONS */
+
+/* GLOBAL FUNCTION DEFINITIONS */
 void setup()
 {
   Serial.begin(115200); /* Serial monitor with 115200 baudrate */

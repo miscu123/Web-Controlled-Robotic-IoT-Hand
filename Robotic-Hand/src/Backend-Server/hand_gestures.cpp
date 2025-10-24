@@ -1,6 +1,7 @@
+/* INCLUSIONS */
 #include "main_cfg.hpp"
 
-/* Function definitions */
+/* GLOBAL FUNCTION DEFINITIONS */
 void close_all(void)
 {
     servo_little.write(CLOSE_FINGER);

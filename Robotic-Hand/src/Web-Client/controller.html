@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="globals.css" />
   <title>CONTROLLER - IoT Robotic Hand</title>
+  <style>
+
+  </style>
 </head>
 
 <body class="robo-bg">
+    <!-- Racing Lines Background -->
+    <div class="racing-lines">
+        <div class="race-line" style="animation: slide-0 3s linear infinite;"></div>
+        <div class="race-line" style="animation: slide-1 4s linear infinite;"></div>
+        <div class="race-line" style="animation: slide-2 5s linear infinite;"></div>
+    </div>
+
     <!-- Navigation Bar -->
-    <nav style="padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; z-index: 100; margin-bottom: 40px;">
+    <nav style="padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; z-index: 100; width: 100%;">
         <div style="display: flex; gap: 16px;">
             <a href="index.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">Home</a>
             <a href="about.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">About</a>
@@ -21,20 +31,107 @@
         <!-- Hero Section -->
         <section class="hero animate-fade-in">
             <h1 class="gradient-text">TAKE CONTROL OVER 
-                <br> The Robotic Hand </h1>
+                <br> The Robotic Hand</h1>
+            <p style="color: #d1d5db; margin-top: 20px;">Adjust each finger and wrist position with precision control</p>
         </section>
+
+        <!-- Connection Status -->
+        <div class="glass animate-fade-in" style="text-align: center; margin-bottom: 30px; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: #10b981;">
+            <div style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981; margin-right: 8px;"></div>
+            System Ready - All Controls Active
+        </div>
+
+        <!-- Hand Controller Section -->
+        <div class="glass animate-slide-in-bottom" style="margin-bottom: 60px;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: center;">
+                <span class="gradient-text">Hand Controller</span>
+            </h2>
+            
+            <!-- Hand Visual Controller -->
+            <div class="hand-container">
+                <!-- Thumb -->
+                <div class="finger thumb">
+                    <div class="finger-value" id="thumb-value">90°</div>
+                    <input type="range" min="0" max="180" value="90" class="finger-slider" id="thumb" orient="vertical">
+                    <div class="finger-label">THUMB</div>
+                </div>
+
+                <!-- Index Finger -->
+                <div class="finger">
+                    <div class="finger-value" id="index-value">90°</div>
+                    <input type="range" min="0" max="180" value="90" class="finger-slider" id="index" orient="vertical">
+                    <div class="finger-label">INDEX</div>
+                </div>
+
+                <!-- Middle Finger -->
+                <div class="finger">
+                    <div class="finger-value" id="middle-value">90°</div>
+                    <input type="range" min="0" max="180" value="90" class="finger-slider" id="middle" orient="vertical">
+                    <div class="finger-label">MIDLLE</div>
+                </div>
+
+                <!-- Ring Finger -->
+                <div class="finger">
+                    <div class="finger-value" id="ring-value">90°</div>
+                    <input type="range" min="0" max="180" value="90" class="finger-slider" id="ring" orient="vertical">
+                    <div class="finger-label">RING</div>
+                </div>
+
+                <!-- Pinky -->
+                <div class="finger">
+                    <div class="finger-value" id="pinky-value">90°</div>
+                    <input type="range" min="0" max="180" value="90" class="finger-slider" id="pinky" orient="vertical">
+                    <div class="finger-label">PINKY</div>
+                </div>
+            </div>
+
+            <!-- Wrist Control -->
+            <div class="wrist-control">
+                <div class="finger-label" style="font-size: 1.1rem; margin-bottom: 15px;">WRIST ROTATION</div>
+                <div class="finger-value" id="wrist-value" style="display: inline-block; margin-bottom: 15px;">0°</div>
+                <br>
+                <input type="range" min="-90" max="90" value="0" class="wrist-slider" id="wrist">
+            </div>
+
+            <!-- Reset Button -->
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-primary" onclick="resetAll()" style="width: 100%; max-width: 400px; padding: 16px;">
+                    RESET ALL 
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Gestures -->
+        <div class="glass animate-slide-in-bottom stagger-1" style="margin-bottom: 60px;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: center;">
+                <span class="gradient-text">Quick Gestures</span>
+            </h2>
+            <div class="buttons">
+                <button class="btn-secondary" onclick="setGesture('close')">Close Hand</button>
+                <button class="btn-secondary" onclick="setGesture('countU')">Count Up</button>
+                <button class="btn-secondary" onclick="setGesture('countD')">Count Down</button>
+                <button class="btn-secondary" onclick="setGesture('peace')">Peace Sign</button>
+                <button class="btn-secondary" onclick="setGesture('ok')">OK Sign</button>
+                <button class="btn-secondary" onclick="setGesture('hold')">Hold Phone</button>
+                <button class="btn-secondary" onclick="setGesture('come')">Come Here</button>
+                <button class="btn-secondary" onclick="setGesture('love')">Love You</button>
+                <button class="btn-secondary" onclick="setGesture('berserk')">Go Berserk</button>
+            </div>
+        </div>
      
         <!-- Footer -->
-        <footer style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(14, 8, 8, 0.1);">
-        <p style="color: #9ca3af; margin-bottom: 16px;">© 2026 IoT Robotic Hand</p>
+        <footer style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="color: #9ca3af; margin-bottom: 16px;">© 2026 IoT Robotic Hand</p>
             <div class="buttons">
-            <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Home</a>
-            <a href="about.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Features</a>
-            <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Future Plans</a>
-            <a href="https://github.com/miscu123" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">GitHub</a>
-            <a href="mailto:mihaialbu4567@gmail.com.com" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Contact</a>
+                <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Home</a>
+                <a href="about.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Features</a>
+                <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Future Plans</a>
+                <a href="https://github.com/miscu123" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">GitHub</a>
+                <a href="mailto:mihaialbu4567@gmail.com" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Contact</a>
             </div>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

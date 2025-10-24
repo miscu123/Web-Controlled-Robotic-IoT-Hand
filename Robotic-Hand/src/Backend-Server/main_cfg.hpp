@@ -1,12 +1,12 @@
-/* Guards */
+/* GUARDS */
 #ifndef MAIN_CFG_HPP
 #define MAIN_CFG_HPP
 
-/* Inclusions */
+/* INCLUSIONS */
 #include <Arduino.h>
 #include <ESP32Servo.h>
 
-/* Pin configurations */
+/* MACROS */
 #define LITTLE_PIN 15
 #define RING_PIN 16
 #define MIDDLE_PIN 17
@@ -16,8 +16,7 @@
 #define DEFAULT_ANGLE 0
 #define CLOSE_FINGER 180
 
-/* Variables declarations */
-/* Servos needed */
+/* GLOBAL VARIABLE DECLARATIONS */
 extern Servo servo_little;
 extern Servo servo_ring;
 extern Servo servo_middle;
@@ -26,7 +25,7 @@ extern Servo servo_thumb;
 extern Servo servo_wrist;
 extern volatile int angle;
 
-/* Function declarations */
+/* GLOBAL FUNCTION DECLARATIONS */
 void reset_all(void);       // reset to default positions when i want to
 void close_all(void);       // close all fingers
 void count_up(void);        // count up from 1 -> 5
@@ -38,4 +37,5 @@ void i_love_you_sign(void); // make the hand say 'i love you' (1. only little fi
 void come_here_sign(void);  // make the hand 'call' someone toward itself (only thumb and index up, then make the index slightly move back and forth)
 void go_berserk(void);      // let the hand do random gestures
 
+/* END OF FILE */
 #endif
