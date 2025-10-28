@@ -11,6 +11,7 @@ Servo servo_index;
 Servo servo_thumb;
 Servo servo_wrist;
 volatile int angle;
+WiFiServer server(80);
 
 /* LOCAL VARIABLES */
 
@@ -22,6 +23,7 @@ volatile int angle;
 void setup()
 {
   Serial.begin(115200); /* Serial monitor with 115200 baudrate */
+  connect_to_server();
   /* Attach the servos to the pins */
   servo_little.attach(LITTLE_PIN);
   servo_ring.attach(RING_PIN);
