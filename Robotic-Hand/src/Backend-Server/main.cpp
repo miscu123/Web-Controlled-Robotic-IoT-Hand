@@ -11,7 +11,6 @@ Servo servo_index;
 Servo servo_thumb;
 Servo servo_wrist;
 volatile int angle;
-WiFiServer server(80);
 
 /* LOCAL VARIABLES */
 
@@ -23,7 +22,14 @@ WiFiServer server(80);
 void setup()
 {
   Serial.begin(115200); /* Serial monitor with 115200 baudrate */
+  if (!LittleFS.begin(true))
+  {
+    Serial.println("An Error has occurred while mounting LittleFS");
+    return;
+  }
+  Serial.println("LittleFS mounted successfully");
   connect_to_server();
+
   /* Attach the servos to the pins */
   servo_little.attach(LITTLE_PIN);
   servo_ring.attach(RING_PIN);
@@ -40,4 +46,5 @@ void setup()
 
 void loop()
 {
+  get_server_client();
 }

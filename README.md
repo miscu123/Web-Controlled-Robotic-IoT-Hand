@@ -80,7 +80,7 @@ Establish a seamless communication layer between the **web interface** and **ESP
 
 ## 🛠️ Tools & Frameworks
 
-- Arduino IDE / VS Code
+- VS Code & PlatformIO
 - Node.js (optional backend)
 - Vanilla JS for frontend
 - CSS for styling

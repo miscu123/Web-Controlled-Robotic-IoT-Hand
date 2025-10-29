@@ -6,6 +6,8 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 #include <WiFi.h>
+#include "FS.h"
+#include "LittleFS.h"
 
 /* MACROS */
 #define LITTLE_PIN 15
@@ -27,7 +29,7 @@ extern Servo servo_wrist;
 extern volatile int angle;
 extern const char *ssid;
 extern const char *password;
-extern WiFiServer server(80);
+extern WiFiServer server;
 extern WiFiClient client;
 
 /* GLOBAL FUNCTION DECLARATIONS */
