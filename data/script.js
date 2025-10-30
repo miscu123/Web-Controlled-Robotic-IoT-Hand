@@ -33,30 +33,3 @@ function resetAll() {
     
     console.log('All controls reset to default');
 }
-
-// Optional: Function to send data to IoT device
-// Uncomment and modify based on your IoT setup
-/*
-function sendToDevice(finger, value) {
-    // Example using fetch API
-    fetch('/api/control', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            finger: finger,
-            angle: value
-        })
-    })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch((error) => console.error('Error:', error));
-}
-*/
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('IoT Robotic Hand Controller Ready');
-    console.log('Available gestures: open, fist, point, peace, rock');
-});

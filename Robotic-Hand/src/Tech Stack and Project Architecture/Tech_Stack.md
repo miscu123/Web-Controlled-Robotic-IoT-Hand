@@ -1,10 +1,10 @@
-# 🧠 Tech Stack Overview
+# Tech Stack Overview
 
 This document outlines the technologies and tools used to build the **Web-Controlled Robotic Hand** — a project that enables users to control servo motors via a web interface hosted directly on an **ESP32** microcontroller.
 
 ---
 
-## ⚙️ Backend — C++ (ESP32 Web Server)
+## Backend — C++ (ESP32 Web Server)
 
 **Purpose:**  
 Implements an onboard web server using **C++ (Arduino framework)** to handle HTTP requests from the browser, control servo motors, and manage communication between the web interface and the robotic hand hardware.
@@ -34,7 +34,7 @@ Implements an onboard web server using **C++ (Arduino framework)** to handle HTT
 
 ---
 
-## 🌐 Frontend — HTML, CSS, JavaScript
+## Frontend — HTML, CSS, JavaScript
 
 **Purpose:**  
 Provides the user interface for controlling the robotic hand from any web browser (PC, tablet, or phone).
@@ -60,7 +60,7 @@ Provides the user interface for controlling the robotic hand from any web browse
 
 ---
 
-## 🧩 Hardware Components
+## Hardware Components
 
 - **ESP32 Development Board**
 - **6× Servo Motors (SG90 / MG996R)**
@@ -71,7 +71,7 @@ Provides the user interface for controlling the robotic hand from any web browse
 
 ---
 
-## 🗃️ Database — MongoDB
+## Database — MongoDB
 
 **Purpose:**  
 Stores a **history of commands** sent to ESP32s, including timestamps and results.
@@ -80,7 +80,6 @@ Stores a **history of commands** sent to ESP32s, including timestamps and result
 
 - Schemaless and flexible — perfect for simple logging.
 - JSON-like documents make it easy to store and retrieve command records.
-- Easy integration with Python via `pymongo`.
 
 **Example Document Structure:**
 
