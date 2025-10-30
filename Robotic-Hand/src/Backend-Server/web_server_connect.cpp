@@ -13,6 +13,7 @@ String header;
 /* LOCAL VARIABLES */
 /* LOCAL FUNCTION DECLARATIONS */
 /* LOCAL FUNCTION DEFINITIONS */
+
 /* GLOBAL FUNCTION DEFINITIONS */
 void connect_to_server(void)
 {
@@ -50,7 +51,7 @@ void get_server_client()
                 {
                     if (currentLine.length() == 0)
                     {
-                        // Extrage calea din cererea GET
+                        // Extract path from GET
                         String path = "/";
                         int getIndex = header.indexOf("GET ");
                         int httpIndex = header.indexOf(" HTTP");
@@ -59,23 +60,26 @@ void get_server_client()
                             path = header.substring(getIndex + 4, httpIndex);
                         }
                         if (path == "/")
-                            path = "/controller.html";
+                            path = "/index.html";
                         if (!path.startsWith("/"))
                             path = "/" + path;
 
                         Serial.print("Client requested: ");
                         Serial.println(path);
 
-                        // Deschide fișierul cerut
+                        // Open requested file
                         File file = LittleFS.open(path, "r");
+                        // if we find a file, we send it and print what we connect to for debugging
+                        // can be removed later on
                         if (file)
                         {
                             Serial.print("Sending ");
                             Serial.println(path);
 
-                            // Setează tipul MIME corect
+                            // conn to css file
                             if (path.endsWith(".css"))
                                 client.println("HTTP/1.1 200 OK\r\nContent-Type: text/css\r\n\r\n");
+                            // conn to js file
                             else if (path.endsWith(".js"))
                                 client.println("HTTP/1.1 200 OK\r\nContent-Type: application/javascript\r\n\r\n");
                             else
@@ -88,6 +92,7 @@ void get_server_client()
                             file.close();
                             Serial.println("File sent successfully!");
                         }
+                        // err if we can not connect to files
                         else
                         {
                             Serial.println(path + " not found!");
