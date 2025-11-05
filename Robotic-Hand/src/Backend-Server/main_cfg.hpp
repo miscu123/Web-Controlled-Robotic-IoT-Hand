@@ -8,6 +8,9 @@
 #include <WiFi.h>
 #include <FS.h>
 #include <LittleFS.h>
+// LCD libs (optional, if i want to implement it)
+#include <SPI.h>
+#include <TFT_eSPI.h> // HW-LCD-specific library
 
 /* MACROS */
 #define LITTLE_PIN 15
