@@ -26,7 +26,7 @@ extern Servo servo_middle;
 extern Servo servo_index;
 extern Servo servo_thumb;
 extern Servo servo_wrist;
-extern volatile int angle;
+extern volatile uint32_t angle;
 extern const char *ssid;
 extern const char *password;
 extern WiFiServer server;
@@ -40,8 +40,8 @@ void count_down(void);        // count down from 5 -> 1
 void peace(void);             // peace sign
 void ok_sign(void);           // make the 'ok' sign (index and thumb finger touch and the rest bend a little)
 void hold_phone(void);        // make the hand hold the phone
-void i_love_you_sign(void);   // make the hand say 'i love you' (1. only little finger up; 2. only index and thumb up; 3. only thumb and little finger up)
-void come_here_sign(void);    // make the hand 'call' someone toward itself (only thumb and index up, then make the index slightly move back and forth)
+void i_love_you_sign(void);   // make the hand say 'i love you'
+void come_here_sign(void);    // make the hand 'call' someone toward itself
 void go_berserk(void);        // let the hand do random gestures
 void connect_to_server(void); // make connection to WIFI server
 void get_server_client(void); // listen to connect a client to the server
