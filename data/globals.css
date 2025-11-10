@@ -476,11 +476,6 @@ body {
   text-align: center;
 }
 
-.thumb {
-  transform: rotate(-15deg);
-  margin-right: 20px;
-}
-
 .wrist-control {
   margin-top: 40px;
   text-align: center;
