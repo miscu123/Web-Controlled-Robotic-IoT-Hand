@@ -52,7 +52,7 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 ### Hardware Integration
 
 - 6-finger robotic hand actuated by servo motors (5 for fingers, 1 for wrist rotation)
-- 03D printed or acrylic mechanical structure / straight up bought hand
+- 3D printed OR metal mechanical structure 
 - ESP32-based embedded controller
 
 ### IoT Connectivity
@@ -81,10 +81,11 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 ## Tools & Frameworks
 
 - VS Code & PlatformIO
-- Node.js (optional backend)
-- Vanilla JS for frontend
+- C++ for backend
+- Vanilla JS & HTML for frontend
 - CSS for styling
 - Git & GitHub for version control
+- Docker -- optional
 
 ---
 
@@ -99,3 +100,4 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 This project is licensed under the **MIT License** – feel free to modify and improve upon it for educational and research purposes.
 
 ---
+
