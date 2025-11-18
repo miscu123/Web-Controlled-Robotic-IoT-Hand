@@ -167,6 +167,8 @@ void ok_sign(void)
     servo_middle.write(40);
     servo_ring.write(25);
     servo_little.write(10);
+
+    Serial.println("OK Sign Done!");
 }
 
 void hold_phone(void)
@@ -192,6 +194,8 @@ void hold_phone(void)
     servo_index.write(10);
     servo_middle.write(10);
     servo_ring.write(10);
+
+    Serial.println("Holding Phone!");
 }
 
 void i_love_you_sign(void)
@@ -238,6 +242,8 @@ void i_love_you_sign(void)
         delay(8);
     }
     delay(100);
+
+    Serial.println("I Love You Sign Done!");
 }
 
 void come_here_sign(void)
@@ -269,4 +275,41 @@ void come_here_sign(void)
 
         count++;
     }
+
+    Serial.println("Come Here Sign Done!");
+}
+
+void go_berserk(void)
+{
+    reset_all();
+    delay(100);
+
+    random_angles[FINGER_COUNT];
+
+    uint8_t counter = 0;
+    while (counter < 10) // at least 10 gestures to be executed
+    {
+        for (int i = 0; i < FINGER_COUNT; i++)
+        {
+            random_angles[i] = esp_random(); // call HW RNG function
+            random_angles[i] %= 181;         // make sure we are between [0,180] angle
+        }
+
+        delay(100);
+        servo_little.write(random_angles[0]);
+        delay(100);
+        servo_ring.write(random_angles[1]);
+        delay(100);
+        servo_middle.write(random_angles[2]);
+        delay(100);
+        servo_index.write(random_angles[3]);
+        delay(100);
+        servo_thumb.write(random_angles[4]);
+        delay(100);
+
+        delay(100);
+        counter++;
+    }
+
+    Serial.println("Berserk Done!");
 }

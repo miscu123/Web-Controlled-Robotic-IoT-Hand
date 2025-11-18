@@ -6,21 +6,25 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 #include <WiFi.h>
+#include <stdint.h>
 #include <FS.h>
 #include <LittleFS.h>
 // LCD libs (optional, if i want to implement it)
+// HW-LCD-specific library
 #include <SPI.h>
-#include <TFT_eSPI.h> // HW-LCD-specific library
+#include <TFT_eSPI.h>
+#include "esp_random.h" // random number generation for berserk callback
 
 /* MACROS */
-#define LITTLE_PIN 15
-#define RING_PIN 16
-#define MIDDLE_PIN 17
-#define INDEX_PIN 18
-#define THUMB_PIN 19
-#define WRIST_PIN 35
+#define LITTLE_PIN 17
+#define RING_PIN 18
+#define MIDDLE_PIN 19
+#define INDEX_PIN 21
+#define THUMB_PIN 22
+#define WRIST_PIN 23
 #define DEFAULT_ANGLE 0
 #define CLOSE_FINGER 180
+#define FINGER_COUNT 5
 
 /* GLOBAL VARIABLE DECLARATIONS */
 extern Servo servo_little;
@@ -34,6 +38,7 @@ extern const char *ssid;
 extern const char *password;
 extern WiFiServer server;
 extern WiFiClient client;
+extern uint32_t random_angles[];
 
 /* GLOBAL FUNCTION DECLARATIONS */
 void reset_all(void);         // reset to default positions when i want to

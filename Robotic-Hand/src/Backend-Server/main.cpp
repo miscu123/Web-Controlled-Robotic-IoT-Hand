@@ -10,7 +10,7 @@ Servo servo_middle;
 Servo servo_index;
 Servo servo_thumb;
 Servo servo_wrist;
-volatile int angle;
+volatile uint32_t angle;
 
 /* LOCAL VARIABLES */
 
