@@ -33,3 +33,7 @@ function resetAll() {
     
     console.log('All controls reset to default');
 }
+
+function setGesture(name) {
+    fetch("/gesture?name=" + name);
+}

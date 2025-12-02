@@ -67,40 +67,85 @@ void get_server_client()
                         Serial.print("Client requested: ");
                         Serial.println(path);
 
-                        // Open requested file
-                        File file = LittleFS.open(path, "r");
-                        // if we find a file, we send it and print what we connect to for debugging
-                        // can be removed later on
-                        if (file)
+                        // ---- Handle gestures ----
+                        if (path.startsWith("/gesture"))
                         {
-                            Serial.print("Sending ");
-                            Serial.println(path);
-
-                            // conn to css file
-                            if (path.endsWith(".css"))
-                                client.println("HTTP/1.1 200 OK\r\nContent-Type: text/css\r\n\r\n");
-                            // conn to js file
-                            else if (path.endsWith(".js"))
-                                client.println("HTTP/1.1 200 OK\r\nContent-Type: application/javascript\r\n\r\n");
-                            else
-                                client.println("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
-
-                            while (file.available())
+                            // Parse the "name" parameter
+                            int nameIndex = path.indexOf("name=");
+                            String gesture = "";
+                            if (nameIndex >= 0)
                             {
-                                client.write(file.read());
+                                gesture = path.substring(nameIndex + 5);
+                                int ampIndex = gesture.indexOf('&'); // ignore extra parameters
+                                if (ampIndex >= 0)
+                                    gesture = gesture.substring(0, ampIndex);
                             }
-                            file.close();
-                            Serial.println("File sent successfully!");
+
+                            Serial.println("Gesture requested: " + gesture);
+
+                            // Call your C++ gesture functions
+                            if (gesture == "close")
+                                close_all();
+                            else if (gesture == "countU")
+                                count_up();
+                            else if (gesture == "countD")
+                                count_down();
+                            else if (gesture == "peace")
+                                peace();
+                            else if (gesture == "ok")
+                                ok_sign();
+                            else if (gesture == "hold")
+                                hold_phone();
+                            else if (gesture == "come")
+                                come_here_sign();
+                            else if (gesture == "love")
+                                i_love_you_sign();
+                            else if (gesture == "berserk")
+                                go_berserk();
+
+                            // Send HTTP response
+                            client.println("HTTP/1.1 200 OK");
+                            client.println("Content-Type: text/plain");
+                            client.println("Connection: close");
+                            client.println();
+                            client.println("OK: " + gesture);
+
+                            break; // End of response
                         }
-                        // err if we can not connect to files
+                        // ---- Serve files ----
                         else
                         {
-                            Serial.println(path + " not found!");
-                            client.println("HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n<h1>404 Not Found</h1>");
-                        }
+                            File file = LittleFS.open(path, "r");
 
-                        client.println();
-                        break; // End of response
+                            if (file)
+                            {
+                                Serial.print("Sending ");
+                                Serial.println(path);
+
+                                // Set correct content type
+                                if (path.endsWith(".css"))
+                                    client.println("HTTP/1.1 200 OK\r\nContent-Type: text/css\r\n\r\n");
+                                else if (path.endsWith(".js"))
+                                    client.println("HTTP/1.1 200 OK\r\nContent-Type: application/javascript\r\n\r\n");
+                                else
+                                    client.println("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
+
+                                while (file.available())
+                                    client.write(file.read());
+
+                                file.close();
+                                Serial.println("File sent successfully!");
+                            }
+                            else
+                            {
+                                Serial.println(path + " not found!");
+                                client.println("HTTP/1.1 404 Not Found\r\nContent-Type: text/html\r\n\r\n<h1>404 Not Found</h1>");
+                            }
+
+                            client.println();
+                            break; // End of response
+                        }
+                        // -------------------------------
                     }
                     else
                     {

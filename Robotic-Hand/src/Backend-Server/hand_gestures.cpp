@@ -284,7 +284,7 @@ void go_berserk(void)
     reset_all();
     delay(100);
 
-    random_angles[FINGER_COUNT];
+    uint32_t random_angles[FINGER_COUNT];
 
     uint8_t counter = 0;
     while (counter < 10) // at least 10 gestures to be executed
