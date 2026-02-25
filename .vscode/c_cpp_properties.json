@@ -8,9 +8,10 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/include",
-                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src/Backend-Server",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESPAsyncWebServer/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP@1.1.1/src",
                 "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/TFT_eSPI",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
@@ -213,6 +214,7 @@
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/variants/mhetesp32devkit",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -237,7 +239,6 @@
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
-                "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
@@ -246,9 +247,10 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/include",
-                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src/Backend-Server",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESPAsyncWebServer/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP@1.1.1/src",
                     "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/TFT_eSPI",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
@@ -451,6 +453,7 @@
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/variants/mhetesp32devkit",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -475,7 +478,6 @@
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
-                    "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
@@ -483,8 +485,9 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=60118",
+                "PLATFORMIO=60119",
                 "ARDUINO_MH_ET_LIVE_ESP32DEVKIT",
+                "CORE_DEBUG_LEVEL=0",
                 "HAVE_CONFIG_H",
                 "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\"",
                 "UNITY_INCLUDE_CONFIG_H",
