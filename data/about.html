@@ -50,15 +50,10 @@
                 <p style="margin-top: 30px; font-size: 1.2rem;">
                     The advancement of the Internet of Things (IoT) and embedded systems has opened new possibilities in human–machine interaction, robotics, and 
                     remote control technologies. This project, titled "IoT Robotic Hand", aims to design and implement a robotic hand that can be wirelessly controlled 
-                    through both a sensor-equipped glove and a web-based interface.
+                    through a web-based interface.
                 </p>
                 <p style="margin-top: 10px; font-size: 1.2rem;">
-                    The project utilizes two ESP32 microcontrollers—one embedded in the robotic hand and another integrated into a wearable glove. 
-                    The glove is equipped with flex sensors that detect the bending motion of each finger. These sensor readings are transmitted via Wi-Fi to the ESP32 
-                    controlling the robotic hand, which replicates the same movements in real time using servo motors. This setup allows the robotic hand to imitate natural
-                    human gestures with high accuracy and low latency.
-                </p>
-                <p style="margin-top: 10px; font-size: 1.2rem;">
+                    The project utilizes one ESP32 microcontroller, embedded in the robotic hand.
                     In addition to gesture-based control, the system also features a web server interface hosted on the ESP32, allowing users to control the robotic hand 
                     remotely through a standard web browser.
                 </p>
@@ -88,8 +83,8 @@
                 <div class="card hover-lift stagger-1">
                     <h3>Backend — C++ </h3>
                     <p>
-                    Implements an onboard web server using C++ (Arduino Framework) to handle HTTP requests, control servo motors, and manage communication between the browser, 
-                    robotic hand & sensor glove.
+                    Implements an onboard web server using C++ to handle HTTP requests, control servo motors, and manage communication between the browser & 
+                    robotic hand.
                     </p>
                     <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
                         <li>Handles Wi-Fi and AP modes</li>

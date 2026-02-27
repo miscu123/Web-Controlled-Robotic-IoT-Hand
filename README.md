@@ -46,14 +46,14 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 
 ### Real-Time Communication
 
-- Instant response through WebSocket or MQTT
+- Instant response through WebSocket 
 - Bi-directional updates between device and web interface
 
 ### Hardware Integration
 
-- 6-finger robotic hand actuated by servo motors (5 for fingers, 1 for wrist rotation)
+- 5 finger robotic hand actuated by servo motors
 - 3D printed OR metal mechanical structure 
-- ESP32-based embedded controller
+- ESP32-based embedded MCU
 
 ### IoT Connectivity
 
@@ -72,7 +72,7 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 | **1. Servo Control**       | Basic servo control using ESP32 PWM       | Single finger motion    |
 | **2. Wi-Fi Setup**         | Connect ESP32 to local Wi-Fi network      | Network connectivity    |
 | **3. Web Server**          | Host control webpage on ESP32             | Browser-based control   |
-| **4. Multi-Servo Control** | Add all 6 servos with coordinated motion  | Functional robotic hand |
+| **4. Multi-Servo Control** | Add all 5 servos with coordinated motion  | Functional robotic hand |
 | **5. Mechanical Assembly** | Build and mount servos to frame           | Fully assembled hand    |
 | **6. Full Web UI**         | Add sliders, presets, and gesture buttons | Interactive interface   |
 

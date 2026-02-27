@@ -10,7 +10,6 @@
 #include <ESPAsyncWebServer.h>
 #include <AsyncTCP.h>
 #include <stdint.h>
-#include "esp_random.h"
 
 /* MACROS */
 #define LITTLE_PIN 17
@@ -47,11 +46,8 @@ void count_down(void);
 void peace(void);
 void ok_sign(void);
 void hold_phone(void);
-void i_love_you_sign(void);
 void come_here_sign(void);
-void go_berserk(void);
 void connect_to_server(void);
 void setup_routes(void);
-void sum();
 
 #endif

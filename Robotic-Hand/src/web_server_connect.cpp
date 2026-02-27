@@ -54,8 +54,6 @@ void setup_routes()
             else if (gesture == "ok") ok_sign();
             else if (gesture == "hold") hold_phone();
             else if (gesture == "come") come_here_sign();
-            else if (gesture == "love") i_love_you_sign();
-            else if (gesture == "berserk") go_berserk();
 
             request->send(200, "text/plain", "OK");
             Serial.println("Gesture requested: " + gesture);
