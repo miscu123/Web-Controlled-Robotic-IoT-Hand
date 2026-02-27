@@ -50,8 +50,8 @@ void hold_phone(void);
 void i_love_you_sign(void);
 void come_here_sign(void);
 void go_berserk(void);
-
 void connect_to_server(void);
 void setup_routes(void);
+void sum();
 
 #endif
