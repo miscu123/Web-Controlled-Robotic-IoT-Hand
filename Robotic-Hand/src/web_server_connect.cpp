@@ -31,7 +31,9 @@ void connect_to_server()
     }
 
     Serial.println();
+    Serial.print("---------------------------");
     Serial.print("Connected! IP: ");
+    Serial.print("---------------------------");
     Serial.println(WiFi.localIP());
 }
 
@@ -54,7 +56,8 @@ void setup_routes()
             else if (gesture == "ok") ok_sign();
             else if (gesture == "hold") hold_phone();
             else if (gesture == "come") come_here_sign();
-
+            else if (gesture == "reset") reset_all();
+            
             request->send(200, "text/plain", "OK");
             Serial.println("Gesture requested: " + gesture);
         } else {
