@@ -2,6 +2,7 @@
 #include "main_cfg.hpp"
 
 /* GLOBAL FUNCTION DEFINITIONS */
+/* Close all fingers */
 void close_all(void)
 {
     servo_little.write(CLOSE_FINGER);
@@ -12,6 +13,7 @@ void close_all(void)
     servo_wrist.write(CLOSE_FINGER);
 }
 
+/* Reset all fingers */
 void reset_all(void)
 {
     servo_little.write(DEFAULT_ANGLE);
@@ -22,7 +24,7 @@ void reset_all(void)
     servo_wrist.write(DEFAULT_ANGLE);
 }
 
-/* index -> middle -> thumb -> ring -> little */
+/* Index -> middle -> thumb -> ring -> little */
 void count_up(void)
 {
     /* First close all fingers to begin counting up */
@@ -74,7 +76,7 @@ void count_up(void)
 
 void count_down(void)
 {
-    /* First open all fingers to begin counting up */
+    /* First open all fingers to begin counting down */
     reset_all();
     delay(200);
     for (angle = 0; angle <= 180; angle += 3)
@@ -121,6 +123,7 @@ void count_down(void)
     Serial.println("Count DOWN Done!");
 }
 
+/* Peace sign gesture */
 void peace(void)
 {
     close_all();
@@ -144,6 +147,7 @@ void peace(void)
     Serial.println("Peace Done!");
 }
 
+/* Ok sign gesture */
 void ok_sign(void)
 {
     reset_all();
@@ -171,6 +175,7 @@ void ok_sign(void)
     Serial.println("OK Sign Done!");
 }
 
+/* Phone holding gesture */
 void hold_phone(void)
 {
     reset_all();
@@ -198,6 +203,7 @@ void hold_phone(void)
     Serial.println("Holding Phone!");
 }
 
+/* Come here gesture */
 void come_here_sign(void)
 {
     close_all();

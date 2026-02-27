@@ -44,6 +44,7 @@ void setup_routes()
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
     // Gesture handler
+    // Fetch all gestures from web interface and execute the Cpp callbacks
     server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
               {
         if (request->hasParam("name")) {

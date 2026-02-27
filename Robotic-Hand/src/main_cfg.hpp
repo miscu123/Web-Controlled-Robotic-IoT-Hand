@@ -1,3 +1,4 @@
+/* GUARDS */
 #ifndef MAIN_CFG_HPP
 #define MAIN_CFG_HPP
 

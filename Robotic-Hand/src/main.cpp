@@ -46,4 +46,5 @@ void setup()
 void loop()
 {
   // Nothing needed here, server is async
+  // Async server does not block and is way faster than sync server
 }
