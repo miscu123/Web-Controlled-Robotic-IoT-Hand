@@ -11,6 +11,8 @@ volatile uint32_t angle;
 
 const char *ssid = "DIGI-j4aJ";
 const char *password = "teAeJVK3Dn";
+//const char *ssid = "Mihai's iPhone";
+//const char *password = "vericu12";
 
 /* SETUP */
 void setup()
