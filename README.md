@@ -40,19 +40,19 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 
 ### Interactive Web Dashboard
 
-- Control each finger via sliders / buttons
+- Control each finger 
 - Execute saved gestures instantly
 - Monitor servo positions and feedback sensors
 
 ### Real-Time Communication
 
-- Instant response through WebSocket 
+- FAST response through WebSocket 
 - Bi-directional updates between device and web interface
 
 ### Hardware Integration
 
 - 5 finger robotic hand actuated by servo motors
-- 3D printed OR metal mechanical structure 
+- 3D printed / metal mechanical structure OR wooden structure 
 - ESP32-based embedded MCU
 
 ### IoT Connectivity
@@ -85,7 +85,6 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 - Vanilla JS & HTML for frontend
 - CSS for styling
 - Git & GitHub for version control
-- Docker -- optional
 
 ---
 
@@ -100,4 +99,5 @@ Establish a seamless communication layer between the **WEB Interface** & **ESP32
 This project is licensed under the **MIT License** – feel free to modify and improve upon it for educational and research purposes.
 
 ---
+
 
