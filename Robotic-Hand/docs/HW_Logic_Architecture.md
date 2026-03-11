@@ -29,8 +29,5 @@ _Thumb finger_
 WIRE: green
 PIN: 18
 
-_Wrist_
-WIRE: blue
-PIN: 17
 
 ---

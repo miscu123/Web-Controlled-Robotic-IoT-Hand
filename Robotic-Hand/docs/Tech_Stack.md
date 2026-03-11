@@ -14,7 +14,7 @@ Implements an onboard web server using **C++ (Arduino framework)** to handle HTT
 - Runs natively on the microcontroller — no external computer or server needed.
 - Efficient memory and performance management.
 - Full control over hardware interfaces (GPIO, PWM, Serial, etc.).
-- Supports both **Wi-Fi** and **access point (AP)** modes for flexible connectivity.
+- Supports **Wi-Fi** mode for flexible connectivity.
 
 **Responsibilities:**
 
@@ -22,14 +22,14 @@ Implements an onboard web server using **C++ (Arduino framework)** to handle HTT
 - Receive and process HTTP requests from the browser.
 - Control servo positions based on user commands.
 - Maintain connection with all hardware components (motors, sensors, etc.).
-- Log command activity (optional via EEPROM, SD card, or external server).
+- Log command activity.
 
 **Example Flow:**
 
 1. ESP32 connects to Wi-Fi or starts its own access point.
-2. ESP32 hosts a web page at a local IP (e.g., `192.168.4.1`).
+2. ESP32 hosts a web page at a local IP.
 3. User opens the page in a browser.
-4. When the user sends a command, a **GET** or **POST** request is sent to the ESP32 web server.
+4. When the user sends a command, a **FETCH** request is sent to the ESP32 web server.
 5. ESP32 parses the command, moves the servos, and sends a response (JSON or plain text).
 
 ---
@@ -63,18 +63,17 @@ Provides the user interface for controlling the robotic hand from any web browse
 ## Hardware Components
 
 - **ESP32 Development Board**
-- **6× Servo Motors (SG90 / MG996R)**
-- **External 5V Power Supply**
+- **5× Servo Motors (MG996R)**
 - **Breadboard & Jumper Wires**
 - **3D Printed or Acrylic Hand Frame**
-- **Fishing Line & Elastic Rope (for finger movement)**
+- **Fishing Line & Elastic Rope (for finger movement and tendons)**
 
 ---
 
 ## Database — MongoDB
 
 **Purpose:**  
-Stores a **history of commands** sent to ESP32s, including timestamps and results.
+Stores a **history of commands** sent to ESP32s.
 
 **Why MongoDB?**
 
