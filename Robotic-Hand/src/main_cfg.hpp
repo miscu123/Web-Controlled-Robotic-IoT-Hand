@@ -13,12 +13,11 @@
 #include <stdint.h>
 
 /* MACROS */
-#define LITTLE_PIN 17
-#define RING_PIN 18
-#define MIDDLE_PIN 19
-#define INDEX_PIN 21
-#define THUMB_PIN 22
-#define WRIST_PIN 23
+#define LITTLE_PIN 23
+#define RING_PIN 22
+#define MIDDLE_PIN 21
+#define INDEX_PIN 19
+#define THUMB_PIN 18
 #define DEFAULT_ANGLE 0
 #define CLOSE_FINGER 180
 #define FINGER_COUNT 5

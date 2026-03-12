@@ -6,7 +6,6 @@ Servo servo_ring;
 Servo servo_middle;
 Servo servo_index;
 Servo servo_thumb;
-Servo servo_wrist;
 volatile uint32_t angle;
 
 const char *ssid = "DIGI-j4aJ";
@@ -33,7 +32,6 @@ void setup()
   servo_middle.attach(MIDDLE_PIN);
   servo_index.attach(INDEX_PIN);
   servo_thumb.attach(THUMB_PIN);
-  servo_wrist.attach(WRIST_PIN);
 
   // Reset positions
   reset_all();
