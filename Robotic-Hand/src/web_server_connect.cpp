@@ -38,15 +38,12 @@ void connect_to_server()
 }
 
 /* HELPER: Setup async routes */
-void setup_routes()
-{
+void setup_routes() {
     // Serve all static files from LittleFS root
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    // Gesture handler
-    // Fetch all gestures from web interface and execute the Cpp callbacks
-    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
-              {
+    // Gesture handler (preseturi)
+    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request) {
         if (request->hasParam("name")) {
             String gesture = request->getParam("name")->value();
             
@@ -63,7 +60,28 @@ void setup_routes()
             Serial.println("Gesture requested: " + gesture);
         } else {
             request->send(400, "text/plain", "Missing name parameter");
-        } });
+        }
+    });
+
+    // Finger slider handler (control individual)
+    server.on("/finger", HTTP_GET, [](AsyncWebServerRequest *request) {
+        if (request->hasParam("finger") && request->hasParam("angle")) {
+            String finger = request->getParam("finger")->value();
+            int angle = request->getParam("angle")->value().toInt();
+
+            // Aplica unghiul la servo-ul corespunzator
+            if (finger == "thumb") servo_thumb.write(angle);
+            else if (finger == "index") servo_index.write(angle);
+            else if (finger == "middle") servo_middle.write(angle);
+            else if (finger == "ring") servo_ring.write(angle);
+            else if (finger == "pinky") servo_little.write(angle);
+
+            request->send(200, "text/plain", "OK");
+            Serial.println("Finger: " + finger + " Angle: " + String(angle));
+        } else {
+            request->send(400, "text/plain", "Missing finger or angle parameter");
+        }
+    });
 
     server.begin();
     Serial.println("AsyncWebServer started");

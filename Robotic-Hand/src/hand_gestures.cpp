@@ -10,7 +10,6 @@ void close_all(void)
     servo_middle.write(CLOSE_FINGER);
     servo_index.write(CLOSE_FINGER);
     servo_thumb.write(CLOSE_FINGER);
-    servo_wrist.write(CLOSE_FINGER);
 }
 
 /* Reset all fingers */
@@ -21,7 +20,6 @@ void reset_all(void)
     servo_middle.write(DEFAULT_ANGLE);
     servo_index.write(DEFAULT_ANGLE);
     servo_thumb.write(DEFAULT_ANGLE);
-    servo_wrist.write(DEFAULT_ANGLE);
 }
 
 /* Index -> middle -> thumb -> ring -> little */

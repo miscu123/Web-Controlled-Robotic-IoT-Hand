@@ -48,7 +48,61 @@
             </div>
             System Ready - All Controls Active
         </div>
+        <!-- Finger Control Sliders - Compact Vertical -->
+<div class="glass animate-slide-in-bottom stagger-1" style="margin-bottom: 60px;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px; text-align: center;">
+        <span class="gradient-text">Finger Control</span>
+    </h2>
+    <div class="finger-sliders-vertical" style="display: flex; justify-content: center; align-items: flex-end; gap: 12px; height: 300px; max-width: 500px; margin: 0 auto;">
+        <!-- Thumb -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <input type="range" id="thumb" min="0" max="180" value="90" 
+                   oninput="setFingerAngle('thumb', this.value)" 
+                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
+            <label for="thumb">Thumb</label>
+            <span id="thumb-value">90°</span>
+        </div>
+        <!-- Index -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <input type="range" id="index" min="0" max="180" value="90" 
+                   oninput="setFingerAngle('index', this.value)" 
+                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
+            <label for="index">Index</label>
+            <span id="index-value">90°</span>
+        </div>
+        <!-- Middle -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <input type="range" id="middle" min="0" max="180" value="90" 
+                   oninput="setFingerAngle('middle', this.value)" 
+                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
+            <label for="middle">Middle</label>
+            <span id="middle-value">90°</span>
+        </div>
+        <!-- Ring -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <input type="range" id="ring" min="0" max="180" value="90" 
+                   oninput="setFingerAngle('ring', this.value)" 
+                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
+            <label for="ring">Ring</label>
+            <span id="ring-value">90°</span>
+        </div>
+        <!-- Pinky -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <input type="range" id="pinky" min="0" max="180" value="90" 
+                   oninput="setFingerAngle('pinky', this.value)" 
+                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
+            <label for="pinky">Pinky</label>
+            <span id="pinky-value">90°</span>
+        </div>
+    </div>
+</div>
 
+<script>
+function setFingerAngle(finger, value) {
+    document.getElementById(finger + '-value').textContent = value + '°';
+    // aici adaugi codul pentru a trimite valoarea către ESP32
+}
+</script>
         <!-- Quick Gestures -->
         <div class="glass animate-slide-in-bottom stagger-1" style="margin-bottom: 60px;">
             <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: center;">

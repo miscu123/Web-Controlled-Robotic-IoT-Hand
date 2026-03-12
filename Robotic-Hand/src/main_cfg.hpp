@@ -29,7 +29,6 @@ extern Servo servo_ring;
 extern Servo servo_middle;
 extern Servo servo_index;
 extern Servo servo_thumb;
-extern Servo servo_wrist;
 extern volatile uint32_t angle;
 
 /* WiFi credentials */
