@@ -20,7 +20,6 @@
 #define THUMB_PIN 18
 #define DEFAULT_ANGLE 0
 #define CLOSE_FINGER 180
-#define FINGER_COUNT 5
 
 /* GLOBAL VARIABLES */
 extern Servo servo_little;

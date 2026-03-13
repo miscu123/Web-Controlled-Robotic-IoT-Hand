@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +10,6 @@
 
     </style>
 </head>
-
 <body class="robo-bg">
     <!-- Racing Lines Background -->
     <div class="racing-lines">
@@ -19,7 +17,6 @@
         <div class="race-line" style="animation: slide-1 4s linear infinite;"></div>
         <div class="race-line" style="animation: slide-2 5s linear infinite;"></div>
     </div>
-
     <!-- Navigation Bar -->
     <nav
         style="padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; z-index: 100; width: 100%;">
@@ -30,7 +27,6 @@
                 Control</a>
         </div>
     </nav>
-
     <div class="container">
         <!-- Hero Section -->
         <section class="hero animate-fade-in">
@@ -48,54 +44,39 @@
             </div>
             System Ready - All Controls Active
         </div>
-        <!-- Finger Control Sliders - Compact Vertical -->
-<div class="glass animate-slide-in-bottom stagger-1" style="margin-bottom: 60px;">
-    <h2 style="font-size: 2rem; margin-bottom: 20px; text-align: center;">
-        <span class="gradient-text">Finger Control</span>
-    </h2>
-    <div class="finger-sliders-vertical" style="display: flex; justify-content: center; align-items: flex-end; gap: 12px; height: 300px; max-width: 500px; margin: 0 auto;">
-        <!-- Thumb -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <input type="range" id="thumb" min="0" max="180" value="90" 
-                   oninput="setFingerAngle('thumb', this.value)" 
-                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
-            <label for="thumb">Thumb</label>
-            <span id="thumb-value">90°</span>
+        <!-- Finger Control Sliders -->
+        <div class="finger-sliders">
+            <div class="finger">
+                <label>Thumb</label>
+                <input type="range" id="thumb" min="0" max="180" value="0"
+                oninput="setFingerAngle('thumb', this.value)">
+                <span id="thumb-value">0°</span>
+            </div>
+            <div class="finger">
+                <label>Index</label>
+                <input type="range" id="index" min="0" max="180" value="0"
+                oninput="setFingerAngle('index', this.value)">
+                <span id="index-value">0°</span>
+            </div>
+            <div class="finger">
+                <label>Middle</label>
+                <input type="range" id="middle" min="0" max="180" value="0"
+                oninput="setFingerAngle('middle', this.value)">
+                <span id="middle-value">0°</span>
+            </div>
+            <div class="finger">
+                <label>Ring</label>
+                <input type="range" id="ring" min="0" max="180" value="0"
+                oninput="setFingerAngle('ring', this.value)">
+                <span id="ring-value">0°</span>
+            </div>
+            <div class="finger">
+                <label>Pinky</label>
+                <input type="range" id="pinky" min="0" max="180" value="0"
+                oninput="setFingerAngle('pinky', this.value)">
+                <span id="pinky-value">0°</span>
+            </div>
         </div>
-        <!-- Index -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <input type="range" id="index" min="0" max="180" value="90" 
-                   oninput="setFingerAngle('index', this.value)" 
-                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
-            <label for="index">Index</label>
-            <span id="index-value">90°</span>
-        </div>
-        <!-- Middle -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <input type="range" id="middle" min="0" max="180" value="90" 
-                   oninput="setFingerAngle('middle', this.value)" 
-                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
-            <label for="middle">Middle</label>
-            <span id="middle-value">90°</span>
-        </div>
-        <!-- Ring -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <input type="range" id="ring" min="0" max="180" value="90" 
-                   oninput="setFingerAngle('ring', this.value)" 
-                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
-            <label for="ring">Ring</label>
-            <span id="ring-value">90°</span>
-        </div>
-        <!-- Pinky -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <input type="range" id="pinky" min="0" max="180" value="90" 
-                   oninput="setFingerAngle('pinky', this.value)" 
-                   style="writing-mode: bt-lr; transform: rotate(-90deg); width: 180px;">
-            <label for="pinky">Pinky</label>
-            <span id="pinky-value">90°</span>
-        </div>
-    </div>
-</div>
         <!-- Quick Gestures -->
         <div class="glass animate-slide-in-bottom stagger-1" style="margin-bottom: 60px;">
             <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: center;">
@@ -110,7 +91,6 @@
                 <button class="btn-secondary" onclick="setGesture('hold')">Hold Phone</button>
                 <button class="btn-secondary" onclick="setGesture('come')">Come Here</button>
             </div>
-
             <!-- Reset Button -->
             <div style="text-align: center; margin-top: 40px;">
                 <button class="btn-primary" onclick="setGesture('reset')" style="width: 100%; max-width: 400px; padding: 16px;">
@@ -118,7 +98,6 @@
                 </button>
             </div>
         </div>
-
         <!-- Footer -->
         <footer
             style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1);">

@@ -98,6 +98,15 @@ body {
 /* ============================= */
 /* BUTTONS */
 /* ============================= */
+.buttons {
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  flex-wrap: wrap;           
+  gap: 16px;                 
+  margin-top: 20px;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--robo-primary), var(--robo-primary-dark));
   border: 1px solid var(--robo-primary);
@@ -275,4 +284,107 @@ body {
     max-width: 300px;
     order: initial !important;
   }
+}
+
+/* ============================= */
+/* FINGER CONTROL SLIDERS */
+/* ============================= */
+
+.finger-sliders {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.finger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 60px;
+}
+
+/* Finger name */
+.finger label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--robo-steel);
+}
+
+/* Angle value */
+.finger span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--robo-primary);
+  text-shadow: 0 0 6px var(--robo-glow);
+}
+
+/* Vertical slider */
+.finger input[type="range"] {
+  appearance: none;
+  writing-mode: vertical-lr;
+  direction: rtl;
+
+  width: 8px;
+  height: 220px;
+
+  border-radius: 6px;
+  background: linear-gradient(
+    to top,
+    var(--robo-primary-dark),
+    var(--robo-primary)
+  );
+
+  box-shadow: 0 0 12px rgba(0,245,255,0.3);
+  outline: none;
+}
+
+/* Slider Thumb */
+.finger input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+  border-radius: 50%;
+  border: 2px solid var(--robo-primary);
+
+  box-shadow:
+    0 0 8px var(--robo-glow),
+    0 0 14px var(--robo-glow);
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.finger input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Firefox */
+.finger input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 2px solid var(--robo-primary);
+  box-shadow: 0 0 10px var(--robo-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .finger-sliders {
+    gap: 20px;
+  }
+
+  .finger input[type="range"] {
+    height: 180px;
+  }
+
 }
