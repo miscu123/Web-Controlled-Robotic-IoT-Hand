@@ -56,12 +56,6 @@ void init_gesture(const String &gesture);
 void update_gesture();
 void reset_all(void);
 void close_all(void);
-void count_up(void);
-void count_down(void);
-void peace(void);
-void ok_sign(void);
-void hold_phone(void);
-void come_here_sign(void);
 void connect_to_server(void);
 void setup_routes(void);
 
