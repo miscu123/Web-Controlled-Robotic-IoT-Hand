@@ -14,6 +14,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
+#include "soc/soc.h"
+#include "soc/rtc_cntl_reg.h"
 
 /* MACROS */
 #define LITTLE_PIN 23

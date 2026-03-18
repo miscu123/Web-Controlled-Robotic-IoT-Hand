@@ -8,7 +8,7 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/AlbuMihai/Downloads/Web-Controlled-Robotic-IoT-Hand-main/Web-Controlled-Robotic-IoT-Hand-main/Robotic-Hand/src",
+                "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src",
                 "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESPAsyncWebServer/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP@1.1.1/src",
@@ -247,7 +247,7 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/AlbuMihai/Downloads/Web-Controlled-Robotic-IoT-Hand-main/Web-Controlled-Robotic-IoT-Hand-main/Robotic-Hand/src",
+                    "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/Robotic-Hand/src",
                     "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/ESPAsyncWebServer/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "C:/Users/Lenovo/Documents/Web-Controlled-Robotic-IoT-Hand/.pio/libdeps/mhetesp32devkit/AsyncTCP@1.1.1/src",
