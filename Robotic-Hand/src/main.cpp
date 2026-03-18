@@ -6,17 +6,19 @@ Servo servo_ring;
 Servo servo_middle;
 Servo servo_index;
 Servo servo_thumb;
-volatile uint32_t angle;
+
+QueueHandle_t commandQueue;
 
 const char *ssid = "DIGI-j4aJ";
 const char *password = "teAeJVK3Dn";
-//const char *ssid = "Mihai's iPhone";
-//const char *password = "vericu12";
+// const char *ssid = "Mihai's iPhone";
+// const char *password = "vericu12";
 
 /* SETUP */
 void setup()
 {
   Serial.begin(115200);
+
   if (!LittleFS.begin(true))
   {
     Serial.println("Error mounting LittleFS");
@@ -35,6 +37,25 @@ void setup()
 
   // Reset positions
   reset_all();
+
+  // Create command queue
+  commandQueue = xQueueCreate(10, sizeof(Command));
+  if (commandQueue == NULL)
+  {
+    Serial.println("Failed to create command queue!");
+    while (1)
+      ;
+  }
+
+  // Start servo task
+  xTaskCreatePinnedToCore(
+      servo_task,
+      "Servo Task",
+      4096,
+      NULL,
+      2,
+      NULL,
+      1);
 
   // Start server
   setup_routes();

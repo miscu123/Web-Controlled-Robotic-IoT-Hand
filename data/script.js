@@ -1,20 +1,33 @@
-function setGesture(name) {
-    fetch("/gesture?name=" + name);
-
-    const fingers = ['thumb', 'index', 'middle', 'ring', 'pinky'];
+async function setGesture(name) {
+    try {
+        const response = await fetch("/gesture?name=" + encodeURIComponent(name));
+        if (!response.ok) throw new Error(response.statusText);
+        console.log("Gesture queued:", name);
+    } catch (err) {
+        console.error("Gesture request failed:", err);
+    }
 
     if (name === 'reset') {
-        fingers.forEach(finger => {
+        ['thumb','index','middle','ring','pinky'].forEach(finger => {
             const slider = document.getElementById(finger);
             const display = document.getElementById(finger + '-value');
-            slider.value = 0;          
-            display.textContent = '0°'; 
+            if (slider && display) {
+                slider.value = 0;
+                display.textContent = '0°';
+            }
         });
     }
 }
 
-function setFingerAngle(finger, angle) {
-    document.getElementById(finger + '-value').textContent = angle + '°';
+async function setFingerAngle(finger, angle) {
+    const display = document.getElementById(finger + '-value');
+    if (display) display.textContent = angle + '°';
 
-    fetch(`/finger?finger=${finger}&angle=${angle}`);
+    try {
+        const response = await fetch(`/finger?finger=${encodeURIComponent(finger)}&angle=${angle}`);
+        if (!response.ok) throw new Error(response.statusText);
+        console.log(`Finger ${finger} queued: ${angle}°`);
+    } catch (err) {
+        console.error("Finger request failed:", err);
+    }
 }

@@ -11,6 +11,9 @@
 #include <ESPAsyncWebServer.h>
 #include <AsyncTCP.h>
 #include <stdint.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
 
 /* MACROS */
 #define LITTLE_PIN 23
@@ -27,16 +30,30 @@ extern Servo servo_ring;
 extern Servo servo_middle;
 extern Servo servo_index;
 extern Servo servo_thumb;
-extern volatile uint32_t angle;
 
-/* WiFi credentials */
+typedef enum
+{
+    CMD_GESTURE,
+    CMD_FINGER
+} CommandType;
+
+typedef struct
+{
+    CommandType type;
+    String gesture;
+    String finger;
+    int angle;
+} Command;
+
 extern const char *ssid;
 extern const char *password;
-
-/* Async Server */
 extern AsyncWebServer server;
+extern QueueHandle_t commandQueue;
 
 /* GLOBAL FUNCTION DECLARATIONS */
+void servo_task(void *param);
+void init_gesture(const String &gesture);
+void update_gesture();
 void reset_all(void);
 void close_all(void);
 void count_up(void);
