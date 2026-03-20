@@ -1,13 +1,13 @@
 #include "main_cfg.hpp"
 
 /* GLOBAL VARIABLES */
-extern const char *ssid;
-extern const char *password;
+const char *ssid;
+const char *password;
 
 WiFiClient client;
 AsyncWebServer server(80);
 
-/* ================= WIFI ================= */
+// WIFI 
 void connect_to_server()
 {
     Serial.print("Connecting to WiFi...");
@@ -27,11 +27,10 @@ void connect_to_server()
     Serial.println(WiFi.localIP());
 }
 
-/* ================= SERVO TASK ================= */
+// SERVO TASK
 void servo_task(void *param)
 {
     Command cmd;
-
     while (true)
     {
         if (xQueueReceive(commandQueue, &cmd, 0))
@@ -58,16 +57,14 @@ void servo_task(void *param)
     }
 }
 
-/* ================= ROUTES ================= */
-
+// ROUTES 
 void setup_routes()
 {
     // Serve static files
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    /* -------- Gesture Handler -------- */
-    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
-              {
+    // Gesture Handler 
+    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request) {
         if (request->hasParam("name"))
         {
             String gesture = request->getParam("name")->value();
@@ -90,7 +87,7 @@ void setup_routes()
             request->send(400, "text/plain", "Missing name parameter");
         } });
 
-    /* -------- Finger Handler -------- */
+    // Finger Handler
     server.on("/finger", HTTP_GET, [](AsyncWebServerRequest *request)
               {
         if (request->hasParam("finger") && request->hasParam("angle"))

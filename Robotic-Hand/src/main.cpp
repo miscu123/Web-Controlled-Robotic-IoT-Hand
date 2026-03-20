@@ -17,6 +17,7 @@ const char *password = "teAeJVK3Dn";
 /* SETUP */
 void setup()
 {
+  // bypass brownout issue
   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
 
   Serial.begin(115200);
@@ -45,8 +46,7 @@ void setup()
   if (commandQueue == NULL)
   {
     Serial.println("Failed to create command queue!");
-    while (1)
-      ;
+    for(;;){}
   }
 
   // Start servo task
@@ -55,9 +55,9 @@ void setup()
       "Servo Task",
       4096,
       NULL,
-      2,
+      2, // task priority in RTOS
       NULL,
-      1);
+      1); // we use core 1
 
   // Start server
   setup_routes();

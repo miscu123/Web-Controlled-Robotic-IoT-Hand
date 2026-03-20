@@ -1,7 +1,7 @@
 /* INCLUSIONS */
 #include "main_cfg.hpp"
 
-/* ================= STATE MACHINE DEFINITIONS ================= */
+// STATE MACHINE DEFINITIONS 
 enum GestureState
 {
     GESTURE_IDLE,
@@ -15,9 +15,9 @@ struct GestureContext
     uint32_t angle; // temporary angle for loops
     uint32_t count; // counter for repeated motions
     GestureState state;
-} gesture_ctx = {"", 0, 0, 0, GESTURE_IDLE};
+} gesture_ctx = {"", 0, 0, 0, GESTURE_IDLE}; // default init
 
-/* ================= BASIC FINGER HELPERS ================= */
+// BASIC FINGER HELPERS
 void close_all()
 {
     servo_little.write(CLOSE_FINGER);
@@ -36,7 +36,6 @@ void reset_all()
     servo_thumb.write(DEFAULT_ANGLE);
 }
 
-/* ================= GESTURE INITIALIZATION ================= */
 void init_gesture(const String &gesture)
 {
     gesture_ctx.current_gesture = gesture;
@@ -46,7 +45,7 @@ void init_gesture(const String &gesture)
     gesture_ctx.state = GESTURE_RUNNING;
 }
 
-/* ================= GESTURE UPDATE (NON-BLOCKING) ================= */
+// Non-blocking gesture update
 void update_gesture()
 {
     if (gesture_ctx.state != GESTURE_RUNNING)
@@ -199,7 +198,7 @@ void update_gesture()
             servo_index.write(DEFAULT_ANGLE);
             gesture_ctx.step++;
             gesture_ctx.angle = 0;
-            gesture_ctx.count = 0;
+            gesture_ctx.count = 0;       
         }
         else if (gesture_ctx.step == 1)
         {
