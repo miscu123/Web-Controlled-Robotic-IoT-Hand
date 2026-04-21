@@ -7,24 +7,41 @@ const char *password;
 WiFiClient client;
 AsyncWebServer server(80);
 
-// WIFI 
+// WIFI
 void connect_to_server()
 {
-    Serial.print("Connecting to WiFi...");
-    WiFi.begin(ssid, password);
+    Serial.println("Connecting to WiFi...");
+
+    WiFi.disconnect(true, true);
+    delay(1000);
+
+    WiFi.mode(WIFI_STA);
     WiFi.setSleep(false);
 
-    while (WiFi.status() != WL_CONNECTED)
+    WiFi.begin(ssid, password);
+
+    int tries = 0;
+    while (WiFi.status() != WL_CONNECTED && tries < 40)
     {
-        delay(200);
+        delay(500);
         Serial.print(".");
+        Serial.println(WiFi.status());
+        tries++;
     }
 
-    Serial.println();
-    Serial.print("---------------------------");
-    Serial.print("Connected! IP: ");
-    Serial.print("---------------------------");
-    Serial.println(WiFi.localIP());
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        Serial.println("WiFi connected!");
+        Serial.print("IP: ");
+        Serial.println(WiFi.localIP());
+    }
+    else
+    {
+        Serial.println("WiFi failed. Starting fallback AP...");
+        WiFi.softAP("RobotHand-Setup", "12345678");
+        Serial.print("AP IP: ");
+        Serial.println(WiFi.softAPIP());
+    }
 }
 
 // SERVO TASK
@@ -57,14 +74,15 @@ void servo_task(void *param)
     }
 }
 
-// ROUTES 
+// ROUTES
 void setup_routes()
 {
     // Serve static files
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    // Gesture Handler 
-    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request) {
+    // Gesture Handler
+    server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
+              {
         if (request->hasParam("name"))
         {
             String gesture = request->getParam("name")->value();
