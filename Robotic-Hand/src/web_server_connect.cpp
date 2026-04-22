@@ -1,8 +1,8 @@
 #include "main_cfg.hpp"
 
 /* GLOBAL VARIABLES */
-const char *ssid;
-const char *password;
+extern const char *ssid;
+extern const char *password;
 
 WiFiClient client;
 AsyncWebServer server(80);

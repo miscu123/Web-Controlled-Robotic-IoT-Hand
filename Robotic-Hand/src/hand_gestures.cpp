@@ -1,7 +1,7 @@
 /* INCLUSIONS */
 #include "main_cfg.hpp"
 
-// STATE MACHINE DEFINITIONS 
+// STATE MACHINE DEFINITIONS
 enum GestureState
 {
     GESTURE_IDLE,
@@ -21,19 +21,37 @@ struct GestureContext
 void close_all()
 {
     servo_little.write(CLOSE_FINGER);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_ring.write(CLOSE_FINGER);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_middle.write(CLOSE_FINGER);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_index.write(CLOSE_FINGER);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_thumb.write(CLOSE_FINGER);
+    vTaskDelay(pdMS_TO_TICKS(60));
 }
 
 void reset_all()
 {
     servo_little.write(DEFAULT_ANGLE);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_ring.write(DEFAULT_ANGLE);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_middle.write(DEFAULT_ANGLE);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_index.write(DEFAULT_ANGLE);
+    vTaskDelay(pdMS_TO_TICKS(60));
+
     servo_thumb.write(DEFAULT_ANGLE);
+    vTaskDelay(pdMS_TO_TICKS(60));
 }
 
 void init_gesture(const String &gesture)
@@ -198,7 +216,7 @@ void update_gesture()
             servo_index.write(DEFAULT_ANGLE);
             gesture_ctx.step++;
             gesture_ctx.angle = 0;
-            gesture_ctx.count = 0;       
+            gesture_ctx.count = 0;
         }
         else if (gesture_ctx.step == 1)
         {

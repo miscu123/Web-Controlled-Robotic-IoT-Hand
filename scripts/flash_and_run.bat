@@ -1,6 +1,6 @@
 @echo off
 SET PYTHON_PATH=C:\Users\AlbuMihai\AppData\Local\Python\pythoncore-3.14-64\python.exe
-SET LOG_FILE=flash_and_runbat.txt
+SET LOG_FILE=./scripts/logs/flash_and_runbat.txt
 
 echo. >> %LOG_FILE%
 echo. >> %LOG_FILE%
