@@ -29,5 +29,4 @@ _Thumb finger_
 WIRE: green
 PIN: 18
 
-
 ---
