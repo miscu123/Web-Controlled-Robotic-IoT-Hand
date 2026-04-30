@@ -46,7 +46,9 @@ void setup()
   if (commandQueue == NULL)
   {
     Serial.println("Failed to create command queue!");
-    for(;;){}
+    for (;;)
+    {
+    }
   }
 
   // Start servo task

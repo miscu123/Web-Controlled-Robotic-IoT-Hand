@@ -1,134 +1,159 @@
-ESP32 RTOS Gesture Control – Architecture Overview
+# ESP32 RTOS Gesture Control – Architecture Overview
 
-1. Key Components
+---
 
-ESP32 RTOS Environment:
+## Key Components
 
-- FreeRTOS handles multiple tasks concurrently.
+### ESP32 RTOS Environment
 
-Tasks:
+- Runs FreeRTOS for multitasking
+- Enables concurrent execution of:
+  - Web server
+  - Servo control
+  - WiFi stack
 
-- servo_task – Handles all servo motions via update_gesture() and direct finger angle commands.
-- AsyncWebServer task – Handles incoming HTTP requests from the browser or any client.
+---
 
-Data Passing:
+### Tasks
 
-- Queue (commandQueue) – Thread-safe communication between web server and servo_task.
+#### servo_task
 
-State Machines:
+- Controls all servo movements
+- Executes:
+  - update_gesture() (state machine)
+  - Direct finger commands
 
-- gesture_ctx tracks:
-  - current_gesture
-  - step
-  - angle
-  - count (repeat counter)
-- Executes gestures incrementally, non-blocking.
+#### AsyncWebServer Task
 
-JS Frontend:
+- Handles incoming HTTP requests
+- Parses parameters
+- Sends commands to queue
 
-- Sends /gesture?name=... or /finger?finger=...&angle=... requests asynchronously.
-- Updates sliders instantly.
+---
 
-2. Async Command Flow
+### Data Passing
 
-1. User triggers gesture on webpage.
-1. JS sends HTTP request asynchronously to ESP32:
-   fetch(`/gesture?name=${name}`)
-1. AsyncWebServer receives request:
-   - Extracts parameters (gesture or finger+angle)
-   - Packs into Command struct
-   - Pushes into commandQueue (xQueueSend)
-   - Responds 200 OK or 500 Queue full
-1. servo_task loop:
-   - Checks commandQueue via xQueueReceive (non-blocking)
-   - CMD_GESTURE → init_gesture(cmd.gesture)
-   - CMD_FINGER → servo.write() directly
-   - Calls update_gesture()
-   - vTaskDelay(8ms) → yields to other tasks
-1. update_gesture():
-   - Executes step-by-step gestures
-   - Updates gesture_ctx
-   - Non-blocking, exits after small action
-1. FreeRTOS scheduler allows web server, WiFi, and other tasks to run concurrently.
+#### commandQueue
 
-1. Flowchart Concept (Textual)
+- Thread-safe FreeRTOS queue
+- Decouples:
+  - Web server (producer)
+  - Servo task (consumer)
 
-User Browser
-│
-├─ JS Fetch /gesture or /finger
-▼
-ESP32 AsyncWebServer
-│
-├─ Validate parameters
-│
-├─ Create Command struct
-│
-├─ Push Command to commandQueue
-│
-└─ Respond 200 OK
-▼
-servo_task Loop
-│
-├─ xQueueReceive(commandQueue)
-│ ├─ CMD_GESTURE → init_gesture()
-│ └─ CMD_FINGER → move servo
-│
-├─ update_gesture() – increment step/angle
-│
-└─ vTaskDelay(8ms) → yield
-▼
-Next iteration
+---
 
-4. Key Insights
+### State Machine (gesture_ctx)
 
-- vTaskDelay yields every 8ms → gestures and server run concurrently
-- Queue decouples tasks → server never blocks
-- State machine executes gestures in small increments → non-blocking
-- JS async fetch → frontend updates instantly
+Tracks gesture execution:
 
-Code logic architecture:
-[ Web Server Task ] → [ Command Queue ] → [ Servo Control Task ] → [ Hardware (Servos) ]
+- current_gesture
+- step
+- angle
+- count (repetitions)
+
+Enables non-blocking, incremental execution.
+
+---
+
+### JavaScript Frontend
+
+- Sends async HTTP requests:
+  - /gesture?name=...
+  - /finger?finger=...&angle=...
+- Updates UI instantly
+
+---
+
+## Async Command Flow
+
+- User interacts with UI
+- JS sends async request:
+  fetch(`/gesture?name=${name}`)
+
+- ESP32 Web Server:
+  - Parses request
+  - Creates Command struct
+  - Pushes to commandQueue
+  - Responds with status
+
+- servo_task loop:
+  - Reads queue (non-blocking)
+  - CMD_GESTURE → init_gesture()
+  - CMD_FINGER → servo.write()
+  - Calls update_gesture()
+  - Uses vTaskDelay(8ms)
+
+- update_gesture():
+  - Executes small step
+  - Updates state
+  - Returns immediately
+
+- FreeRTOS Scheduler runs tasks concurrently
+
+---
+
+## Flow Overview
+
+User Browser → Web Server → Queue → Servo Task → Servos
+
+---
+
+## Key Insights
+
+- vTaskDelay allows multitasking
+- Queue prevents blocking
+- State machine avoids delays
+- Async JS keeps UI responsive
+
+---
+
+## Architecture Comparison
 
 Before:
-
-- HTTP → directly moves servos ❌
-- Race conditions ❌
-- Unsafe concurrency ❌
+HTTP → Direct Servo Control
 
 After:
+Web Server → Queue → Servo Task → Hardware
 
-- HTTP → queue → servo task → hardware ✅
+---
 
-5. Core Usage Flow
+## Core Usage
 
-Core 0 (PRO_CPU) – System / WiFi / Web Server
+Core 0:
 
-- Handles HTTP requests
-- Pushes Command structs into queue
-- Non-blocking, allows Core 1 to run servo_task
+- WiFi
+- Web Server
+- Push commands
 
-Core 1 (APP_CPU) – Servo Task
+Core 1:
 
-- Pulls Command from queue
-- CMD_GESTURE → init_gesture()
-- CMD_FINGER → servo.write()
-- update_gesture() runs non-blocking gesture state machine
-- vTaskDelay(8ms) yields to RTOS
+- Servo task
+- Process queue
+- Execute gestures
 
-6. JS Flow (Browser)
+---
 
-- setGesture(name):
-  - Sends GET /gesture?name=...
-  - Updates sliders if 'reset'
-- setFingerAngle(finger, angle):
-  - Sends GET /finger?finger=...&angle=...
-- Async fetch ensures UI never blocks
+## JavaScript Flow
 
-7. Summary Flow
+setGesture(name):
 
-Browser → Core 0: HTTP request
-Core 0 → Queue: Push Command
-Core 1 → servo_task: Pull Command
-Core 1 → update_gesture: Step-by-step servo motion
-Servos move gradually → gesture completed
-Browser can send new commands concurrently
+- Sends /gesture request
+
+setFingerAngle(finger, angle):
+
+- Sends /finger request
+
+---
+
+## End-to-End Flow
+
+Browser → Web Server → Queue → Servo Task → update_gesture → Servos
+
+---
+
+## Final Takeaway
+
+- True concurrency
+- Safe communication
+- Smooth motion
+- Responsive UI
