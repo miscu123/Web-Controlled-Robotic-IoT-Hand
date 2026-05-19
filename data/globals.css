@@ -820,6 +820,16 @@ a:hover {
 /* ============================= */
 /* RESPONSIVE                    */
 /* ============================= */
+.hover-lift {
+  transition: transform var(--duration) var(--ease),
+              box-shadow var(--duration) var(--ease);
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-panel), 0 0 0 1px rgba(14, 165, 233, 0.08);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 120px 20px 60px;
@@ -890,3 +900,63 @@ a:hover {
     width: 8px;
   }
 }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-in-bottom {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes podium-rise {
+  from { opacity: 0; transform: scaleY(0.4); }
+  to   { opacity: 1; transform: scaleY(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s var(--ease) both;
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.6s var(--ease) both;
+}
+
+.animate-podium-rise {
+  animation: podium-rise 0.6s var(--ease) both;
+  transform-origin: bottom;
+}
+
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.15s; }
+.stagger-3 { animation-delay: 0.25s; }
+
+/* Racing lines (controller.html) */
+.racing-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.race-line {
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, rgba(14,165,233,0.15), transparent);
+  left: 30%;
+  top: -60%;
+}
+
+.race-line:nth-child(2) { left: 55%; }
+.race-line:nth-child(3) { left: 75%; }
+
+@keyframes race-slide {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(300%); }
+}
+
+.race-line { animation: race-slide 4s linear infinite; }
