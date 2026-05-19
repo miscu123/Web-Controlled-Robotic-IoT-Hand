@@ -39,9 +39,6 @@ void setup()
   // Reset positions
   reset_all();
 
-  // Cream doua cozi in loc de una
-  // sizeof(char[32]) = dimensiunea unui mesaj in coada de gesturi
-  // sizeof(FingerCmd) = dimensiunea unui mesaj in coada de degete
   gestureQueue = xQueueCreate(10, sizeof(char[32]));
   fingerQueue  = xQueueCreate(10, sizeof(FingerCmd));
 

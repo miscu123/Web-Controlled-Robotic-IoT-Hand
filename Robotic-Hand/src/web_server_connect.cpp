@@ -81,14 +81,13 @@ void setup_routes()
 {
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    // Gesture Handler — trimiti direct stringul, fara struct intermediar
+    // Gesture Handler — directly send the string
     server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
     {
         if (request->hasParam("name"))
         {
             char gesture[32];
-            // strncpy copiaza sirul in buffer fix de 32 bytes
-            // asa poate intra in Queue (Queue nu accepta obiecte C++ cu constructor)
+            // strncpy copies 32 byte buffer so that it can enter Queue (Queue does not accept C++ objects with constructors)
             strncpy(gesture, request->getParam("name")->value().c_str(), sizeof(gesture));
 
             if (xQueueSend(gestureQueue, &gesture, 0) != pdPASS)
@@ -106,7 +105,6 @@ void setup_routes()
         }
     });
 
-    // Finger Handler — trimiti FingerCmd direct, fara CMD_FINGER enum
     server.on("/finger", HTTP_GET, [](AsyncWebServerRequest *request)
     {
         if (request->hasParam("finger") && request->hasParam("angle"))
