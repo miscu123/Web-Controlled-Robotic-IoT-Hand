@@ -47,26 +47,28 @@ void connect_to_server()
 // SERVO TASK
 void servo_task(void *param)
 {
-    Command cmd;
+    char gesture[32];
+    FingerCmd fcmd;
+
     while (true)
     {
-        if (xQueueReceive(commandQueue, &cmd, 0))
+        if (xQueueReceive(gestureQueue, &gesture, 0))
         {
-            if (cmd.type == CMD_GESTURE)
-                init_gesture(cmd.gesture);
-            else if (cmd.type == CMD_FINGER)
-            {
-                if (cmd.finger == "thumb")
-                    servo_thumb.write(cmd.angle);
-                if (cmd.finger == "index")
-                    servo_index.write(cmd.angle);
-                if (cmd.finger == "middle")
-                    servo_middle.write(cmd.angle);
-                if (cmd.finger == "ring")
-                    servo_ring.write(cmd.angle);
-                if (cmd.finger == "pinky")
-                    servo_little.write(cmd.angle);
-            }
+            init_gesture(gesture);
+        }
+   
+        if (xQueueReceive(fingerQueue, &fcmd, 0))
+        {
+            if (strcmp(fcmd.finger, "thumb") == 0) 
+                servo_thumb.write(fcmd.angle);
+            else if (strcmp(fcmd.finger, "index") == 0) 
+                servo_index.write(fcmd.angle);
+            else if (strcmp(fcmd.finger, "middle") == 0) 
+                servo_middle.write(fcmd.angle);
+            else if (strcmp(fcmd.finger, "ring") == 0) 
+                servo_ring.write(fcmd.angle);
+            else if (strcmp(fcmd.finger, "pinky") == 0) 
+                servo_little.write(fcmd.angle);    
         }
 
         update_gesture();
@@ -77,60 +79,56 @@ void servo_task(void *param)
 // ROUTES
 void setup_routes()
 {
-    // Serve static files
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    // Gesture Handler
+    // Gesture Handler — trimiti direct stringul, fara struct intermediar
     server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
-              {
+    {
         if (request->hasParam("name"))
         {
-            String gesture = request->getParam("name")->value();
+            char gesture[32];
+            // strncpy copiaza sirul in buffer fix de 32 bytes
+            // asa poate intra in Queue (Queue nu accepta obiecte C++ cu constructor)
+            strncpy(gesture, request->getParam("name")->value().c_str(), sizeof(gesture));
 
-            Command cmd;
-            cmd.type = CMD_GESTURE;
-            cmd.gesture = gesture;
-
-            if (xQueueSend(commandQueue, &cmd, 0) != pdPASS)
+            if (xQueueSend(gestureQueue, &gesture, 0) != pdPASS)
             {
                 request->send(500, "text/plain", "Queue full");
                 return;
             }
 
             request->send(200, "text/plain", "OK");
-            Serial.println("Gesture queued: " + gesture);
+            Serial.println("Gesture queued: " + String(gesture));
         }
         else
         {
             request->send(400, "text/plain", "Missing name parameter");
-        } });
+        }
+    });
 
-    // Finger Handler
+    // Finger Handler — trimiti FingerCmd direct, fara CMD_FINGER enum
     server.on("/finger", HTTP_GET, [](AsyncWebServerRequest *request)
-              {
+    {
         if (request->hasParam("finger") && request->hasParam("angle"))
         {
-            String finger = request->getParam("finger")->value();
-            int angle = request->getParam("angle")->value().toInt();
+            FingerCmd fcmd;
+            strncpy(fcmd.finger, request->getParam("finger")->value().c_str(), sizeof(fcmd.finger));
+            fcmd.angle = request->getParam("angle")->value().toInt();
 
-            Command cmd;
-            cmd.type = CMD_FINGER;
-            cmd.finger = finger;
-            cmd.angle = angle;
-
-            if (xQueueSend(commandQueue, &cmd, 0) != pdPASS)
+            if (xQueueSend(fingerQueue, &fcmd, 0) != pdPASS)
             {
                 request->send(500, "text/plain", "Queue full");
                 return;
             }
 
             request->send(200, "text/plain", "OK");
-            Serial.println("Finger queued: " + finger + " Angle: " + String(angle));
+            Serial.println("Finger queued: " + String(fcmd.finger) + " Angle: " + String(fcmd.angle));
         }
         else
         {
             request->send(400, "text/plain", "Missing finger or angle parameter");
-        } });
+        }
+    });
 
     server.begin();
     Serial.println("AsyncWebServer started");

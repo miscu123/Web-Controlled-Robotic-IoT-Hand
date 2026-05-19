@@ -18,6 +18,8 @@ struct GestureContext
 } gesture_ctx = {"", 0, 0, 0, GESTURE_IDLE}; // default init
 
 // BASIC FINGER HELPERS
+// May need to implement a for loop to close fingers kind of simultaniously but with small angles step by step and a small delay (5-10ms) so the human eye
+// Can not see that the fingers are being closed little by little and not in an instant
 void close_all()
 {
     servo_little.write(CLOSE_FINGER);

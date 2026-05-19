@@ -33,24 +33,23 @@ extern Servo servo_middle;
 extern Servo servo_index;
 extern Servo servo_thumb;
 
-typedef enum
-{
-    CMD_GESTURE,
-    CMD_FINGER
-} CommandType;
-
+// FingerCmd: date despre un singur deget
+// char finger[8] in loc de String — Queue-ul FreeRTOS
+// copiaza bytes in memorie, nu poate copia obiecte C++ (String)
 typedef struct
 {
-    CommandType type;
-    String gesture;
-    String finger;
+    char finger[8]; // "thumb", "index", "middle", "ring", "pinky"
     int angle;
-} Command;
+} FingerCmd;
+
+// Doua cozi separate, una per tip de comanda
+// Asa nu mai ai nevoie de enum/struct care spune "ce tip e comanda asta"
+extern QueueHandle_t gestureQueue; // trimite char[32] cu numele gestului
+extern QueueHandle_t fingerQueue;  // trimite FingerCmd
 
 extern const char *ssid;
 extern const char *password;
 extern AsyncWebServer server;
-extern QueueHandle_t commandQueue;
 
 /* GLOBAL FUNCTION DECLARATIONS */
 void servo_task(void *param);

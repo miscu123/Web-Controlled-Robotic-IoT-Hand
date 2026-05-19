@@ -7,7 +7,8 @@ Servo servo_middle;
 Servo servo_index;
 Servo servo_thumb;
 
-QueueHandle_t commandQueue;
+QueueHandle_t gestureQueue;
+QueueHandle_t fingerQueue;
 
 const char *ssid = "DIGI-j4aJ";
 const char *password = "teAeJVK3Dn";
@@ -17,9 +18,6 @@ const char *password = "teAeJVK3Dn";
 /* SETUP */
 void setup()
 {
-  // bypass brownout issue
-  WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
-
   Serial.begin(115200);
 
   if (!LittleFS.begin(true))
@@ -41,14 +39,16 @@ void setup()
   // Reset positions
   reset_all();
 
-  // Create command queue
-  commandQueue = xQueueCreate(10, sizeof(Command));
-  if (commandQueue == NULL)
+  // Cream doua cozi in loc de una
+  // sizeof(char[32]) = dimensiunea unui mesaj in coada de gesturi
+  // sizeof(FingerCmd) = dimensiunea unui mesaj in coada de degete
+  gestureQueue = xQueueCreate(10, sizeof(char[32]));
+  fingerQueue  = xQueueCreate(10, sizeof(FingerCmd));
+
+  if (gestureQueue == NULL || fingerQueue == NULL)
   {
     Serial.println("Failed to create command queue!");
-    for (;;)
-    {
-    }
+    for (;;) {}
   }
 
   // Start servo task
@@ -59,7 +59,7 @@ void setup()
       NULL,
       2, // task priority in RTOS
       NULL,
-      1); // we use core 1
+      1); // we use core 1 for tasks, core 0 for wifi server
 
   // Start server
   setup_routes();
