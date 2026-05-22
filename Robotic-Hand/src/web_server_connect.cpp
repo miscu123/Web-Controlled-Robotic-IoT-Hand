@@ -13,7 +13,7 @@ void connect_to_server()
     Serial.println("Connecting to WiFi...");
 
     WiFi.disconnect(true, true);
-    delay(1000);
+    vTaskDelay(pdMS_TO_TICKS(1000));
 
     WiFi.mode(WIFI_STA);
     WiFi.setSleep(false);
@@ -23,7 +23,7 @@ void connect_to_server()
     int tries = 0;
     while (WiFi.status() != WL_CONNECTED && tries < 40)
     {
-        delay(500);
+        vTaskDelay(pdMS_TO_TICKS(500));
         Serial.print(".");
         Serial.println(WiFi.status());
         tries++;
@@ -56,19 +56,19 @@ void servo_task(void *param)
         {
             init_gesture(gesture);
         }
-   
+
         if (xQueueReceive(fingerQueue, &fcmd, 0))
         {
-            if (strcmp(fcmd.finger, "thumb") == 0) 
+            if (strcmp(fcmd.finger, "thumb") == 0)
                 servo_thumb.write(fcmd.angle);
-            else if (strcmp(fcmd.finger, "index") == 0) 
+            else if (strcmp(fcmd.finger, "index") == 0)
                 servo_index.write(fcmd.angle);
-            else if (strcmp(fcmd.finger, "middle") == 0) 
+            else if (strcmp(fcmd.finger, "middle") == 0)
                 servo_middle.write(fcmd.angle);
-            else if (strcmp(fcmd.finger, "ring") == 0) 
+            else if (strcmp(fcmd.finger, "ring") == 0)
                 servo_ring.write(fcmd.angle);
-            else if (strcmp(fcmd.finger, "pinky") == 0) 
-                servo_little.write(fcmd.angle);    
+            else if (strcmp(fcmd.finger, "pinky") == 0)
+                servo_little.write(fcmd.angle);
         }
 
         update_gesture();
@@ -83,7 +83,7 @@ void setup_routes()
 
     // Gesture Handler — directly send the string
     server.on("/gesture", HTTP_GET, [](AsyncWebServerRequest *request)
-    {
+              {
         if (request->hasParam("name"))
         {
             char gesture[32];
@@ -102,11 +102,10 @@ void setup_routes()
         else
         {
             request->send(400, "text/plain", "Missing name parameter");
-        }
-    });
+        } });
 
     server.on("/finger", HTTP_GET, [](AsyncWebServerRequest *request)
-    {
+              {
         if (request->hasParam("finger") && request->hasParam("angle"))
         {
             FingerCmd fcmd;
@@ -125,8 +124,7 @@ void setup_routes()
         else
         {
             request->send(400, "text/plain", "Missing finger or angle parameter");
-        }
-    });
+        } });
 
     server.begin();
     Serial.println("AsyncWebServer started");
