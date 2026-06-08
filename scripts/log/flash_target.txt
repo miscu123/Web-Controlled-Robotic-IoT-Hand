@@ -1,5 +1,8 @@
+ 
+ 
+ 
 ============================== 
-Pornire script: Mon 06/08/2026 15:44:24.92 
+Pornire script: Mon 06/08/2026 19:17:19.63 
 ============================== 
 Rulez cu pio din PATH 
 Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
@@ -31,7 +34,7 @@ Auto-detected: COM4
 Erasing...
 esptool.py v4.9.0
 Serial port COM4
-Connecting.......
+Connecting....
 Chip is ESP32-D0WD-V3 (revision v3.0)
 Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
 Crystal is 40MHz
@@ -42,7 +45,7 @@ Stub running...
 Erasing flash (this may take a while)...
 Chip erase completed successfully in 2.0 seconds.
 Hard resetting via RTS pin...
-========================= [SUCCESS] Took 5.80 seconds =========================
+========================= [SUCCESS] Took 5.41 seconds =========================
 Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
 --------------------------------------------------------------------------------
 Verbose mode can be enabled via `-v, --verbose` option
@@ -101,15 +104,15 @@ Flash will be erased from 0x00010000 to 0x000e0fff...
 SHA digest in image updated
 Compressed 17536 bytes to 12202...
 Writing at 0x00001000... (100 %)
-Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 384.8 kbit/s)...
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 385.5 kbit/s)...
 Hash of data verified.
 Compressed 3072 bytes to 146...
 Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1292.3 kbit/s)...
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1422.3 kbit/s)...
 Hash of data verified.
 Compressed 8192 bytes to 47...
 Writing at 0x0000e000... (100 %)
-Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1904.8 kbit/s)...
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1908.8 kbit/s)...
 Hash of data verified.
 Compressed 854080 bytes to 550109...
 Writing at 0x00010000... (2 %)
@@ -146,12 +149,12 @@ Writing at 0x000ccfc4... (91 %)
 Writing at 0x000d270e... (94 %)
 Writing at 0x000d7aee... (97 %)
 Writing at 0x000dd2e6... (100 %)
-Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.6 seconds (effective 540.2 kbit/s)...
+Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.7 seconds (effective 540.1 kbit/s)...
 Hash of data verified.
 
 Leaving...
 Hard resetting via RTS pin...
-========================= [SUCCESS] Took 20.81 seconds =========================
+========================= [SUCCESS] Took 21.41 seconds =========================
 Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
 --------------------------------------------------------------------------------
 Verbose mode can be enabled via `-v, --verbose` option
@@ -195,7 +198,7 @@ Auto-detected: COM4
 Uploading .pio\build\mhetesp32devkit\littlefs.bin
 esptool.py v4.9.0
 Serial port COM4
-Connecting.....
+Connecting....
 Chip is ESP32-D0WD-V3 (revision v3.0)
 Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
 Crystal is 40MHz
@@ -207,28 +210,29 @@ Changing baud rate to 460800
 Changed.
 Configuring flash size...
 Flash will be erased from 0x00290000 to 0x003effff...
-Compressed 1441792 bytes to 216606...
-Writing at 0x00290000... (7 %)
-Writing at 0x00365598... (14 %)
-Writing at 0x003694e2... (21 %)
-Writing at 0x0036d54c... (28 %)
-Writing at 0x00371586... (35 %)
-Writing at 0x00376047... (42 %)
-Writing at 0x0037a02f... (50 %)
-Writing at 0x0037f072... (57 %)
-Writing at 0x0038306a... (64 %)
-Writing at 0x00387048... (71 %)
-Writing at 0x0038b7ae... (78 %)
-Writing at 0x0038f77b... (85 %)
-Writing at 0x003940e9... (92 %)
-Writing at 0x00398035... (100 %)
-Wrote 1441792 bytes (216606 compressed) at 0x00290000 in 7.3 seconds (effective 1579.0 kbit/s)...
+Compressed 1441792 bytes to 237616...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365566... (13 %)
+Writing at 0x00369485... (20 %)
+Writing at 0x0036d4fe... (26 %)
+Writing at 0x0037156d... (33 %)
+Writing at 0x003757d0... (40 %)
+Writing at 0x003797e9... (46 %)
+Writing at 0x0037d833... (53 %)
+Writing at 0x00382346... (60 %)
+Writing at 0x0038634e... (66 %)
+Writing at 0x0038a372... (73 %)
+Writing at 0x0038e664... (80 %)
+Writing at 0x00392667... (86 %)
+Writing at 0x00396c58... (93 %)
+Writing at 0x0039acd4... (100 %)
+Wrote 1441792 bytes (237616 compressed) at 0x00290000 in 7.8 seconds (effective 1485.3 kbit/s)...
 Hash of data verified.
 
 Leaving...
 Hard resetting via RTS pin...
-========================= [SUCCESS] Took 12.73 seconds =========================
-Finalizat: Mon 06/08/2026 15:45:05.66 
+========================= [SUCCESS] Took 13.25 seconds =========================
+Finalizat: Mon 06/08/2026 19:18:01.40 
 ============================== 
  
  
