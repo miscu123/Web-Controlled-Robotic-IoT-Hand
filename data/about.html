@@ -5,112 +5,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="globals.css" />
   <title>ABOUT - IoT Robotic Hand</title>
-  <link rel="icon" type="image/png" href="robotic-hand.png">
+  <link rel="icon" type="image/png" href="/data/resources/robotic-hand.png">
 </head>
 <body class="robo-bg">
-    <!-- Navigation Bar -->
-    <nav>
-        <div style="display: flex; gap: 16px;">
-            <a href="index.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">Home</a>
-            <a href="about.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">About</a>
-            <a href="controller.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.95rem;">Take Control</a>
-        </div>
-    </nav>
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero animate-fade-in">
-            <h1 class="gradient-text">ABOUT The IoT Robotic Hand</h1>
-        </section>
-        <!-- Feature Cards -->
-        <section class="grid">
-        <div class="card hover-lift animate-slide-in-bottom stagger-1">
-            <h3>INTRODUCTION</h3>
-            <p>Inspiration & first steps</p>
-        </div>
-        <div class="card hover-lift animate-slide-in-bottom stagger-2">
-            <h3>HAND DESIGNS</h3>
-            <p>From prototypes to finished product</p>
-        </div>
-        <div class="card hover-lift animate-slide-in-bottom stagger-3">
-            <h3>PROGRAMMING</h3>
-            <p>From sketches to finished programs</p>
-        </div>
-        </section>
-        <!-- Introduction -->
-        <section id="performance">
-            <div class="container animate-fade-in">
-                <h2 class="gradient-text" style="text-align: left; margin-top: 50px; font-size: 2.7rem;">
-                    INTRODUCTION
-                </h2>
-                <p style="margin-top: 30px; font-size: 1.2rem;">
-                    The advancement of the Internet of Things (IoT) and embedded systems has opened new possibilities in human–machine interaction, robotics, and 
-                    remote control technologies. This project, titled "IoT Robotic Hand", aims to design and implement a robotic hand that can be wirelessly controlled 
-                    through a web-based interface.
-                </p>
-                <p style="margin-top: 10px; font-size: 1.2rem;">
-                    The project utilizes one ESP32 microcontroller, embedded in the robotic hand.
-                    In addition to gesture-based control, the system also features a web server interface hosted on the ESP32, allowing users to control the robotic hand 
-                    remotely through a standard web browser.
-                </p>
-                <p style="margin-top: 10px; font-size: 1.2rem;">
-                    The IoT Robotic Hand project serves as a prototype for future applications in assistive technology, teleoperation, prosthetics, and remote robotic systems. 
-                    It showcases how affordable hardware and IoT connectivity can be combined to create interactive and practical solutions in modern robotics.
-                </p>
-            </div>
-        </section>
-        <!-- HAND DESIGNS-->
-        <section id="plans" style="margin-top: 35px;">
-            <div class="container animate-fade-in">
-                <h2 class="gradient-text" style="text-align: left; font-size: 2.7rem; margin-bottom: 40px;">
-                    HAND DESIGNS
-                </h2>
-            </div>
-        </section>
-        <!-- PROGRAMMING-->
-        <section id="plans" style="margin-top: 35px;">
-            <div class="container animate-fade-in">
-                <h2 class="gradient-text" style="text-align: left; font-size: 2.7rem; margin-bottom: 40px;">
-                    PROGRAMMING
-                </h2>
-                <!-- Backend Card -->
-                <div class="card hover-lift stagger-1">
-                    <h3>Backend — C++ </h3>
-                    <p>
-                    Implements an onboard web server using C++ to handle HTTP requests, control servo motors, and manage communication between the browser & 
-                    robotic hand.
-                    </p>
-                    <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
-                        <li>Handles Wi-Fi & Callbacks</li>
-                        <li>Controls hardware (GPIO, PWM, Serial)</li>
-                        <li>Can log commands</li>
-                    </ul>
-                </div>
-                <!-- Frontend Card -->
-                <div class="card hover-lift stagger-2">
-                    <h3>Frontend — HTML, CSS, JavaScript</h3>
-                    <p>
-                    Provides a responsive web interface for controlling the robotic hand from any browser. JavaScript sends commands to the ESP32’s server to move servos and 
-                    display feedback dynamically.
-                    </p>
-                    <ul style="margin-top:12px; color:#9ca3af; line-height:1.6;">
-                        <li>Real-time control with sliders & buttons</li>
-                        <li>Communicates via HTTP requests</li>
-                        <li>Displays live feedback and status</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(14, 8, 8, 0.1);">
-        <p style="color: #9ca3af; margin-bottom: 16px;">© 2026 IoT Robotic Hand</p>
-            <div class="buttons">
-            <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Home</a>
-            <a href="#performance" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Features</a>
-            <a href="#plans" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Future Plans</a>
-            <a href="https://github.com/miscu123" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">GitHub</a>
-            <a href="mailto:mihaialbu4567@gmail.com" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Contact</a>
-            </div>
-        </footer>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div style="display: flex; gap: 16px;">
+      <a href="index.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">Home</a>
+      <a href="about.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.95rem;">About</a>
+      <a href="controller.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.95rem;">Take Control</a>
     </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero -->
+    <section class="hero animate-fade-in">
+      <h1 class="gradient-text">ABOUT The IoT Robotic Hand</h1>
+    </section>
+
+    <!-- Quick-nav cards -->
+    <section class="grid">
+      <a href="#introduction" class="card hover-lift animate-slide-in-bottom stagger-1" style="text-decoration:none;">
+        <h3>INTRODUCTION</h3>
+        <p>Inspiration &amp; first steps</p>
+      </a>
+      <a href="#hand-designs" class="card hover-lift animate-slide-in-bottom stagger-2" style="text-decoration:none;">
+        <h3>HAND DESIGNS</h3>
+        <p>From prototypes to finished product</p>
+      </a>
+      <a href="#programming" class="card hover-lift animate-slide-in-bottom stagger-3" style="text-decoration:none;">
+        <h3>PROGRAMMING</h3>
+        <p>From sketches to finished programs</p>
+      </a>
+    </section>
+
+    <!-- ── INTRODUCTION ── -->
+    <section id="introduction">
+      <div class="container animate-fade-in" style="padding: 0; margin-top: 64px;">
+        <span class="section-label">01 — Overview</span>
+        <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 28px;">
+          INTRODUCTION
+        </h2>
+        <p style="font-size: 1.05rem; max-width: 950px;">
+          The advancement of the Internet of Things (IoT) and embedded systems has opened new possibilities in human–machine interaction, robotics, and remote control technologies.
+          This project aims to design and implement a robotic hand that can be wirelessly controlled through a web-based interface.
+        </p>
+        <p style="font-size: 1.05rem; max-width: 950px; margin-top: 16px;">
+          The project utilises one ESP32 microcontroller embedded inside the robotic arm. Beyond physical control, the system also features a web server hosted directly on the
+          ESP32 — allowing any standard web browser on the local network to command the hand in real time.
+        </p>
+        <p style="font-size: 1.05rem; max-width: 950px; margin-top: 16px;">
+          The IoT Robotic Hand serves as a prototype for future applications in assistive technology, teleoperation, prosthetics, and remote robotic systems. It showcases how
+          affordable hardware and IoT connectivity can be combined to create interactive, practical solutions in modern robotics.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── HAND DESIGNS ── -->
+    <section id="hand-designs" style="margin-top: 72px;">
+      <div class="animate-fade-in" style="padding: 0;">
+        <span class="section-label">02 — Build Progress</span>
+        <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 8px;">
+          HAND DESIGNS
+        </h2>
+        <p style="max-width: 950px; font-size: 0.95rem;">
+          Every build has a story. Here is the full journey from the first wiring session to a fully assembled, ESP32-powered robotic arm.
+        </p>
+
+        <!-- ═══ TIMELINE ═══ -->
+        <div class="timeline">
+
+          <!-- Phase 01 -->
+          <div class="timeline-item animate-slide-in-bottom stagger-1">
+            <div class="timeline-node">
+              <div class="timeline-dot">P.01</div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-phase">Phase 01 — Electronics Prep</span>
+              <h3>Wiring the Brain</h3>
+              <p>
+                Before any plastic was printed, the hardware foundation had to be laid.
+                The ESP32 microcontroller was fitted with female Dupont headers and wired
+                up with colour-coded jumper cables — one channel per servo. The rainbow of
+                wires maps directly to the five fingers: each colour representing a dedicated
+                PWM signal line. Getting the pinout right at this stage was critical.
+                A mislabelled wire here would mean a misfiring finger later.
+              </p>
+              <div class="timeline-photo">
+                <img src="./resources/esp32.jpg">
+                <div class="timeline-photo-caption">ESP32 Dev Board — GPIO headers &amp; PWM signal lines</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="timeline-item animate-slide-in-bottom stagger-2">
+            <div class="timeline-node">
+              <div class="timeline-dot">P.02</div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-phase">Phase 02 — First Assembly</span>
+              <h3>Hand Model v1 — Palm &amp; Thumb Servo</h3>
+              <p>
+                The first 3D-printed hand arrived in skin-tone PLA. At this stage the focus
+                was purely mechanical: verifying that the jointed finger segments articulate
+                correctly and that the palm provides enough real-estate to house a servo.
+                A single MG90S micro-servo was mounted on the palm to test thumb actuation.
+                With four fingers naturally extended and the thumb independently controlled,
+                the proof-of-concept was already taking shape.
+              </p>
+              <div class="timeline-photo">
+                <img src="./resources/Hand_model_1.jpeg">
+                <div class="photo-badge">v1 · Palm Servo</div>
+                <div class="timeline-photo-caption">Hand v1 — MG90S thumb servo mounted, four-finger open posture</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="timeline-item animate-slide-in-bottom stagger-3">
+            <div class="timeline-node">
+              <div class="timeline-dot">P.03</div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-phase">Phase 03 — Design Iteration</span>
+              <h3>Adding the Forearm — Internal Architecture</h3>
+              <p>
+                The hand alone was not enough. A full forearm section was designed and printed
+                to act as the electronics enclosure, keeping the ESP32 and wiring hidden
+                inside the body. This photo captures the design-review moment: the forearm
+                shell opened up, the wrist joint and rotation disc components laid out
+                separately, and the ESP32 board placed above to plan fitment. The hollow
+                interior was engineered with mounting tabs to keep the board secure without
+                adhesive.
+              </p>
+              <div class="timeline-photo">
+                <img src="./resources/Hand_model_2.jpeg">
+                <div class="photo-badge">v2 · Forearm</div>
+                <div class="timeline-photo-caption">Design review — forearm shell, wrist rotation discs, and ESP32 fitment planning</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="timeline-item animate-slide-in-bottom stagger-1">
+            <div class="timeline-node">
+              <div class="timeline-dot">P.04</div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-phase">Phase 04 — Structural Assembly</span>
+              <h3>Wrist Joint &amp; Forearm Integration</h3>
+              <p>
+                With the shell design confirmed, the arm was assembled for the first time as
+                a single structural unit. The side view reveals the wrist connector bridging
+                hand and forearm, the internal mounting rails clearly visible through the
+                open back panel, and the servo bracket locked into position at the palm.
+                This angle was used to check alignment tolerances — any twist or offset in
+                the wrist joint would accumulate into positioning error at the fingertips.
+              </p>
+              <div style="height: 550px; overflow: hidden; position: relative;">
+                <img src="./resources/Hand_model_3.jpeg" 
+                    style="position: absolute; top: 50%; left: 50%; 
+                            transform: translate(-50%, -50%);
+                            height: auto; width: 100%;
+                            image-orientation: none;">
+                <div class="photo-badge">v3 · Whole Hand</div>
+              </div>
+              
+              <div class="timeline-photo-caption">Side profile — wrist joint, internal rail system, and palm servo bracket</div>
+            </div>
+          </div>
+
+          <!-- Phase 05 — dual photo -->
+          <div class="timeline-item animate-slide-in-bottom stagger-2">
+            <div class="timeline-node">
+              <div class="timeline-dot">P.05</div>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-phase">Phase 05 — Electronics Integration &amp; Final Build</span>
+              <h3>ESP32 Mounted — The Complete System</h3>
+              <p>
+                The final stage: the ESP32 was slid into its forearm cradle and the arm
+                closed up. The left photo shows the board settled at the base of the
+                forearm cavity, USB port accessible from the bottom for flashing and power.
+                The right photo captures the finished arm standing upright — all five
+                fingers extended, the wrist servo visible through the palm opening, and the
+                ESP32 peeking out from below. At this point the web server was live, the
+                hand was online, and control via any browser on the local network was fully
+                operational.
+              </p>
+              <div class="timeline-photos-dual">
+                <div class="timeline-photo">
+                  <img src="">
+                  <div class="photo-badge">Electronics</div>
+                  <div class="timeline-photo-caption">ESP32 seated inside forearm — USB accessible at base</div>
+                </div>
+                <div class="timeline-photo">
+                  <img src="">
+                  <div class="photo-badge">Final Build</div>
+                  <div class="timeline-photo-caption">Completed arm — all fingers extended, system online</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROGRAMMING ── -->
+    <section id="programming" style="margin-top: 72px;">
+      <div class="animate-fade-in" style="padding: 0;">
+        <span class="section-label">03 — Software</span>
+        <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 28px;">
+          PROGRAMMING
+        </h2>
+        <div class="grid" style="margin-top: 0; gap: 16px;">
+
+          <!-- Backend Card -->
+          <div class="card hover-lift stagger-1">
+            <span class="section-label" style="margin-bottom: 12px; display: block;">Backend</span>
+            <h3>C++ on ESP32</h3>
+            <p style="margin-top: 10px;">
+              Implements an onboard web server using C++ to handle HTTP requests, control
+              servo motors, and manage communication between the browser and the robotic hand.
+            </p>
+            <ul style="margin-top: 16px; color: var(--text-muted); line-height: 1.7; font-size: 0.875rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px;">
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Wi-Fi connection &amp; HTTP callbacks</li>
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> GPIO &amp; PWM servo control</li>
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Serial command logging</li>
+            </ul>
+          </div>
+
+          <!-- Frontend Card -->
+          <div class="card hover-lift stagger-2">
+            <span class="section-label" style="margin-bottom: 12px; display: block;">Frontend</span>
+            <h3>HTML · CSS · JavaScript</h3>
+            <p style="margin-top: 10px;">
+              Provides a responsive web interface for controlling the robotic hand from any
+              browser. JavaScript sends commands to the ESP32's server to move servos and
+              display feedback dynamically.
+            </p>
+            <ul style="margin-top: 16px; color: var(--text-muted); line-height: 1.7; font-size: 0.875rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px;">
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Real-time sliders &amp; gesture buttons</li>
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> HTTP requests to ESP32 server</li>
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Live status &amp; feedback display</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06);">
+      <p style="color: #9ca3af; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">© 2026 IoT Robotic Hand</p>
+      <div class="buttons">
+        <a href="index.html" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Home</a>
+        <a href="#introduction" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Introduction</a>
+        <a href="#hand-designs" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Hand Designs</a>
+        <a href="https://github.com/miscu123/Web-Controlled-Robotic-IoT-Hand" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">GitHub</a>
+        <a href="mailto:mihaialbu4567@gmail.com" class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Contact</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
