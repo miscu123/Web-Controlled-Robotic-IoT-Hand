@@ -1,6 +1,6 @@
 @echo off
 SET PYTHON_PATH=C:\Users\AlbuMihai\AppData\Local\Python\pythoncore-3.14-64\python.exe
-SET LOG_FILE=./scripts/logs/flash_target.txt
+SET LOG_FILE=./scripts/log/flash_target.txt
 
 echo. >> %LOG_FILE%
 echo. >> %LOG_FILE%
@@ -32,5 +32,5 @@ echo ============================== >> %LOG_FILE%
 echo. >> %LOG_FILE%
 echo. >> %LOG_FILE%
 
-echo Toate comenzile au fost rulate. Monitorul serial rulează separat.
+echo Toate comenzile au fost rulate. Monitorul serial ruleaza separat.
 pause
