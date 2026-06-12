@@ -59,16 +59,17 @@ void servo_task(void *param)
 
         if (xQueueReceive(fingerQueue, &fcmd, 0))
         {
+            int angle = 180 - fcmd.angle;
             if (strcmp(fcmd.finger, "thumb") == 0)
-                servo_thumb.write(fcmd.angle);
+                servo_thumb.write(angle);
             else if (strcmp(fcmd.finger, "index") == 0)
-                servo_index.write(fcmd.angle);
+                servo_index.write(angle);
             else if (strcmp(fcmd.finger, "middle") == 0)
-                servo_middle.write(fcmd.angle);
+                servo_middle.write(angle);
             else if (strcmp(fcmd.finger, "ring") == 0)
-                servo_ring.write(fcmd.angle);
+                servo_ring.write(angle);
             else if (strcmp(fcmd.finger, "pinky") == 0)
-                servo_little.write(fcmd.angle);
+                servo_little.write(angle);
         }
 
         update_gesture();

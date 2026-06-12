@@ -20,9 +20,6 @@ async function setGesture(name) {
 }
 
 async function setFingerAngle(finger, angle) {
-    const display = document.getElementById(finger + '-value');
-    if (display) display.textContent = angle + '°';
-
     try {
         const response = await fetch(`/finger?finger=${encodeURIComponent(finger)}&angle=${angle}`);
         if (!response.ok) throw new Error(response.statusText);

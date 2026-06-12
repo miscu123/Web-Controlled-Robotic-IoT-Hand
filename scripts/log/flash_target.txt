@@ -236,3 +236,5054 @@ Finalizat: Mon 06/08/2026 19:18:01.40
 ============================== 
  
  
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:16:20.88 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.8 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.52 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847509 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 381.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 900.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2236.3 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550109...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7c3... (5 %)
+Writing at 0x0002592a... (8 %)
+Writing at 0x00032da4... (11 %)
+Writing at 0x00038861... (14 %)
+Writing at 0x0003e08b... (17 %)
+Writing at 0x00043838... (20 %)
+Writing at 0x00048efc... (23 %)
+Writing at 0x0004e14d... (26 %)
+Writing at 0x0005337b... (29 %)
+Writing at 0x0005856e... (32 %)
+Writing at 0x0005d9f8... (35 %)
+Writing at 0x00062c09... (38 %)
+Writing at 0x00067f75... (41 %)
+Writing at 0x0006d007... (44 %)
+Writing at 0x0007235c... (47 %)
+Writing at 0x00077723... (50 %)
+Writing at 0x0007d411... (52 %)
+Writing at 0x00082955... (55 %)
+Writing at 0x00087cd8... (58 %)
+Writing at 0x0008d0b3... (61 %)
+Writing at 0x00092517... (64 %)
+Writing at 0x00097af2... (67 %)
+Writing at 0x0009d3c8... (70 %)
+Writing at 0x000a3016... (73 %)
+Writing at 0x000a8acf... (76 %)
+Writing at 0x000ae786... (79 %)
+Writing at 0x000b77f5... (82 %)
+Writing at 0x000bf873... (85 %)
+Writing at 0x000c48d5... (88 %)
+Writing at 0x000ccfc4... (91 %)
+Writing at 0x000d270e... (94 %)
+Writing at 0x000d7aee... (97 %)
+Writing at 0x000dd2e6... (100 %)
+Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.7 seconds (effective 536.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 23.89 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365563... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e660... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1483.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.22 seconds =========================
+Finalizat: Fri 06/12/2026 14:17:06.52 
+============================== 
+  
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:18:04.11 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.03 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847509 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 389.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1109.7 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1972.3 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550109...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7c3... (5 %)
+Writing at 0x0002592a... (8 %)
+Writing at 0x00032da4... (11 %)
+Writing at 0x00038861... (14 %)
+Writing at 0x0003e08b... (17 %)
+Writing at 0x00043838... (20 %)
+Writing at 0x00048efc... (23 %)
+Writing at 0x0004e14d... (26 %)
+Writing at 0x0005337b... (29 %)
+Writing at 0x0005856e... (32 %)
+Writing at 0x0005d9f8... (35 %)
+Writing at 0x00062c09... (38 %)
+Writing at 0x00067f75... (41 %)
+Writing at 0x0006d007... (44 %)
+Writing at 0x0007235c... (47 %)
+Writing at 0x00077723... (50 %)
+Writing at 0x0007d411... (52 %)
+Writing at 0x00082955... (55 %)
+Writing at 0x00087cd8... (58 %)
+Writing at 0x0008d0b3... (61 %)
+Writing at 0x00092517... (64 %)
+Writing at 0x00097af2... (67 %)
+Writing at 0x0009d3c8... (70 %)
+Writing at 0x000a3016... (73 %)
+Writing at 0x000a8acf... (76 %)
+Writing at 0x000ae786... (79 %)
+Writing at 0x000b77f5... (82 %)
+Writing at 0x000bf873... (85 %)
+Writing at 0x000c48d5... (88 %)
+Writing at 0x000ccfc4... (91 %)
+Writing at 0x000d270e... (94 %)
+Writing at 0x000d7aee... (97 %)
+Writing at 0x000dd2e6... (100 %)
+Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.7 seconds (effective 537.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 22.89 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1487.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.89 seconds =========================
+Finalizat: Fri 06/12/2026 14:18:51.41 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:20:29.83 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.8 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.09 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847509 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 378.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1089.7 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2121.8 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550109...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7c3... (5 %)
+Writing at 0x0002592a... (8 %)
+Writing at 0x00032da4... (11 %)
+Writing at 0x00038861... (14 %)
+Writing at 0x0003e08b... (17 %)
+Writing at 0x00043838... (20 %)
+Writing at 0x00048efc... (23 %)
+Writing at 0x0004e14d... (26 %)
+Writing at 0x0005337b... (29 %)
+Writing at 0x0005856e... (32 %)
+Writing at 0x0005d9f8... (35 %)
+Writing at 0x00062c09... (38 %)
+Writing at 0x00067f75... (41 %)
+Writing at 0x0006d007... (44 %)
+Writing at 0x0007235c... (47 %)
+Writing at 0x00077723... (50 %)
+Writing at 0x0007d411... (52 %)
+Writing at 0x00082955... (55 %)
+Writing at 0x00087cd8... (58 %)
+Writing at 0x0008d0b3... (61 %)
+Writing at 0x00092517... (64 %)
+Writing at 0x00097af2... (67 %)
+Writing at 0x0009d3c8... (70 %)
+Writing at 0x000a3016... (73 %)
+Writing at 0x000a8acf... (76 %)
+Writing at 0x000ae786... (79 %)
+Writing at 0x000b77f5... (82 %)
+Writing at 0x000bf873... (85 %)
+Writing at 0x000c48d5... (88 %)
+Writing at 0x000ccfc4... (91 %)
+Writing at 0x000d270e... (94 %)
+Writing at 0x000d7aee... (97 %)
+Writing at 0x000dd2e6... (100 %)
+Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.7 seconds (effective 536.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.21 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1483.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.05 seconds =========================
+Finalizat: Fri 06/12/2026 14:21:13.18 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:21:55.71 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.03 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847509 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 384.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1012.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1769.3 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550109...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7c3... (5 %)
+Writing at 0x0002592a... (8 %)
+Writing at 0x00032da4... (11 %)
+Writing at 0x00038861... (14 %)
+Writing at 0x0003e08b... (17 %)
+Writing at 0x00043838... (20 %)
+Writing at 0x00048efc... (23 %)
+Writing at 0x0004e14d... (26 %)
+Writing at 0x0005337b... (29 %)
+Writing at 0x0005856e... (32 %)
+Writing at 0x0005d9f8... (35 %)
+Writing at 0x00062c09... (38 %)
+Writing at 0x00067f75... (41 %)
+Writing at 0x0006d007... (44 %)
+Writing at 0x0007235c... (47 %)
+Writing at 0x00077723... (50 %)
+Writing at 0x0007d411... (52 %)
+Writing at 0x00082955... (55 %)
+Writing at 0x00087cd8... (58 %)
+Writing at 0x0008d0b3... (61 %)
+Writing at 0x00092517... (64 %)
+Writing at 0x00097af2... (67 %)
+Writing at 0x0009d3c8... (70 %)
+Writing at 0x000a3016... (73 %)
+Writing at 0x000a8acf... (76 %)
+Writing at 0x000ae786... (79 %)
+Writing at 0x000b77f5... (82 %)
+Writing at 0x000bf873... (85 %)
+Writing at 0x000c48d5... (88 %)
+Writing at 0x000ccfc4... (91 %)
+Writing at 0x000d270e... (94 %)
+Writing at 0x000d7aee... (97 %)
+Writing at 0x000dd2e6... (100 %)
+Wrote 854080 bytes (550109 compressed) at 0x00010000 in 12.7 seconds (effective 539.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.74 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237618...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365564... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156e... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a370... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c56... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237618 compressed) at 0x00290000 in 7.8 seconds (effective 1485.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.29 seconds =========================
+Finalizat: Fri 06/12/2026 14:22:44.20 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:24:08.36 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.51 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 381.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1240.2 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2218.2 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550093...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7d4... (5 %)
+Writing at 0x0002590a... (8 %)
+Writing at 0x00032da5... (11 %)
+Writing at 0x0003886f... (14 %)
+Writing at 0x0003e0a0... (17 %)
+Writing at 0x00043842... (20 %)
+Writing at 0x00048f06... (23 %)
+Writing at 0x0004e155... (26 %)
+Writing at 0x00053387... (29 %)
+Writing at 0x00058579... (32 %)
+Writing at 0x0005d9fb... (35 %)
+Writing at 0x00062c16... (38 %)
+Writing at 0x00067f7e... (41 %)
+Writing at 0x0006d00f... (44 %)
+Writing at 0x00072367... (47 %)
+Writing at 0x00077733... (50 %)
+Writing at 0x0007d41a... (52 %)
+Writing at 0x0008295e... (55 %)
+Writing at 0x00087cec... (58 %)
+Writing at 0x0008d0c3... (61 %)
+Writing at 0x00092526... (64 %)
+Writing at 0x00097b0a... (67 %)
+Writing at 0x0009d3de... (70 %)
+Writing at 0x000a3024... (73 %)
+Writing at 0x000a8ae3... (76 %)
+Writing at 0x000ae799... (79 %)
+Writing at 0x000b78a4... (82 %)
+Writing at 0x000bf885... (85 %)
+Writing at 0x000c48eb... (88 %)
+Writing at 0x000ccfd0... (91 %)
+Writing at 0x000d2713... (94 %)
+Writing at 0x000d7af3... (97 %)
+Writing at 0x000dd2f3... (100 %)
+Wrote 854064 bytes (550093 compressed) at 0x00010000 in 12.7 seconds (effective 537.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 31.54 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237618...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365564... (13 %)
+Writing at 0x00369483... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156e... (33 %)
+Writing at 0x003757ce... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d831... (53 %)
+Writing at 0x00382344... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a370... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c56... (93 %)
+Writing at 0x0039acd2... (100 %)
+Wrote 1441792 bytes (237618 compressed) at 0x00290000 in 7.7 seconds (effective 1488.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.42 seconds =========================
+Finalizat: Fri 06/12/2026 14:25:02.13 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:26:17.24 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.35 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 383.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 964.9 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1942.0 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550074...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7d1... (5 %)
+Writing at 0x0002591b... (8 %)
+Writing at 0x00032dbd... (11 %)
+Writing at 0x0003888b... (14 %)
+Writing at 0x0003e0b4... (17 %)
+Writing at 0x00043857... (20 %)
+Writing at 0x00048f19... (23 %)
+Writing at 0x0004e165... (26 %)
+Writing at 0x0005339b... (29 %)
+Writing at 0x00058590... (32 %)
+Writing at 0x0005da16... (35 %)
+Writing at 0x00062c26... (38 %)
+Writing at 0x00067f90... (41 %)
+Writing at 0x0006d029... (44 %)
+Writing at 0x00072374... (47 %)
+Writing at 0x00077749... (50 %)
+Writing at 0x0007d428... (52 %)
+Writing at 0x0008296f... (55 %)
+Writing at 0x00087cfb... (58 %)
+Writing at 0x0008d0d5... (61 %)
+Writing at 0x00092536... (64 %)
+Writing at 0x00097b1e... (67 %)
+Writing at 0x0009d3f8... (70 %)
+Writing at 0x000a3035... (73 %)
+Writing at 0x000a8af6... (76 %)
+Writing at 0x000ae7af... (79 %)
+Writing at 0x000b78e1... (82 %)
+Writing at 0x000bf893... (85 %)
+Writing at 0x000c48fa... (88 %)
+Writing at 0x000ccfe9... (91 %)
+Writing at 0x000d272f... (94 %)
+Writing at 0x000d7b09... (97 %)
+Writing at 0x000dd30f... (100 %)
+Wrote 854064 bytes (550074 compressed) at 0x00010000 in 12.7 seconds (effective 537.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 24.89 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e660... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1482.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.03 seconds =========================
+Finalizat: Fri 06/12/2026 14:27:08.22 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:38:27.60 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.8 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.10 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 377.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 866.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1962.4 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550074...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7d1... (5 %)
+Writing at 0x0002591b... (8 %)
+Writing at 0x00032dbd... (11 %)
+Writing at 0x0003888b... (14 %)
+Writing at 0x0003e0b4... (17 %)
+Writing at 0x00043857... (20 %)
+Writing at 0x00048f19... (23 %)
+Writing at 0x0004e165... (26 %)
+Writing at 0x0005339b... (29 %)
+Writing at 0x00058590... (32 %)
+Writing at 0x0005da16... (35 %)
+Writing at 0x00062c26... (38 %)
+Writing at 0x00067f90... (41 %)
+Writing at 0x0006d029... (44 %)
+Writing at 0x00072374... (47 %)
+Writing at 0x00077749... (50 %)
+Writing at 0x0007d428... (52 %)
+Writing at 0x0008296f... (55 %)
+Writing at 0x00087cfb... (58 %)
+Writing at 0x0008d0d5... (61 %)
+Writing at 0x00092536... (64 %)
+Writing at 0x00097b1e... (67 %)
+Writing at 0x0009d3f8... (70 %)
+Writing at 0x000a3035... (73 %)
+Writing at 0x000a8af6... (76 %)
+Writing at 0x000ae7af... (79 %)
+Writing at 0x000b78e1... (82 %)
+Writing at 0x000bf893... (85 %)
+Writing at 0x000c48fa... (88 %)
+Writing at 0x000ccfe9... (91 %)
+Writing at 0x000d272f... (94 %)
+Writing at 0x000d7b09... (97 %)
+Writing at 0x000dd30f... (100 %)
+Wrote 854064 bytes (550074 compressed) at 0x00010000 in 12.7 seconds (effective 536.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.48 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365564... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.7 seconds (effective 1488.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.97 seconds =========================
+Finalizat: Fri 06/12/2026 14:39:12.17 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:44:16.66 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.37 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847481 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 382.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1504.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1892.5 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550076...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7f0... (5 %)
+Writing at 0x00025930... (8 %)
+Writing at 0x00032dc5... (11 %)
+Writing at 0x0003888a... (14 %)
+Writing at 0x0003e0b4... (17 %)
+Writing at 0x00043855... (20 %)
+Writing at 0x00048f1a... (23 %)
+Writing at 0x0004e170... (26 %)
+Writing at 0x000533a2... (29 %)
+Writing at 0x00058597... (32 %)
+Writing at 0x0005da11... (35 %)
+Writing at 0x00062c2a... (38 %)
+Writing at 0x00067f9f... (41 %)
+Writing at 0x0006d026... (44 %)
+Writing at 0x0007237b... (47 %)
+Writing at 0x0007774f... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082973... (55 %)
+Writing at 0x00087d02... (58 %)
+Writing at 0x0008d0d9... (61 %)
+Writing at 0x0009253d... (64 %)
+Writing at 0x00097b24... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a303c... (73 %)
+Writing at 0x000a8b11... (76 %)
+Writing at 0x000ae7b0... (79 %)
+Writing at 0x000b791a... (82 %)
+Writing at 0x000bf88f... (85 %)
+Writing at 0x000c48f9... (88 %)
+Writing at 0x000ccfe1... (91 %)
+Writing at 0x000d2728... (94 %)
+Writing at 0x000d7afd... (97 %)
+Writing at 0x000dd303... (100 %)
+Wrote 854064 bytes (550076 compressed) at 0x00010000 in 12.7 seconds (effective 536.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.16 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.7 seconds (effective 1490.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.28 seconds =========================
+Finalizat: Fri 06/12/2026 14:45:03.14 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:49:31.82 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.16 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847481 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 378.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1531.0 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1890.6 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550076...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7f0... (5 %)
+Writing at 0x00025930... (8 %)
+Writing at 0x00032dc5... (11 %)
+Writing at 0x0003888a... (14 %)
+Writing at 0x0003e0b4... (17 %)
+Writing at 0x00043855... (20 %)
+Writing at 0x00048f1a... (23 %)
+Writing at 0x0004e170... (26 %)
+Writing at 0x000533a2... (29 %)
+Writing at 0x00058597... (32 %)
+Writing at 0x0005da11... (35 %)
+Writing at 0x00062c2a... (38 %)
+Writing at 0x00067f9f... (41 %)
+Writing at 0x0006d026... (44 %)
+Writing at 0x0007237b... (47 %)
+Writing at 0x0007774f... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082973... (55 %)
+Writing at 0x00087d02... (58 %)
+Writing at 0x0008d0d9... (61 %)
+Writing at 0x0009253d... (64 %)
+Writing at 0x00097b24... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a303c... (73 %)
+Writing at 0x000a8b11... (76 %)
+Writing at 0x000ae7b0... (79 %)
+Writing at 0x000b791a... (82 %)
+Writing at 0x000bf88f... (85 %)
+Writing at 0x000c48f9... (88 %)
+Writing at 0x000ccfe1... (91 %)
+Writing at 0x000d2728... (94 %)
+Writing at 0x000d7afd... (97 %)
+Writing at 0x000dd303... (100 %)
+Wrote 854064 bytes (550076 compressed) at 0x00010000 in 12.7 seconds (effective 537.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.48 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fe... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634e... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e660... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1483.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.75 seconds =========================
+Finalizat: Fri 06/12/2026 14:50:15.15 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:51:14.41 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.81 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 382.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1405.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2101.5 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550074...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591d... (8 %)
+Writing at 0x00032dbe... (11 %)
+Writing at 0x0003888f... (14 %)
+Writing at 0x0003e0b9... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f1f... (23 %)
+Writing at 0x0004e167... (26 %)
+Writing at 0x0005339d... (29 %)
+Writing at 0x00058590... (32 %)
+Writing at 0x0005da15... (35 %)
+Writing at 0x00062c28... (38 %)
+Writing at 0x00067f92... (41 %)
+Writing at 0x0006d02c... (44 %)
+Writing at 0x0007237a... (47 %)
+Writing at 0x0007774d... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082971... (55 %)
+Writing at 0x00087cfe... (58 %)
+Writing at 0x0008d0d9... (61 %)
+Writing at 0x00092538... (64 %)
+Writing at 0x00097b1e... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a3037... (73 %)
+Writing at 0x000a8af7... (76 %)
+Writing at 0x000ae7b1... (79 %)
+Writing at 0x000b78ff... (82 %)
+Writing at 0x000bf895... (85 %)
+Writing at 0x000c48fc... (88 %)
+Writing at 0x000ccfea... (91 %)
+Writing at 0x000d2734... (94 %)
+Writing at 0x000d7b0b... (97 %)
+Writing at 0x000dd311... (100 %)
+Wrote 854064 bytes (550074 compressed) at 0x00010000 in 12.7 seconds (effective 536.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.88 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365563... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1481.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.27 seconds =========================
+Finalizat: Fri 06/12/2026 14:52:02.22 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:52:40.58 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+
+A fatal error occurred: Could not open COM4, the port is busy or doesn't exist.
+(could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5))
+
+Hint: Check if the port is not used by another task
+
+*** [erase] Error 2
+========================== [FAILED] Took 1.69 seconds ==========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847481 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 356.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 991.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1322.5 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550076...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7f0... (5 %)
+Writing at 0x00025930... (8 %)
+Writing at 0x00032dc5... (11 %)
+Writing at 0x0003888a... (14 %)
+Writing at 0x0003e0b4... (17 %)
+Writing at 0x00043855... (20 %)
+Writing at 0x00048f1a... (23 %)
+Writing at 0x0004e170... (26 %)
+Writing at 0x000533a2... (29 %)
+Writing at 0x00058597... (32 %)
+Writing at 0x0005da11... (35 %)
+Writing at 0x00062c2a... (38 %)
+Writing at 0x00067f9f... (41 %)
+Writing at 0x0006d026... (44 %)
+Writing at 0x0007237b... (47 %)
+Writing at 0x0007774f... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082973... (55 %)
+Writing at 0x00087d02... (58 %)
+Writing at 0x0008d0d9... (61 %)
+Writing at 0x0009253d... (64 %)
+Writing at 0x00097b24... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a303c... (73 %)
+Writing at 0x000a8b11... (76 %)
+Writing at 0x000ae7b0... (79 %)
+Writing at 0x000b791a... (82 %)
+Writing at 0x000bf88f... (85 %)
+Writing at 0x000c48f9... (88 %)
+Writing at 0x000ccfe1... (91 %)
+Writing at 0x000d2728... (94 %)
+Writing at 0x000d7afd... (97 %)
+Writing at 0x000dd303... (100 %)
+Wrote 854064 bytes (550076 compressed) at 0x00010000 in 12.7 seconds (effective 536.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.73 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237618...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365563... (13 %)
+Writing at 0x00369483... (20 %)
+Writing at 0x0036d4fc... (26 %)
+Writing at 0x0037156e... (33 %)
+Writing at 0x003757ce... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d831... (53 %)
+Writing at 0x00382344... (60 %)
+Writing at 0x0038634c... (66 %)
+Writing at 0x0038a370... (73 %)
+Writing at 0x0038e65e... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c56... (93 %)
+Writing at 0x0039acd2... (100 %)
+Wrote 1441792 bytes (237618 compressed) at 0x00290000 in 8.1 seconds (effective 1429.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.54 seconds =========================
+Finalizat: Fri 06/12/2026 14:53:24.12 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:56:15.75 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Error: Please specify `upload_port` for environment or use global `--upload-port` option.
+For some development platforms it can be a USB flash drive (i.e. /media/<user>/<device name>)
+*** [erase] Explicit exit, status 1
+========================== [FAILED] Took 3.68 seconds ==========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+*** [.pio\build\mhetesp32devkit\firmware.elf] Error 3
+AbortedByUser: Aborted by user
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Build interrupted.
+AbortedByUser: Aborted by user
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:56:42.07 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.80 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting..........
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 380.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 951.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1742.1 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550074...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591d... (8 %)
+Writing at 0x00032dbe... (11 %)
+Writing at 0x0003888f... (14 %)
+Writing at 0x0003e0b9... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f1f... (23 %)
+Writing at 0x0004e167... (26 %)
+Writing at 0x0005339d... (29 %)
+Writing at 0x00058590... (32 %)
+Writing at 0x0005da15... (35 %)
+Writing at 0x00062c28... (38 %)
+Writing at 0x00067f92... (41 %)
+Writing at 0x0006d02c... (44 %)
+Writing at 0x0007237a... (47 %)
+Writing at 0x0007774d... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082971... (55 %)
+Writing at 0x00087cfe... (58 %)
+Writing at 0x0008d0d9... (61 %)
+Writing at 0x00092538... (64 %)
+Writing at 0x00097b1e... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a3037... (73 %)
+Writing at 0x000a8af7... (76 %)
+Writing at 0x000ae7b1... (79 %)
+Writing at 0x000b78ff... (82 %)
+Writing at 0x000bf895... (85 %)
+Writing at 0x000c48fc... (88 %)
+Writing at 0x000ccfea... (91 %)
+Writing at 0x000d2734... (94 %)
+Writing at 0x000d7b0b... (97 %)
+Writing at 0x000dd311... (100 %)
+Wrote 854064 bytes (550074 compressed) at 0x00010000 in 12.7 seconds (effective 537.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 27.09 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237618...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365564... (13 %)
+Writing at 0x00369483... (20 %)
+Writing at 0x0036d4fc... (26 %)
+Writing at 0x0037156e... (33 %)
+Writing at 0x003757ce... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d831... (53 %)
+Writing at 0x00382344... (60 %)
+Writing at 0x0038634c... (66 %)
+Writing at 0x0038a370... (73 %)
+Writing at 0x0038e65e... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c56... (93 %)
+Writing at 0x0039acd2... (100 %)
+Wrote 1441792 bytes (237618 compressed) at 0x00290000 in 7.8 seconds (effective 1486.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.90 seconds =========================
+Finalizat: Fri 06/12/2026 14:57:31.20 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 14:59:17.32 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.42 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847501 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 379.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1220.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2009.4 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550082...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7f0... (5 %)
+Writing at 0x00025928... (8 %)
+Writing at 0x00032dc9... (11 %)
+Writing at 0x00038892... (14 %)
+Writing at 0x0003e0bb... (17 %)
+Writing at 0x0004386b... (20 %)
+Writing at 0x00048f2e... (23 %)
+Writing at 0x0004e18b... (26 %)
+Writing at 0x000533b6... (29 %)
+Writing at 0x000585ad... (32 %)
+Writing at 0x0005da50... (35 %)
+Writing at 0x00062c3d... (38 %)
+Writing at 0x00067fa6... (41 %)
+Writing at 0x0006d041... (44 %)
+Writing at 0x00072385... (47 %)
+Writing at 0x00077760... (50 %)
+Writing at 0x0007d435... (52 %)
+Writing at 0x0008297f... (55 %)
+Writing at 0x00087d0c... (58 %)
+Writing at 0x0008d0e5... (61 %)
+Writing at 0x00092544... (64 %)
+Writing at 0x00097b2d... (67 %)
+Writing at 0x0009d408... (70 %)
+Writing at 0x000a3041... (73 %)
+Writing at 0x000a8afd... (76 %)
+Writing at 0x000ae7b7... (79 %)
+Writing at 0x000b78e9... (82 %)
+Writing at 0x000bf89c... (85 %)
+Writing at 0x000c4903... (88 %)
+Writing at 0x000ccff2... (91 %)
+Writing at 0x000d2732... (94 %)
+Writing at 0x000d7b0a... (97 %)
+Writing at 0x000dd310... (100 %)
+Wrote 854080 bytes (550082 compressed) at 0x00010000 in 12.7 seconds (effective 538.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.00 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e65f... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1485.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.37 seconds =========================
+Finalizat: Fri 06/12/2026 15:00:04.17 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:01:08.82 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 6.77 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\main.cpp.o
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847477 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 381.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1083.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2186.0 kbit/s)...
+Hash of data verified.
+Compressed 854048 bytes to 550059...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7f4... (5 %)
+Writing at 0x0002592e... (8 %)
+Writing at 0x00032db9... (11 %)
+Writing at 0x0003887f... (14 %)
+Writing at 0x0003e0a3... (17 %)
+Writing at 0x0004384d... (20 %)
+Writing at 0x00048f14... (23 %)
+Writing at 0x0004e15b... (26 %)
+Writing at 0x00053394... (29 %)
+Writing at 0x0005858f... (32 %)
+Writing at 0x0005d9f9... (35 %)
+Writing at 0x00062c1c... (38 %)
+Writing at 0x00067f8a... (41 %)
+Writing at 0x0006d021... (44 %)
+Writing at 0x0007237b... (47 %)
+Writing at 0x0007774d... (50 %)
+Writing at 0x0007d42c... (52 %)
+Writing at 0x00082977... (55 %)
+Writing at 0x00087d06... (58 %)
+Writing at 0x0008d0de... (61 %)
+Writing at 0x00092541... (64 %)
+Writing at 0x00097b25... (67 %)
+Writing at 0x0009d406... (70 %)
+Writing at 0x000a304e... (73 %)
+Writing at 0x000a8b1a... (76 %)
+Writing at 0x000ae7b9... (79 %)
+Writing at 0x000b7953... (82 %)
+Writing at 0x000bf897... (85 %)
+Writing at 0x000c4904... (88 %)
+Writing at 0x000ccff5... (91 %)
+Writing at 0x000d2737... (94 %)
+Writing at 0x000d7b0f... (97 %)
+Writing at 0x000dd313... (100 %)
+Wrote 854048 bytes (550059 compressed) at 0x00010000 in 12.7 seconds (effective 536.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.26 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237617...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365565... (13 %)
+Writing at 0x00369484... (20 %)
+Writing at 0x0036d4fd... (26 %)
+Writing at 0x0037156f... (33 %)
+Writing at 0x003757cf... (40 %)
+Writing at 0x003797e8... (46 %)
+Writing at 0x0037d832... (53 %)
+Writing at 0x00382345... (60 %)
+Writing at 0x0038634d... (66 %)
+Writing at 0x0038a371... (73 %)
+Writing at 0x0038e660... (80 %)
+Writing at 0x00392666... (86 %)
+Writing at 0x00396c57... (93 %)
+Writing at 0x0039acd3... (100 %)
+Wrote 1441792 bytes (237617 compressed) at 0x00290000 in 7.8 seconds (effective 1486.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.88 seconds =========================
+Finalizat: Fri 06/12/2026 15:01:57.16 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:03:30.93 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.43 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847493 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 385.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 992.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2281.8 kbit/s)...
+Hash of data verified.
+Compressed 854064 bytes to 550074...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591c... (8 %)
+Writing at 0x00032dbe... (11 %)
+Writing at 0x0003888c... (14 %)
+Writing at 0x0003e0b9... (17 %)
+Writing at 0x00043858... (20 %)
+Writing at 0x00048f1e... (23 %)
+Writing at 0x0004e166... (26 %)
+Writing at 0x0005339c... (29 %)
+Writing at 0x00058590... (32 %)
+Writing at 0x0005da1a... (35 %)
+Writing at 0x00062c27... (38 %)
+Writing at 0x00067f91... (41 %)
+Writing at 0x0006d029... (44 %)
+Writing at 0x00072379... (47 %)
+Writing at 0x0007774d... (50 %)
+Writing at 0x0007d428... (52 %)
+Writing at 0x00082970... (55 %)
+Writing at 0x00087cfd... (58 %)
+Writing at 0x0008d0d8... (61 %)
+Writing at 0x00092538... (64 %)
+Writing at 0x00097b1e... (67 %)
+Writing at 0x0009d3fa... (70 %)
+Writing at 0x000a3036... (73 %)
+Writing at 0x000a8af7... (76 %)
+Writing at 0x000ae7b1... (79 %)
+Writing at 0x000b78fe... (82 %)
+Writing at 0x000bf895... (85 %)
+Writing at 0x000c48fa... (88 %)
+Writing at 0x000ccfe9... (91 %)
+Writing at 0x000d272f... (94 %)
+Writing at 0x000d7b09... (97 %)
+Writing at 0x000dd30f... (100 %)
+Wrote 854064 bytes (550074 compressed) at 0x00010000 in 12.7 seconds (effective 536.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 24.93 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237618...
+Writing at 0x00290000... (6 %)
+Writing at 0x00365564... (13 %)
+Writing at 0x00369483... (20 %)
+Writing at 0x0036d4fc... (26 %)
+Writing at 0x0037156e... (33 %)
+Writing at 0x003757ce... (40 %)
+Writing at 0x003797e7... (46 %)
+Writing at 0x0037d831... (53 %)
+Writing at 0x00382344... (60 %)
+Writing at 0x0038634c... (66 %)
+Writing at 0x0038a370... (73 %)
+Writing at 0x0038e65e... (80 %)
+Writing at 0x00392665... (86 %)
+Writing at 0x00396c56... (93 %)
+Writing at 0x0039acd2... (100 %)
+Wrote 1441792 bytes (237618 compressed) at 0x00290000 in 7.8 seconds (effective 1482.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.04 seconds =========================
+Finalizat: Fri 06/12/2026 15:04:17.21 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:08:56.61 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.8 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.08 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847505 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 380.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 992.7 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1970.6 kbit/s)...
+Hash of data verified.
+Compressed 854080 bytes to 550092...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x00025920... (8 %)
+Writing at 0x00032dc8... (11 %)
+Writing at 0x0003888e... (14 %)
+Writing at 0x0003e0bc... (17 %)
+Writing at 0x0004386c... (20 %)
+Writing at 0x00048f25... (23 %)
+Writing at 0x0004e175... (26 %)
+Writing at 0x000533a4... (29 %)
+Writing at 0x00058593... (32 %)
+Writing at 0x0005da2d... (35 %)
+Writing at 0x00062c2b... (38 %)
+Writing at 0x00067f95... (41 %)
+Writing at 0x0006d01f... (44 %)
+Writing at 0x0007237a... (47 %)
+Writing at 0x00077751... (50 %)
+Writing at 0x0007d42b... (52 %)
+Writing at 0x00082973... (55 %)
+Writing at 0x00087d02... (58 %)
+Writing at 0x0008d0d6... (61 %)
+Writing at 0x00092538... (64 %)
+Writing at 0x00097b17... (67 %)
+Writing at 0x0009d3f1... (70 %)
+Writing at 0x000a3030... (73 %)
+Writing at 0x000a8af2... (76 %)
+Writing at 0x000ae7ae... (79 %)
+Writing at 0x000b78e1... (82 %)
+Writing at 0x000bf895... (85 %)
+Writing at 0x000c48fb... (88 %)
+Writing at 0x000ccfe6... (91 %)
+Writing at 0x000d2727... (94 %)
+Writing at 0x000d7b04... (97 %)
+Writing at 0x000dd309... (100 %)
+Wrote 854080 bytes (550092 compressed) at 0x00010000 in 12.7 seconds (effective 536.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.02 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237676...
+Writing at 0x00290000... (6 %)
+Writing at 0x0036552c... (13 %)
+Writing at 0x00369446... (20 %)
+Writing at 0x0036d4bf... (26 %)
+Writing at 0x00371531... (33 %)
+Writing at 0x00375793... (40 %)
+Writing at 0x003797ac... (46 %)
+Writing at 0x0037d7f6... (53 %)
+Writing at 0x0038230a... (60 %)
+Writing at 0x0038630f... (66 %)
+Writing at 0x0038a335... (73 %)
+Writing at 0x0038e623... (80 %)
+Writing at 0x00392627... (86 %)
+Writing at 0x00396c17... (93 %)
+Writing at 0x0039ac96... (100 %)
+Wrote 1441792 bytes (237676 compressed) at 0x00290000 in 7.7 seconds (effective 1488.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.26 seconds =========================
+Finalizat: Fri 06/12/2026 15:09:43.15 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:17:31.81 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.9 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.79 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\web_server_connect.cpp.o
+Linking .pio\build\mhetesp32devkit\firmware.elf
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847521 bytes from 1310720 bytes)
+Building .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 382.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1182.7 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2125.0 kbit/s)...
+Hash of data verified.
+Compressed 854096 bytes to 550126...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591c... (8 %)
+Writing at 0x00032db0... (11 %)
+Writing at 0x00038874... (14 %)
+Writing at 0x0003e09a... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f14... (23 %)
+Writing at 0x0004e172... (26 %)
+Writing at 0x0005339c... (29 %)
+Writing at 0x0005858a... (32 %)
+Writing at 0x0005da06... (35 %)
+Writing at 0x00062c25... (38 %)
+Writing at 0x00067f82... (41 %)
+Writing at 0x0006d00a... (44 %)
+Writing at 0x00072372... (47 %)
+Writing at 0x0007772d... (50 %)
+Writing at 0x0007d424... (52 %)
+Writing at 0x0008296b... (55 %)
+Writing at 0x00087cf2... (58 %)
+Writing at 0x0008d0c5... (61 %)
+Writing at 0x00092529... (64 %)
+Writing at 0x00097b06... (67 %)
+Writing at 0x0009d3dd... (70 %)
+Writing at 0x000a3021... (73 %)
+Writing at 0x000a8ad3... (76 %)
+Writing at 0x000ae797... (79 %)
+Writing at 0x000b77e0... (82 %)
+Writing at 0x000bf884... (85 %)
+Writing at 0x000c48e6... (88 %)
+Writing at 0x000ccfc2... (91 %)
+Writing at 0x000d270a... (94 %)
+Writing at 0x000d7aed... (97 %)
+Writing at 0x000dd2d4... (100 %)
+Wrote 854096 bytes (550126 compressed) at 0x00010000 in 12.7 seconds (effective 536.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 25.14 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237677...
+Writing at 0x00290000... (6 %)
+Writing at 0x0036552c... (13 %)
+Writing at 0x00369445... (20 %)
+Writing at 0x0036d4be... (26 %)
+Writing at 0x0037152f... (33 %)
+Writing at 0x00375792... (40 %)
+Writing at 0x003797ab... (46 %)
+Writing at 0x0037d7f5... (53 %)
+Writing at 0x00382308... (60 %)
+Writing at 0x0038630e... (66 %)
+Writing at 0x0038a334... (73 %)
+Writing at 0x0038e622... (80 %)
+Writing at 0x00392625... (86 %)
+Writing at 0x00396c15... (93 %)
+Writing at 0x0039ac94... (100 %)
+Wrote 1441792 bytes (237677 compressed) at 0x00290000 in 7.8 seconds (effective 1484.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.45 seconds =========================
+Finalizat: Fri 06/12/2026 15:18:19.15 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:24:51.10 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Error: Please specify `upload_port` for environment or use global `--upload-port` option.
+For some development platforms it can be a USB flash drive (i.e. /media/<user>/<device name>)
+*** [erase] Explicit exit, status 1
+========================== [FAILED] Took 3.50 seconds ==========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Compiling .pio\build\mhetesp32devkit\src\hand_gestures.cpp.o
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847521 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Error: Please specify `upload_port` for environment or use global `--upload-port` option.
+For some development platforms it can be a USB flash drive (i.e. /media/<user>/<device name>)
+*** [upload] Explicit exit, status 1
+========================== [FAILED] Took 6.85 seconds ==========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Error: Please specify `upload_port` for environment or use global `--upload-port` option.
+For some development platforms it can be a USB flash drive (i.e. /media/<user>/<device name>)
+*** [uploadfs] Explicit exit, status 1
+========================== [FAILED] Took 3.57 seconds ==========================
+Finalizat: Fri 06/12/2026 15:25:09.16 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:25:26.92 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 1.8 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.52 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847521 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 388.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 976.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 1908.5 kbit/s)...
+Hash of data verified.
+Compressed 854096 bytes to 550126...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591c... (8 %)
+Writing at 0x00032db0... (11 %)
+Writing at 0x00038874... (14 %)
+Writing at 0x0003e09a... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f14... (23 %)
+Writing at 0x0004e172... (26 %)
+Writing at 0x0005339c... (29 %)
+Writing at 0x0005858a... (32 %)
+Writing at 0x0005da06... (35 %)
+Writing at 0x00062c25... (38 %)
+Writing at 0x00067f82... (41 %)
+Writing at 0x0006d00a... (44 %)
+Writing at 0x00072372... (47 %)
+Writing at 0x0007772d... (50 %)
+Writing at 0x0007d424... (52 %)
+Writing at 0x0008296b... (55 %)
+Writing at 0x00087cf2... (58 %)
+Writing at 0x0008d0c5... (61 %)
+Writing at 0x00092529... (64 %)
+Writing at 0x00097b06... (67 %)
+Writing at 0x0009d3dd... (70 %)
+Writing at 0x000a3021... (73 %)
+Writing at 0x000a8ad3... (76 %)
+Writing at 0x000ae797... (79 %)
+Writing at 0x000b77e0... (82 %)
+Writing at 0x000bf884... (85 %)
+Writing at 0x000c48e6... (88 %)
+Writing at 0x000ccfc2... (91 %)
+Writing at 0x000d270a... (94 %)
+Writing at 0x000d7aed... (97 %)
+Writing at 0x000dd2d4... (100 %)
+Wrote 854096 bytes (550126 compressed) at 0x00010000 in 12.7 seconds (effective 536.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.23 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237677...
+Writing at 0x00290000... (6 %)
+Writing at 0x0036552c... (13 %)
+Writing at 0x00369445... (20 %)
+Writing at 0x0036d4bd... (26 %)
+Writing at 0x0037152f... (33 %)
+Writing at 0x00375791... (40 %)
+Writing at 0x003797aa... (46 %)
+Writing at 0x0037d7f4... (53 %)
+Writing at 0x00382308... (60 %)
+Writing at 0x0038630d... (66 %)
+Writing at 0x0038a333... (73 %)
+Writing at 0x0038e621... (80 %)
+Writing at 0x00392625... (86 %)
+Writing at 0x00396c15... (93 %)
+Writing at 0x0039ac93... (100 %)
+Wrote 1441792 bytes (237677 compressed) at 0x00290000 in 7.8 seconds (effective 1486.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.97 seconds =========================
+Finalizat: Fri 06/12/2026 15:26:10.19 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:28:02.45 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.28 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847521 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 383.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1214.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2248.6 kbit/s)...
+Hash of data verified.
+Compressed 854096 bytes to 550126...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591c... (8 %)
+Writing at 0x00032db0... (11 %)
+Writing at 0x00038874... (14 %)
+Writing at 0x0003e09a... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f14... (23 %)
+Writing at 0x0004e172... (26 %)
+Writing at 0x0005339c... (29 %)
+Writing at 0x0005858a... (32 %)
+Writing at 0x0005da06... (35 %)
+Writing at 0x00062c25... (38 %)
+Writing at 0x00067f82... (41 %)
+Writing at 0x0006d00a... (44 %)
+Writing at 0x00072372... (47 %)
+Writing at 0x0007772d... (50 %)
+Writing at 0x0007d424... (52 %)
+Writing at 0x0008296b... (55 %)
+Writing at 0x00087cf2... (58 %)
+Writing at 0x0008d0c5... (61 %)
+Writing at 0x00092529... (64 %)
+Writing at 0x00097b06... (67 %)
+Writing at 0x0009d3dd... (70 %)
+Writing at 0x000a3021... (73 %)
+Writing at 0x000a8ad3... (76 %)
+Writing at 0x000ae797... (79 %)
+Writing at 0x000b77e0... (82 %)
+Writing at 0x000bf884... (85 %)
+Writing at 0x000c48e6... (88 %)
+Writing at 0x000ccfc2... (91 %)
+Writing at 0x000d270a... (94 %)
+Writing at 0x000d7aed... (97 %)
+Writing at 0x000dd2d4... (100 %)
+Wrote 854096 bytes (550126 compressed) at 0x00010000 in 12.7 seconds (effective 538.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 20.90 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237676...
+Writing at 0x00290000... (6 %)
+Writing at 0x0036552d... (13 %)
+Writing at 0x00369446... (20 %)
+Writing at 0x0036d4be... (26 %)
+Writing at 0x00371530... (33 %)
+Writing at 0x00375792... (40 %)
+Writing at 0x003797ab... (46 %)
+Writing at 0x0037d7f5... (53 %)
+Writing at 0x00382309... (60 %)
+Writing at 0x0038630e... (66 %)
+Writing at 0x0038a334... (73 %)
+Writing at 0x0038e622... (80 %)
+Writing at 0x00392626... (86 %)
+Writing at 0x00396c16... (93 %)
+Writing at 0x0039ac94... (100 %)
+Wrote 1441792 bytes (237676 compressed) at 0x00290000 in 7.8 seconds (effective 1484.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.00 seconds =========================
+Finalizat: Fri 06/12/2026 15:28:45.23 
+============================== 
+ 
+ 
+ 
+ 
+ 
+============================== 
+Pornire script: Fri 06/12/2026 15:30:08.28 
+============================== 
+Rulez cu pio din PATH 
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Looking for serial port...
+Auto-detected: COM4
+Erasing...
+esptool.py v4.9.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 2.0 seconds.
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 5.31 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Retrieving maximum program size .pio\build\mhetesp32devkit\firmware.elf
+Checking size .pio\build\mhetesp32devkit\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.3% (used 46980 bytes from 327680 bytes)
+Flash: [======    ]  64.7% (used 847521 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\firmware.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000e0fff...
+SHA digest in image updated
+Compressed 17536 bytes to 12202...
+Writing at 0x00001000... (100 %)
+Wrote 17536 bytes (12202 compressed) at 0x00001000 in 0.4 seconds (effective 380.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 1063.6 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 2177.5 kbit/s)...
+Hash of data verified.
+Compressed 854096 bytes to 550126...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001b7ea... (5 %)
+Writing at 0x0002591c... (8 %)
+Writing at 0x00032db0... (11 %)
+Writing at 0x00038874... (14 %)
+Writing at 0x0003e09a... (17 %)
+Writing at 0x0004385a... (20 %)
+Writing at 0x00048f14... (23 %)
+Writing at 0x0004e172... (26 %)
+Writing at 0x0005339c... (29 %)
+Writing at 0x0005858a... (32 %)
+Writing at 0x0005da06... (35 %)
+Writing at 0x00062c25... (38 %)
+Writing at 0x00067f82... (41 %)
+Writing at 0x0006d00a... (44 %)
+Writing at 0x00072372... (47 %)
+Writing at 0x0007772d... (50 %)
+Writing at 0x0007d424... (52 %)
+Writing at 0x0008296b... (55 %)
+Writing at 0x00087cf2... (58 %)
+Writing at 0x0008d0c5... (61 %)
+Writing at 0x00092529... (64 %)
+Writing at 0x00097b06... (67 %)
+Writing at 0x0009d3dd... (70 %)
+Writing at 0x000a3021... (73 %)
+Writing at 0x000a8ad3... (76 %)
+Writing at 0x000ae797... (79 %)
+Writing at 0x000b77e0... (82 %)
+Writing at 0x000bf884... (85 %)
+Writing at 0x000c48e6... (88 %)
+Writing at 0x000ccfc2... (91 %)
+Writing at 0x000d270a... (94 %)
+Writing at 0x000d7aed... (97 %)
+Writing at 0x000dd2d4... (100 %)
+Wrote 854096 bytes (550126 compressed) at 0x00010000 in 12.7 seconds (effective 536.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 21.32 seconds =========================
+Processing mhetesp32devkit (platform: espressif32; board: mhetesp32devkit; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/mhetesp32devkit.html
+PLATFORM: Espressif 32 (6.12.0) > MH ET LIVE ESP32DevKIT
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.0
+|-- TFT_eSPI @ 2.5.43
+|-- AsyncTCP @ 1.1.1
+|-- ESPAsyncWebServer @ 3.6.0
+|-- FS @ 2.0.0
+|-- LittleFS @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building FS image from 'data' directory to .pio\build\mhetesp32devkit\littlefs.bin
+/about.html
+/controller.html
+/globals.css
+/index.html
+/resources/esp32.jpg
+/resources/Hand_model_1.jpeg
+/resources/Hand_model_2.jpeg
+/resources/Hand_model_3.jpeg
+/resources/robotic-hand.png
+/script.js
+Looking for upload port...
+Auto-detected: COM4
+Uploading .pio\build\mhetesp32devkit\littlefs.bin
+esptool.py v4.9.0
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:68:6a:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00290000 to 0x003effff...
+Compressed 1441792 bytes to 237676...
+Writing at 0x00290000... (6 %)
+Writing at 0x0036552d... (13 %)
+Writing at 0x00369446... (20 %)
+Writing at 0x0036d4bf... (26 %)
+Writing at 0x00371530... (33 %)
+Writing at 0x00375793... (40 %)
+Writing at 0x003797ab... (46 %)
+Writing at 0x0037d7f6... (53 %)
+Writing at 0x00382309... (60 %)
+Writing at 0x0038630f... (66 %)
+Writing at 0x0038a334... (73 %)
+Writing at 0x0038e623... (80 %)
+Writing at 0x00392626... (86 %)
+Writing at 0x00396c16... (93 %)
+Writing at 0x0039ac95... (100 %)
+Wrote 1441792 bytes (237676 compressed) at 0x00290000 in 7.8 seconds (effective 1483.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 13.21 seconds =========================
+Finalizat: Fri 06/12/2026 15:30:51.16 
+============================== 
+ 
+ 

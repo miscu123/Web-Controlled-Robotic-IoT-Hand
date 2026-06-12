@@ -72,7 +72,7 @@ void update_gesture()
         return;
 
     const uint32_t increment = 3;
-    const uint32_t max_angle = CLOSE_FINGER; // 180
+    const uint32_t max_angle = CLOSE_FINGER; // 0
 
     if (gesture_ctx.current_gesture == "close")
     {
@@ -97,7 +97,7 @@ void update_gesture()
             if (gesture_ctx.angle <= max_angle)
             {
                 s->write(gesture_ctx.angle);
-                gesture_ctx.angle += increment;
+                gesture_ctx.angle -= increment;
             }
             else
             {

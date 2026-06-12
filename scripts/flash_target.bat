@@ -17,7 +17,8 @@ IF EXIST "%PYTHON_PATH%" (
     "%PYTHON_PATH%" -m platformio run --target upload >> %LOG_FILE% 2>&1
     "%PYTHON_PATH%" -m platformio run --target uploadfs >> %LOG_FILE% 2>&1
 
-    start "" "%PYTHON_PATH%" -m platformio device monitor --baud 115200 --log-file %MONITOR_LOG%
+    timeout /t 2 /nobreak > nul
+    start "Serial Monitor" powershell -NoExit -Command "Add-Content -Path '.\scripts\log\monitor_log.txt' -Value @('','','','',''); & '%PYTHON_PATH%' -m platformio device monitor --baud 115200 | Tee-Object -FilePath '.\scripts\log\monitor_log.txt' -Append"
 ) ELSE (
     echo Rulez cu pio din PATH >> %LOG_FILE%
 
@@ -25,7 +26,8 @@ IF EXIST "%PYTHON_PATH%" (
     pio run --target upload >> %LOG_FILE% 2>&1
     pio run --target uploadfs >> %LOG_FILE% 2>&1
 
-    start "" pio device monitor -b 115200 --log-file %MONITOR_LOG%
+    timeout /t 2 /nobreak > nul
+    start "Serial Monitor" powershell -NoExit -Command "Add-Content -Path '.\scripts\log\monitor_log.txt' -Value @('','','','',''); pio device monitor -b 115200 | Tee-Object -FilePath '.\scripts\log\monitor_log.txt' -Append"
 )
 
 echo Finalizat: %date% %time% >> %LOG_FILE%

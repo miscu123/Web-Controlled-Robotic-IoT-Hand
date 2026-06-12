@@ -23,8 +23,8 @@
 #define MIDDLE_PIN 21
 #define INDEX_PIN 19
 #define THUMB_PIN 18
-#define DEFAULT_ANGLE 0
-#define CLOSE_FINGER 180
+#define DEFAULT_ANGLE 180
+#define CLOSE_FINGER 0
 
 /* GLOBAL VARIABLES */
 extern Servo servo_little;
@@ -40,7 +40,6 @@ typedef struct
     char finger[8]; // "thumb", "index", "middle", "ring", "pinky"
     int angle;
 } FingerCmd;
-
 
 extern QueueHandle_t gestureQueue; // send char[32] with gesture name
 extern QueueHandle_t fingerQueue;  // send FingerCmd

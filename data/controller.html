@@ -49,31 +49,36 @@
             <div class="finger">
                 <label>Thumb</label>
                 <input type="range" id="thumb" min="0" max="180" value="0"
-                oninput="setFingerAngle('thumb', this.value)">
+                oninput="document.getElementById('thumb-value').textContent = this.value + '°'"
+                onchange="setFingerAngle('thumb', this.value)">
                 <span id="thumb-value">0°</span>
             </div>
             <div class="finger">
                 <label>Index</label>
                 <input type="range" id="index" min="0" max="180" value="0"
-                oninput="setFingerAngle('index', this.value)">
+                oninput="document.getElementById('index-value').textContent = this.value + '°'"
+                onchange="setFingerAngle('index', this.value)">
                 <span id="index-value">0°</span>
             </div>
             <div class="finger">
                 <label>Middle</label>
                 <input type="range" id="middle" min="0" max="180" value="0"
-                oninput="setFingerAngle('middle', this.value)">
+                oninput="document.getElementById('middle-value').textContent = this.value + '°'"
+                onchange="setFingerAngle('middle', this.value)">
                 <span id="middle-value">0°</span>
             </div>
             <div class="finger">
                 <label>Ring</label>
                 <input type="range" id="ring" min="0" max="180" value="0"
-                oninput="setFingerAngle('ring', this.value)">
+                oninput="document.getElementById('ring-value').textContent = this.value + '°'"
+                onchange="setFingerAngle('ring', this.value)">
                 <span id="ring-value">0°</span>
             </div>
             <div class="finger">
                 <label>Pinky</label>
                 <input type="range" id="pinky" min="0" max="180" value="0"
-                oninput="setFingerAngle('pinky', this.value)">
+                oninput="document.getElementById('pinky-value').textContent = this.value + '°'"
+                onchange="setFingerAngle('pinky', this.value)">
                 <span id="pinky-value">0°</span>
             </div>
         </div>

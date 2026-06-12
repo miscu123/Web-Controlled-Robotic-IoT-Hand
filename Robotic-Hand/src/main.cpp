@@ -10,10 +10,10 @@ Servo servo_thumb;
 QueueHandle_t gestureQueue;
 QueueHandle_t fingerQueue;
 
-const char *ssid = "DIGI-j4aJ";
-const char *password = "teAeJVK3Dn";
-// const char *ssid = "Mihai's iPhone";
-// const char *password = "vericu12";
+// const char *ssid = "DIGI-j4aJ";
+// const char *password = "teAeJVK3Dn";
+const char *ssid = "Mihai";
+const char *password = "12345678";
 
 /* SETUP */
 void setup()
@@ -40,12 +40,14 @@ void setup()
   reset_all();
 
   gestureQueue = xQueueCreate(10, sizeof(char[32]));
-  fingerQueue  = xQueueCreate(10, sizeof(FingerCmd));
+  fingerQueue = xQueueCreate(10, sizeof(FingerCmd));
 
   if (gestureQueue == NULL || fingerQueue == NULL)
   {
     Serial.println("Failed to create command queue!");
-    for (;;) {}
+    for (;;)
+    {
+    }
   }
 
   // Start servo task
