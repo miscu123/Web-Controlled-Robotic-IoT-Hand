@@ -10,10 +10,10 @@ Servo servo_thumb;
 QueueHandle_t gestureQueue;
 QueueHandle_t fingerQueue;
 
-// const char *ssid = "DIGI-j4aJ";
-// const char *password = "teAeJVK3Dn";
-const char *ssid = "Mihai";
-const char *password = "12345678";
+const char *ssid = "DIGI-j4aJ";
+const char *password = "teAeJVK3Dn";
+// const char *ssid = "Mihai";
+// const char *password = "12345678";
 
 /* SETUP */
 void setup()

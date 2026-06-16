@@ -21,7 +21,7 @@
 #define LITTLE_PIN 23
 #define RING_PIN 22
 #define MIDDLE_PIN 21
-#define INDEX_PIN 19
+#define INDEX_PIN 17
 #define THUMB_PIN 18
 #define DEFAULT_ANGLE 180
 #define CLOSE_FINGER 0
