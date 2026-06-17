@@ -52,9 +52,9 @@ extern AsyncWebServer server;
 void servo_task(void *param);
 void init_gesture(const String &gesture);
 void update_gesture();
-void reset_all(void);
-void close_all(void);
 void connect_to_server(void);
 void setup_routes(void);
+static bool phase_close_all(void);
+static bool phase_reset_all(void);
 
 #endif

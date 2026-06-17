@@ -37,7 +37,11 @@ void setup()
   servo_thumb.attach(THUMB_PIN);
 
   // Reset positions
-  reset_all();
+  servo_thumb.write(DEFAULT_ANGLE);
+  servo_index.write(DEFAULT_ANGLE);
+  servo_middle.write(DEFAULT_ANGLE);
+  servo_ring.write(DEFAULT_ANGLE);
+  servo_little.write(DEFAULT_ANGLE);
 
   gestureQueue = xQueueCreate(10, sizeof(char[32]));
   fingerQueue = xQueueCreate(10, sizeof(FingerCmd));

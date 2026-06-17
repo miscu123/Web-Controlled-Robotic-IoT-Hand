@@ -17,44 +17,8 @@ struct GestureContext
     GestureState state;
 } gesture_ctx = {"", 0, 0, 0, GESTURE_IDLE}; // default init
 
-// BASIC FINGER HELPERS
-// May need to implement a for loop to close fingers kind of simultaniously but with small angles step by step and a small delay (5-10ms) so the human eye
-// Can not see that the fingers are being closed little by little and not in an instant
-void close_all()
-{
-    servo_little.write(CLOSE_FINGER);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_ring.write(CLOSE_FINGER);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_middle.write(CLOSE_FINGER);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_index.write(CLOSE_FINGER);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_thumb.write(CLOSE_FINGER);
-    vTaskDelay(pdMS_TO_TICKS(60));
-}
-
-void reset_all()
-{
-    servo_little.write(DEFAULT_ANGLE);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_ring.write(DEFAULT_ANGLE);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_middle.write(DEFAULT_ANGLE);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_index.write(DEFAULT_ANGLE);
-    vTaskDelay(pdMS_TO_TICKS(60));
-
-    servo_thumb.write(DEFAULT_ANGLE);
-    vTaskDelay(pdMS_TO_TICKS(60));
-}
+// Finger order: thumb -> index -> middle -> ring -> little
+static Servo *const CLOSE_ORDER[] = {&servo_thumb, &servo_index, &servo_middle, &servo_ring, &servo_little};
 
 void init_gesture(const String &gesture)
 {
@@ -65,6 +29,30 @@ void init_gesture(const String &gesture)
     gesture_ctx.state = GESTURE_RUNNING;
 }
 
+// Snaps one finger to CLOSE_FINGER per call. Returns true when all 5 are done.
+static bool phase_close_all()
+{
+    if (gesture_ctx.step < 5)
+    {
+        CLOSE_ORDER[gesture_ctx.step]->write(CLOSE_FINGER);
+        gesture_ctx.step++;
+        return false;
+    }
+    return true;
+}
+
+// Snaps one finger to DEFAULT_ANGLE per call. Returns true when all 5 are done.
+static bool phase_reset_all()
+{
+    if (gesture_ctx.step < 5)
+    {
+        CLOSE_ORDER[gesture_ctx.step]->write(DEFAULT_ANGLE);
+        gesture_ctx.step++;
+        return false;
+    }
+    return true;
+}
+
 // Non-blocking gesture update
 void update_gesture()
 {
@@ -72,36 +60,40 @@ void update_gesture()
         return;
 
     const uint32_t increment = 3;
-    const uint32_t max_angle = CLOSE_FINGER; // 0
 
     if (gesture_ctx.current_gesture == "close")
     {
-        close_all();
+        if (!phase_close_all())
+            return;
         gesture_ctx.state = GESTURE_IDLE;
         Serial.println("Close All Done!");
     }
     else if (gesture_ctx.current_gesture == "reset")
     {
-        reset_all();
+        if (!phase_reset_all())
+            return;
         gesture_ctx.state = GESTURE_IDLE;
         Serial.println("Reset Done!");
     }
     else if (gesture_ctx.current_gesture == "countU")
     {
-        // Index -> Middle -> Thumb -> Ring -> Little
-        Servo *order[] = {&servo_index, &servo_middle, &servo_thumb, &servo_ring, &servo_little};
+        // Phase 1: close all fingers
+        // Phase 2: raise one finger at a time (thumb -> index -> middle -> ring -> little)
+        if (!phase_close_all())
+            return;
 
-        if (gesture_ctx.step < 5)
+        uint8_t finger_idx = gesture_ctx.step - 5;
+        if (finger_idx < 5)
         {
-            Servo *s = order[gesture_ctx.step];
-            if (gesture_ctx.angle <= max_angle)
+            if (gesture_ctx.angle < DEFAULT_ANGLE)
             {
-                s->write(gesture_ctx.angle);
-                gesture_ctx.angle -= increment;
+                CLOSE_ORDER[finger_idx]->write(gesture_ctx.angle);
+                gesture_ctx.angle += increment;
             }
             else
             {
-                gesture_ctx.angle = 0;
+                CLOSE_ORDER[finger_idx]->write(DEFAULT_ANGLE);
+                gesture_ctx.angle = CLOSE_FINGER;
                 gesture_ctx.step++;
             }
         }
@@ -113,118 +105,124 @@ void update_gesture()
     }
     else if (gesture_ctx.current_gesture == "countD")
     {
-        // Thumb -> Index -> Middle -> Ring -> Little
-        Servo *order[] = {&servo_thumb, &servo_index, &servo_middle, &servo_ring, &servo_little};
+        // Phase 1: reset all fingers open
+        // Phase 2: close one finger at a time (thumb -> index -> middle -> ring -> little)
+        if (!phase_reset_all())
+            return;
 
-        if (gesture_ctx.step < 5)
+        if (gesture_ctx.step == 5)
         {
-            Servo *s = order[gesture_ctx.step];
-            if (gesture_ctx.angle <= max_angle)
-            {
-                s->write(gesture_ctx.angle);
-                gesture_ctx.angle += increment;
-            }
-            else
-            {
-                gesture_ctx.angle = 0;
-                gesture_ctx.step++;
-            }
+            gesture_ctx.angle = DEFAULT_ANGLE;
+            gesture_ctx.step++;
         }
         else
         {
-            gesture_ctx.state = GESTURE_IDLE;
-            Serial.println("Count DOWN Done!");
+            uint8_t finger_idx = gesture_ctx.step - 6;
+            if (finger_idx < 5)
+            {
+                if (gesture_ctx.angle > CLOSE_FINGER)
+                {
+                    CLOSE_ORDER[finger_idx]->write(gesture_ctx.angle);
+                    gesture_ctx.angle = (gesture_ctx.angle >= increment) ? gesture_ctx.angle - increment : CLOSE_FINGER;
+                }
+                else
+                {
+                    CLOSE_ORDER[finger_idx]->write(CLOSE_FINGER);
+                    gesture_ctx.angle = DEFAULT_ANGLE;
+                    gesture_ctx.step++;
+                }
+            }
+            else
+            {
+                gesture_ctx.state = GESTURE_IDLE;
+                Serial.println("Count DOWN Done!");
+            }
         }
     }
     else if (gesture_ctx.current_gesture == "peace")
     {
-        if (gesture_ctx.step == 0)
+        // Phase 1: close all fingers
+        // Phase 2: sweep index + middle open
+        if (!phase_close_all())
+            return;
+
+        if (gesture_ctx.angle < DEFAULT_ANGLE)
         {
-            close_all();
-            gesture_ctx.step++;
+            servo_index.write(gesture_ctx.angle);
+            servo_middle.write(gesture_ctx.angle);
+            gesture_ctx.angle += increment;
         }
-        else if (gesture_ctx.step == 1)
+        else
         {
-            if (gesture_ctx.angle <= max_angle)
-            {
-                servo_index.write(gesture_ctx.angle);
-                servo_middle.write(gesture_ctx.angle);
-                gesture_ctx.angle += increment;
-            }
-            else
-            {
-                gesture_ctx.state = GESTURE_IDLE;
-                Serial.println("Peace Done!");
-            }
+            gesture_ctx.state = GESTURE_IDLE;
+            Serial.println("Peace Done!");
         }
     }
     else if (gesture_ctx.current_gesture == "ok")
     {
-        if (gesture_ctx.step == 0)
+        // Phase 1: reset all fingers open
+        // Phase 2: sweep index + thumb closed to 90
+        if (!phase_reset_all())
+            return;
+
+        if (gesture_ctx.angle <= 90)
         {
-            reset_all();
-            gesture_ctx.step++;
-            gesture_ctx.angle = 0;
+            servo_index.write(gesture_ctx.angle);
+            servo_thumb.write(gesture_ctx.angle);
+            gesture_ctx.angle += increment;
         }
-        else if (gesture_ctx.step == 1)
+        else
         {
-            if (gesture_ctx.angle <= 90)
-            {
-                servo_index.write(gesture_ctx.angle);
-                servo_thumb.write(gesture_ctx.angle);
-                gesture_ctx.angle += increment;
-            }
-            else
-            {
-                servo_middle.write(40);
-                servo_ring.write(25);
-                servo_little.write(10);
-                gesture_ctx.state = GESTURE_IDLE;
-                Serial.println("OK Sign Done!");
-            }
+            servo_middle.write(40);
+            servo_ring.write(25);
+            servo_little.write(10);
+            gesture_ctx.state = GESTURE_IDLE;
+            Serial.println("OK Sign Done!");
         }
     }
     else if (gesture_ctx.current_gesture == "hold")
     {
-        if (gesture_ctx.step == 0)
+        // Phase 1: reset all fingers open
+        // Phase 2: sweep thumb + little closed to 90
+        if (!phase_reset_all())
+            return;
+
+        if (gesture_ctx.angle <= 90)
         {
-            reset_all();
-            gesture_ctx.step++;
-            gesture_ctx.angle = 0;
+            servo_thumb.write(gesture_ctx.angle);
+            servo_little.write(gesture_ctx.angle);
+            gesture_ctx.angle += increment;
         }
-        else if (gesture_ctx.step == 1)
+        else
         {
-            if (gesture_ctx.angle <= 90)
-            {
-                servo_thumb.write(gesture_ctx.angle);
-                servo_little.write(gesture_ctx.angle);
-                gesture_ctx.angle += increment;
-            }
-            else
-            {
-                servo_index.write(10);
-                servo_middle.write(10);
-                servo_ring.write(10);
-                gesture_ctx.state = GESTURE_IDLE;
-                Serial.println("Hold Phone Done!");
-            }
+            servo_index.write(10);
+            servo_middle.write(10);
+            servo_ring.write(10);
+            gesture_ctx.state = GESTURE_IDLE;
+            Serial.println("Hold Phone Done!");
         }
     }
     else if (gesture_ctx.current_gesture == "come")
     {
-        if (gesture_ctx.step == 0)
+        // Phase 1: close all fingers
+        // Step 5:  reopen index, init beckon state
+        // Step 6:  extend index (repeat count < 10)
+        // Step 7:  retract index, loop back to step 6
+        if (!phase_close_all())
+            return;
+
+        if (gesture_ctx.step == 5)
         {
-            close_all();
             servo_index.write(DEFAULT_ANGLE);
-            gesture_ctx.step++;
             gesture_ctx.angle = 0;
             gesture_ctx.count = 0;
+            gesture_ctx.step++;
         }
-        else if (gesture_ctx.step == 1)
+        else if (gesture_ctx.step == 6)
         {
             if (gesture_ctx.count < 10)
             {
-                if (gesture_ctx.angle <= max_angle)
+                if (gesture_ctx.angle < DEFAULT_ANGLE)
                 {
                     servo_index.write(gesture_ctx.angle);
                     gesture_ctx.angle += increment;
@@ -240,18 +238,17 @@ void update_gesture()
                 Serial.println("Come Here Done!");
             }
         }
-        else if (gesture_ctx.step == 2)
+        else if (gesture_ctx.step == 7)
         {
             if (gesture_ctx.angle > 0)
             {
                 servo_index.write(gesture_ctx.angle);
-                gesture_ctx.angle -= increment;
+                gesture_ctx.angle = (gesture_ctx.angle >= increment) ? gesture_ctx.angle - increment : 0;
             }
             else
             {
-                gesture_ctx.angle = 0;
                 gesture_ctx.count++;
-                gesture_ctx.step = 1;
+                gesture_ctx.step = 6;
             }
         }
     }
