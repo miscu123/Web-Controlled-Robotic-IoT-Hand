@@ -18,7 +18,7 @@ struct GestureContext
 } gesture_ctx = {"", 0, 0, 0, GESTURE_IDLE}; // default init
 
 // Finger order: thumb -> index -> middle -> ring -> little
-static Servo *const CLOSE_ORDER[] = {&servo_thumb, &servo_index, &servo_middle, &servo_ring, &servo_little};
+static const uint8_t CLOSE_ORDER[] = {THUMB_PIN_A, INDEX_PIN, MIDDLE_PIN, RING_PIN, LITTLE_PIN};
 
 void init_gesture(const String &gesture)
 {
@@ -34,7 +34,7 @@ static bool phase_close_all()
 {
     if (gesture_ctx.step < 5)
     {
-        CLOSE_ORDER[gesture_ctx.step]->write(CLOSE_FINGER);
+        servoWrite(CLOSE_ORDER[gesture_ctx.step], CLOSE_FINGER);
         gesture_ctx.step++;
         return false;
     }
@@ -46,7 +46,7 @@ static bool phase_reset_all()
 {
     if (gesture_ctx.step < 5)
     {
-        CLOSE_ORDER[gesture_ctx.step]->write(DEFAULT_ANGLE);
+        servoWrite(CLOSE_ORDER[gesture_ctx.step], DEFAULT_ANGLE);
         gesture_ctx.step++;
         return false;
     }
@@ -94,12 +94,12 @@ void update_gesture()
         {
             if (gesture_ctx.angle < DEFAULT_ANGLE)
             {
-                CLOSE_ORDER[finger_idx]->write(gesture_ctx.angle);
+                servoWrite(CLOSE_ORDER[finger_idx], gesture_ctx.angle);
                 gesture_ctx.angle += increment;
             }
             else
             {
-                CLOSE_ORDER[finger_idx]->write(DEFAULT_ANGLE);
+                servoWrite(CLOSE_ORDER[finger_idx], DEFAULT_ANGLE);
                 gesture_ctx.angle = CLOSE_FINGER;
                 gesture_ctx.step++;
             }
@@ -136,12 +136,12 @@ void update_gesture()
             {
                 if (gesture_ctx.angle > CLOSE_FINGER)
                 {
-                    CLOSE_ORDER[finger_idx]->write(gesture_ctx.angle);
+                    servoWrite(CLOSE_ORDER[finger_idx], gesture_ctx.angle);
                     gesture_ctx.angle = (gesture_ctx.angle >= increment) ? gesture_ctx.angle - increment : CLOSE_FINGER;
                 }
                 else
                 {
-                    CLOSE_ORDER[finger_idx]->write(CLOSE_FINGER);
+                    servoWrite(CLOSE_ORDER[finger_idx], CLOSE_FINGER);
                     gesture_ctx.angle = DEFAULT_ANGLE;
                     gesture_ctx.step++;
                 }
@@ -167,30 +167,30 @@ void update_gesture()
             return;
         }
 
-        servo_thumb.write(CLOSE_FINGER);
-        servo_ring.write(CLOSE_FINGER);
-        servo_little.write(CLOSE_FINGER);
+        servoWrite(THUMB_PIN_A, CLOSE_FINGER);
+        servoWrite(RING_PIN, CLOSE_FINGER);
+        servoWrite(LITTLE_PIN, CLOSE_FINGER);
         gesture_ctx.state = GESTURE_IDLE;
         Serial.println("Peace Done!");
     }
     else if (gesture_ctx.current_gesture == "ok")
     {
         // Phase 1: reset all fingers open
-        // Phase 2: sweep index + thumb closed to 100, snap rest to 55
+        // Phase 2: sweep thumb closed to 85, snap rest
         if (!phase_reset_all())
             return;
 
         if (gesture_ctx.angle <= 85)
         {
-            servo_thumb.write(gesture_ctx.angle);
+            servoWrite(THUMB_PIN_A, gesture_ctx.angle);
             gesture_ctx.angle += increment;
         }
         else
         {
-            servo_index.write(CLOSE_FINGER);
-            servo_middle.write(150);
-            servo_ring.write(170);
-            servo_little.write(170);
+            servoWrite(INDEX_PIN, CLOSE_FINGER);
+            servoWrite(MIDDLE_PIN, 150);
+            servoWrite(RING_PIN, 170);
+            servoWrite(LITTLE_PIN, 170);
             gesture_ctx.state = GESTURE_IDLE;
             Serial.println("OK Sign Done!");
         }
@@ -198,21 +198,21 @@ void update_gesture()
     else if (gesture_ctx.current_gesture == "hold")
     {
         // Phase 1: reset all fingers open
-        // Phase 2: sweep thumb + little closed to 90
+        // Phase 2: sweep thumb closed to 80, snap rest
         if (!phase_reset_all())
             return;
 
         if (gesture_ctx.angle <= 80)
         {
-            servo_thumb.write(gesture_ctx.angle);
+            servoWrite(THUMB_PIN_A, gesture_ctx.angle);
             gesture_ctx.angle += increment;
         }
         else
         {
-            servo_little.write(CLOSE_FINGER);
-            servo_index.write(CLOSE_FINGER);
-            servo_middle.write(CLOSE_FINGER);
-            servo_ring.write(CLOSE_FINGER);
+            servoWrite(LITTLE_PIN, CLOSE_FINGER);
+            servoWrite(INDEX_PIN, CLOSE_FINGER);
+            servoWrite(MIDDLE_PIN, CLOSE_FINGER);
+            servoWrite(RING_PIN, CLOSE_FINGER);
             gesture_ctx.state = GESTURE_IDLE;
             Serial.println("Hold Phone Done!");
         }

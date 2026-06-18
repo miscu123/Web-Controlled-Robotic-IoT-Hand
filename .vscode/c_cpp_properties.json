@@ -16,8 +16,10 @@
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
+                "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/Adafruit PWM Servo Driver Library",
+                "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/Adafruit BusIO",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
-                "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/ESP32Servo/src",
+                "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -241,7 +243,6 @@
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 ""
             ],
             "browse": {
@@ -255,8 +256,10 @@
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
+                    "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/Adafruit PWM Servo Driver Library",
+                    "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/Adafruit BusIO",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
-                    "C:/Users/Lenovo/Documents/Web-Controller-Robotic-Hand/.pio/libdeps/mhetesp32devkit/ESP32Servo/src",
+                    "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -480,7 +483,6 @@
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                    "C:/Users/Lenovo/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     ""
                 ]
             },

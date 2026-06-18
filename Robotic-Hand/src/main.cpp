@@ -1,11 +1,8 @@
 #include "main_cfg.hpp"
+#include <Wire.h>
 
 /* GLOBAL VARIABLES */
-Servo servo_little;
-Servo servo_ring;
-Servo servo_middle;
-Servo servo_index;
-Servo servo_thumb;
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(); // default I2C address 0x40
 
 QueueHandle_t gestureQueue;
 QueueHandle_t fingerQueue;
@@ -14,6 +11,16 @@ QueueHandle_t fingerQueue;
 // const char *password = "teAeJVK3Dn";
 const char *ssid = "Mihai";
 const char *password = "12345678";
+
+// Writes an angle (0-180) to a PCA9685 channel.
+// Writing to THUMB_PIN_A automatically mirrors to THUMB_PIN_B.
+void servoWrite(uint8_t channel, uint8_t angle)
+{
+  uint16_t pulse = map(angle, 0, 180, SERVO_MIN, SERVO_MAX);
+  pwm.setPWM(channel, 0, pulse);
+  if (channel == THUMB_PIN_A)
+    pwm.setPWM(THUMB_PIN_B, 0, pulse); // second thumb servo — invert pulse if mounted mirrored
+}
 
 /* SETUP */
 void setup()
@@ -29,12 +36,12 @@ void setup()
 
   connect_to_server();
 
-  // Attach servos
-  servo_little.attach(LITTLE_PIN);
-  servo_ring.attach(RING_PIN);
-  servo_middle.attach(MIDDLE_PIN);
-  servo_index.attach(INDEX_PIN);
-  servo_thumb.attach(THUMB_PIN);
+  // Init I2C and PCA9685
+  Wire.begin(21, 22); // SDA, SCL — explicit for ESP32
+  pwm.begin();
+  pwm.setOscillatorFrequency(27000000);
+  pwm.setPWMFreq(50); // 50Hz for servos
+  Serial.println("PCA9685 initialized");
 
   // Reset positions
   init_gesture("reset");

@@ -4,7 +4,7 @@
 
 /* INCLUSIONS */
 #include <Arduino.h>
-#include <ESP32Servo.h>
+#include <Adafruit_PWMServoDriver.h>
 #include <WiFi.h>
 #include <FS.h>
 #include <LittleFS.h>
@@ -17,21 +17,22 @@
 #include "soc/soc.h"
 #include "soc/rtc_cntl_reg.h"
 
-/* MACROS */
-#define LITTLE_PIN 23
-#define RING_PIN 22
-#define MIDDLE_PIN 21
-#define INDEX_PIN 17
-#define THUMB_PIN 18
+/* PCA9685 CHANNELS */
+#define THUMB_PIN_A 0
+#define THUMB_PIN_B 5
+#define INDEX_PIN   1
+#define MIDDLE_PIN  2
+#define RING_PIN    3
+#define LITTLE_PIN  4
+
+/* SERVO ANGLES & PULSE RANGE */
 #define DEFAULT_ANGLE 180
-#define CLOSE_FINGER 0
+#define CLOSE_FINGER  0
+#define SERVO_MIN     112  // pulse ticks at 0°  (~544µs, matches ESP32Servo default)
+#define SERVO_MAX     492  // pulse ticks at 180° (~2400µs, matches ESP32Servo default)
 
 /* GLOBAL VARIABLES */
-extern Servo servo_little;
-extern Servo servo_ring;
-extern Servo servo_middle;
-extern Servo servo_index;
-extern Servo servo_thumb;
+extern Adafruit_PWMServoDriver pwm;
 
 // FingerCmd: data abt 1 finger
 // char finger[8] instead of String — FreeRTOS Queue copies bytes in memory, can not copy C++ objects (String)
@@ -49,12 +50,11 @@ extern const char *password;
 extern AsyncWebServer server;
 
 /* GLOBAL FUNCTION DECLARATIONS */
+void servoWrite(uint8_t channel, uint8_t angle);
 void servo_task(void *param);
 void init_gesture(const String &gesture);
 void update_gesture();
 void connect_to_server(void);
 void setup_routes(void);
-static bool phase_close_all(void);
-static bool phase_reset_all(void);
 
 #endif

@@ -74,11 +74,11 @@ The transformation of a user interaction into physical movement follows a struct
 3. **Ingestion & Queuing:** The ESP32 Async Web Server intercepts the packet on Core 0, parses the arguments, creates a standard `Command` structure, and drops it into `commandQueue`. It immediately returns an HTTP 200 status back to the browser.
 4. **Hardware Consumption:** On Core 1, `servo_task` polls the queue:
    - **If CMD_GESTURE arrives:** It calls `init_gesture()` to reset the state machine variables.
-   - **If CMD_FINGER arrives:** It bypasses the state machine and writes directly to the specific motor using `servo.write()`.
+   - **If CMD_FINGER arrives:** It bypasses the state machine and writes directly to the specific motor using `servoWrite(channel, angle)`, which sends an I2C command to the PCA9685.
 5. **Incremental Update:** `servo_task` calls `update_gesture()`, processes fractional steps for any active animation, and executes `vTaskDelay(8ms)` to briefly yield execution.
 
 **Simplified Flow:**
-User Browser -> Web Server (Core 0) -> commandQueue -> servo_task (Core 1) -> update_gesture() -> Servos
+User Browser -> Web Server (Core 0) -> commandQueue -> servo_task (Core 1) -> update_gesture() -> servoWrite() -> I2C -> PCA9685 -> Servos
 
 Every single tick — update_gesture() is called every 8ms from servo_task's while(true).
 

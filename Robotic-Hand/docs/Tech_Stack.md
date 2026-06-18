@@ -63,7 +63,12 @@ Provides the user interface for controlling the robotic hand from any web browse
 ## Hardware Components
 
 - **ESP32 Development Board**
-- **5× Servo Motors (MG996R)**
-- **Breadboard & Jumper Wires**
-- **3D Printed or Acrylic Hand Frame**
+- **PCA9685 — 16-channel I2C PWM servo driver**
+- **6× Servo Motors (MG90S)** — 5 fingers + 1 additional thumb servo
+- **Jumper Wires**
+- **3D Printed Hand & Forearm Frame**
 - **Fishing Line & Elastic Rope (for finger movement and tendons)**
+
+## Hardware Communication
+
+The ESP32 no longer drives servo PWM signals directly from GPIO pins. Instead, it sends I2C commands over **SDA (GPIO 21)** and **SCL (GPIO 22)** to the PCA9685, which generates the PWM signals for all 6 servo channels independently. This frees up GPIO pins and allows up to 16 servos on just 2 wires.
