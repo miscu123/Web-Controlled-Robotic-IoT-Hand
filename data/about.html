@@ -184,33 +184,25 @@
               <div class="timeline-dot">P.05</div>
             </div>
             <div class="timeline-content">
-              <span class="timeline-phase">Phase 05 — Electronics Integration &amp; Final Build</span>
+              <span class="timeline-phase">Phase 05 — Final Build</span>
               <h3>ESP32 Mounted — The Complete System</h3>
               <p>
-                The final stage: the ESP32 was slid into its forearm cradle and the arm
-                closed up. The left photo shows the board settled at the base of the
-                forearm cavity, USB port accessible from the bottom for flashing and power.
-                The right photo captures the finished arm standing upright — all five
-                fingers extended, the wrist servo visible through the palm opening, and the
-                ESP32 peeking out from below. At this point the web server was live, the
-                hand was online, and control via any browser on the local network was fully
-                operational.
+                The completed build. All servos are mounted and routed,
+                each finger tendon connected and tensioned.
+                At this stage every servo was tested individually — range of motion confirmed,
+                no binding, no slack. The hand responds to each PWM signal cleanly across
+                the full gesture set: from a resting open position all the way to a full
+                fist and every programmed gesture in between. What started as a wiring
+                exercise on a bare dev board had become a fully operational, web-controlled
+                robotic arm.
               </p>
-              <div class="timeline-photos-dual">
-                <div class="timeline-photo">
-                  <img src="">
-                  <div class="photo-badge">Electronics</div>
-                  <div class="timeline-photo-caption">ESP32 seated inside forearm — USB accessible at base</div>
-                </div>
-                <div class="timeline-photo">
-                  <img src="">
-                  <div class="photo-badge">Final Build</div>
-                  <div class="timeline-photo-caption">Completed arm — all fingers extended, system online</div>
-                </div>
+              <div class="timeline-photo">
+                <img src="./resources/Hand_model_4.jpeg">
+                <div class="photo-badge">v4 · Final Build</div>
+                <div class="timeline-photo-caption">Completed assembly — all five servos mounted and operational</div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -227,7 +219,7 @@
           <!-- Backend Card -->
           <div class="card hover-lift stagger-1">
             <span class="section-label" style="margin-bottom: 12px; display: block;">Backend</span>
-            <h3>C++ on ESP32</h3>
+            <h3>C++ &amp; Python on ESP32</h3>
             <p style="margin-top: 10px;">
               Implements an onboard web server using C++ to handle HTTP requests, control
               servo motors, and manage communication between the browser and the robotic hand.
@@ -236,6 +228,7 @@
               <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Wi-Fi connection &amp; HTTP callbacks</li>
               <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> GPIO &amp; PWM servo control</li>
               <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Serial command logging</li>
+              <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: 700;">›</span> Python scripts for image compression, QR generation &amp; LittleFS optimisation</li>
             </ul>
           </div>
 

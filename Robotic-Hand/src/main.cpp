@@ -10,10 +10,10 @@ Servo servo_thumb;
 QueueHandle_t gestureQueue;
 QueueHandle_t fingerQueue;
 
-const char *ssid = "DIGI-j4aJ";
-const char *password = "teAeJVK3Dn";
-// const char *ssid = "Mihai";
-// const char *password = "12345678";
+// const char *ssid = "DIGI-j4aJ";
+// const char *password = "teAeJVK3Dn";
+const char *ssid = "Mihai";
+const char *password = "12345678";
 
 /* SETUP */
 void setup()
@@ -37,11 +37,7 @@ void setup()
   servo_thumb.attach(THUMB_PIN);
 
   // Reset positions
-  servo_thumb.write(DEFAULT_ANGLE);
-  servo_index.write(DEFAULT_ANGLE);
-  servo_middle.write(DEFAULT_ANGLE);
-  servo_ring.write(DEFAULT_ANGLE);
-  servo_little.write(DEFAULT_ANGLE);
+  init_gesture("reset");
 
   gestureQueue = xQueueCreate(10, sizeof(char[32]));
   fingerQueue = xQueueCreate(10, sizeof(FingerCmd));
