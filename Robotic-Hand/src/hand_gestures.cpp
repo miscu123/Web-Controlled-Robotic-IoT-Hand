@@ -212,9 +212,13 @@ void update_gesture()
         else
         {
             servoWrite(LITTLE_PIN, CLOSE_FINGER);
+            vTaskDelay(pdMS_TO_TICKS(12));
             servoWrite(INDEX_PIN, CLOSE_FINGER);
+            vTaskDelay(pdMS_TO_TICKS(12));
             servoWrite(MIDDLE_PIN, CLOSE_FINGER);
+            vTaskDelay(pdMS_TO_TICKS(12));
             servoWrite(RING_PIN, CLOSE_FINGER);
+            vTaskDelay(pdMS_TO_TICKS(12));
             gesture_ctx.state = GESTURE_IDLE;
             Serial.println("Hold Phone Done!");
         }
