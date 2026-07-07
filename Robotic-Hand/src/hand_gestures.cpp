@@ -36,6 +36,7 @@ static bool phase_close_all()
     {
         servoWrite(CLOSE_ORDER[gesture_ctx.step], CLOSE_FINGER);
         gesture_ctx.step++;
+        vTaskDelay(pdMS_TO_TICKS(45));
         return false;
     }
     return true;
@@ -48,6 +49,7 @@ static bool phase_reset_all()
     {
         servoWrite(CLOSE_ORDER[gesture_ctx.step], DEFAULT_ANGLE);
         gesture_ctx.step++;
+        vTaskDelay(pdMS_TO_TICKS(45));
         return false;
     }
     return true;

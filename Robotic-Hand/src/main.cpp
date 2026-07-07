@@ -1,5 +1,7 @@
 #include "main_cfg.hpp"
 #include <Wire.h>
+#include "soc/soc.h"
+#include "soc/rtc_cntl_reg.h"
 
 /* GLOBAL VARIABLES */
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(); // default I2C address 0x40
@@ -25,6 +27,8 @@ void servoWrite(uint8_t channel, uint8_t angle)
 /* SETUP */
 void setup()
 {
+  // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
+
   Serial.begin(115200);
 
   if (!LittleFS.begin(true))
@@ -36,12 +40,16 @@ void setup()
 
   connect_to_server();
 
+  vTaskDelay(pdMS_TO_TICKS(1000));
+
   // Init I2C and PCA9685
   Wire.begin(21, 22); // SDA, SCL — explicit for ESP32
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(50); // 50Hz for servos
   Serial.println("PCA9685 initialized");
+
+  vTaskDelay(pdMS_TO_TICKS(500));
 
   // Reset positions
   init_gesture("reset");
